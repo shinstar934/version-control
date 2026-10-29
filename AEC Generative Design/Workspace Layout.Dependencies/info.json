@@ -1,0 +1,4 @@
+{
+  "scriptName": "Workspace Layout.dyn",
+  "Description": "Generates rows of desks in a room, considering doors, windows, and columns. Calculates distance to exits, views to outside, and more."
+}

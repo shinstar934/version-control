@@ -1,0 +1,504 @@
+{
+  "Uuid": "800b00a4-83b6-423a-8301-d78bc28a473f",
+  "IsCustomNode": true,
+  "Category": "Ampersand",
+  "Description": "Pick items from a list using a set of keys values.  Items and their key values will either be picked or excluded, and they can only be picked once.  Pick keys that do not match any of the list key values will be listed as keysNotMatched.",
+  "Name": "[&] List.PickByKeyUnique",
+  "ElementResolver": {
+    "ResolutionMap": {}
+  },
+  "Inputs": [],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "PythonNodeModels.PythonNode, PythonNodeModels",
+      "NodeType": "PythonScriptNode",
+      "Code": "# Pick items from a list whose keys are included in a given set of choose values.  Each item will only appear once in either the selected or not selected list.  Keys and values do not need to be unique.  Output includes the list items selected and their corresponding keys, the items not selected and their corresponding keys, and a list of the choose values that did not match any of the keys. Items selected and not selected are given in the order in which they appeared in the original list.\n#\n# Example input:\n#    list\t\t\t= {A,B,C,D,E}\n#    keys\t\t\t= {4,5,6,7,8}\n#    values\t\t\t= {5,8,9}\n#\n# Example output:\n#    itemsTaken\t\t= {B,E}\n#\t keysTaken\t\t= {5,8}\n#    itemsDropped\t= {A,C,D}\n#    keysDropped    = {4,6,7}\n#    noKeyMatch\t\t= {9}\n#\n# Colin McCrone\n# Twitter:  https://twitter.com/colinmccrone\n# LinkedIn: https://www.linkedin.com/in/colinmccrone\n# Updated:  2019-05-20\n#\nimport clr\n\n# Input\ndata = IN[0]\nkeys = IN[1]\nvals = IN[2]\n\n# Output\nitemsTaken = []\nitemsDropped = []\nkeysTaken = []\nkeysDropped = []\nnoKeyMatch = []\n\n# Check whether each value matches a key\nvalInKeys = []\nfor val in vals:\n\thasMatch = False\n\tfor key in keys:\n\t\tif val == key:\n\t\t\tvalInKeys.append(True)\n\t\t\thasMatch = True\n\t\t\tbreak\n\tif not hasMatch:\n\t\tvalInKeys.append(False)\n\t\tnoKeyMatch.append(val)\n\n# Sort each data and key into taken and dropped groups\nfor i in range(len(data)):\n\tisTaken = False\n\tfor j in range(len(vals)):\n\t\t# Move on if the value does not have a key match\n\t\tif not valInKeys[j]:\n\t\t\tcontinue\t\n\t\t# For a key/value match\n\t\tif keys[i] == vals[j]:\n\t\t\titemsTaken.append(data[i])\n\t\t\tkeysTaken.append(keys[i])\n\t\t\tisTaken = True\n\t\t\tbreak\n\tif not isTaken:\n\t\titemsDropped.append(data[i])\n\t\tkeysDropped.append(keys[i])\n\nOUT = []\nOUT.append(itemsTaken)\nOUT.append(keysTaken)\nOUT.append(itemsDropped)\nOUT.append(keysDropped)\nOUT.append(noKeyMatch)",
+      "VariableInputPorts": true,
+      "Id": "ec5d87db8017416abf3a6c9eb4d2885c",
+      "Inputs": [
+        {
+          "Id": "4d1a0ab45f424c4aa71345a534662716",
+          "Name": "IN[0]",
+          "Description": "Input #0",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "488b72ce4122474d8c509f2840b8e314",
+          "Name": "IN[1]",
+          "Description": "Input #1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "ffa9c11c61e3427dbaaa4d98e64cd964",
+          "Name": "IN[2]",
+          "Description": "Input #2",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "c0a7657dd7b046ff9f5e99e8bf7dcc47",
+          "Name": "OUT",
+          "Description": "Result of the python script",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Runs an embedded IronPython script."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Symbol, DynamoCore",
+      "NodeType": "InputNode",
+      "Parameter": {
+        "Name": "list",
+        "TypeName": "var",
+        "TypeRank": -1,
+        "DefaultValue": null,
+        "Description": ""
+      },
+      "Id": "fa919e42206f4333a3659768f7cec433",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "5b2a5ec96b1d4fc4803c8967f1fad85e",
+          "Name": "",
+          "Description": "Symbol",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "A function parameter, use with custom nodes.\r\n\r\nYou can specify the type and default value for parameter. E.g.,\r\n\r\ninput : var[]..[]\r\nvalue : bool = false"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Symbol, DynamoCore",
+      "NodeType": "InputNode",
+      "Parameter": {
+        "Name": "keys",
+        "TypeName": "var",
+        "TypeRank": 1,
+        "DefaultValue": null,
+        "Description": ""
+      },
+      "Id": "418d471528254d6e9aa87404b66a03e0",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "60a4c862480f40c59670f0ddbff59ac2",
+          "Name": "",
+          "Description": "Symbol",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "A function parameter, use with custom nodes.\r\n\r\nYou can specify the type and default value for parameter. E.g.,\r\n\r\ninput : var[]..[]\r\nvalue : bool = false"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Symbol, DynamoCore",
+      "NodeType": "InputNode",
+      "Parameter": {
+        "Name": "pickKeys",
+        "TypeName": "var",
+        "TypeRank": 1,
+        "DefaultValue": null,
+        "Description": ""
+      },
+      "Id": "00f813b6df3d450dbb3818153e611883",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "e8f22347b5eb427d8e0d95d78c8af443",
+          "Name": "",
+          "Description": "Symbol",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "A function parameter, use with custom nodes.\r\n\r\nYou can specify the type and default value for parameter. E.g.,\r\n\r\ninput : var[]..[]\r\nvalue : bool = false"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Output, DynamoCore",
+      "NodeType": "OutputNode",
+      "ElementResolver": null,
+      "Symbol": "itemsPicked",
+      "Id": "a6722d9365ae4ee792f4064fdebeba49",
+      "Inputs": [
+        {
+          "Id": "fe71ad3f777446ddb0a635c545f05784",
+          "Name": "",
+          "Description": "",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [],
+      "Replication": "Disabled",
+      "Description": "A function output, use with custom nodes"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Output, DynamoCore",
+      "NodeType": "OutputNode",
+      "ElementResolver": null,
+      "Symbol": "keysPicked",
+      "Id": "051dfedce3d54dd8a3c1a7fd0fd4f25c",
+      "Inputs": [
+        {
+          "Id": "a7e30d672acd4a628857a43c23b52902",
+          "Name": "",
+          "Description": "",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [],
+      "Replication": "Disabled",
+      "Description": "A function output, use with custom nodes"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Output, DynamoCore",
+      "NodeType": "OutputNode",
+      "ElementResolver": null,
+      "Symbol": "itemsExcluded",
+      "Id": "30873dba1ae3416da341d2f9a138b26e",
+      "Inputs": [
+        {
+          "Id": "642a12d426424c5382d31b3a81dff767",
+          "Name": "",
+          "Description": "",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [],
+      "Replication": "Disabled",
+      "Description": "A function output, use with custom nodes"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Output, DynamoCore",
+      "NodeType": "OutputNode",
+      "ElementResolver": null,
+      "Symbol": "keysExcluded",
+      "Id": "23c311ae19304c1c97570f3e8ea3c63e",
+      "Inputs": [
+        {
+          "Id": "079beec916db48bab9c7ef8d2ec55166",
+          "Name": "",
+          "Description": "",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [],
+      "Replication": "Disabled",
+      "Description": "A function output, use with custom nodes"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Output, DynamoCore",
+      "NodeType": "OutputNode",
+      "ElementResolver": null,
+      "Symbol": "keysNotMatched",
+      "Id": "3bbe6e03459c4645892b42fc6cbf5eb5",
+      "Inputs": [
+        {
+          "Id": "3c8decc8d7154502852d0d1357c6cc55",
+          "Name": "",
+          "Description": "",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [],
+      "Replication": "Disabled",
+      "Description": "A function output, use with custom nodes"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "itemsSelected = OUT[0];\nkeysSelected = OUT[1];\nitemsDropped = OUT[2];\nkeysDropped = OUT[3];\nvaluesNotMatched = OUT[4];",
+      "Id": "c357afd3af1548b0ab21552e7f327870",
+      "Inputs": [
+        {
+          "Id": "8ec66e3842824c05976189de345832dc",
+          "Name": "OUT",
+          "Description": "OUT",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "437efc57459a41baa03ec5db5e800de2",
+          "Name": "",
+          "Description": "itemsSelected",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "7be2467fcc1049d1bb772e22aa74b0b3",
+          "Name": "",
+          "Description": "keysSelected",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "c1e311c19f5b4cd4950e7cb3160b2416",
+          "Name": "",
+          "Description": "itemsDropped",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "5ccb5e6809f745b6a0d72190017bf52e",
+          "Name": "",
+          "Description": "keysDropped",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "e92b4a87df3749d582c0bae0c82ebaad",
+          "Name": "",
+          "Description": "valuesNotMatched",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "c0a7657dd7b046ff9f5e99e8bf7dcc47",
+      "End": "8ec66e3842824c05976189de345832dc",
+      "Id": "899ec752dc7347c1b21cebb7fe8bb407"
+    },
+    {
+      "Start": "5b2a5ec96b1d4fc4803c8967f1fad85e",
+      "End": "4d1a0ab45f424c4aa71345a534662716",
+      "Id": "a6019f59e9b6492b884bc01e126ba92c"
+    },
+    {
+      "Start": "60a4c862480f40c59670f0ddbff59ac2",
+      "End": "488b72ce4122474d8c509f2840b8e314",
+      "Id": "20672fcf658e44bba045e9b800043765"
+    },
+    {
+      "Start": "e8f22347b5eb427d8e0d95d78c8af443",
+      "End": "ffa9c11c61e3427dbaaa4d98e64cd964",
+      "Id": "d94b18d8e9cd48eeabdafd93d6837d25"
+    },
+    {
+      "Start": "437efc57459a41baa03ec5db5e800de2",
+      "End": "fe71ad3f777446ddb0a635c545f05784",
+      "Id": "4e87e20c27af4cef91e943dbb4a04940"
+    },
+    {
+      "Start": "7be2467fcc1049d1bb772e22aa74b0b3",
+      "End": "a7e30d672acd4a628857a43c23b52902",
+      "Id": "459f30bfe0bb4a99a1b72e13f620ffd4"
+    },
+    {
+      "Start": "c1e311c19f5b4cd4950e7cb3160b2416",
+      "End": "642a12d426424c5382d31b3a81dff767",
+      "Id": "1e4b6fedc6b941f294826835e176a7d5"
+    },
+    {
+      "Start": "5ccb5e6809f745b6a0d72190017bf52e",
+      "End": "079beec916db48bab9c7ef8d2ec55166",
+      "Id": "cb9576b0292049d68fe904017762a544"
+    },
+    {
+      "Start": "e92b4a87df3749d582c0bae0c82ebaad",
+      "End": "3c8decc8d7154502852d0d1357c6cc55",
+      "Id": "97b8aac5ffe54b74a50dbcbc4c505fd6"
+    }
+  ],
+  "Dependencies": [],
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": false,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "2.0.2.6826",
+      "RunType": "Manual",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "Background Preview",
+      "EyeX": -18.776032238936924,
+      "EyeY": 35.222761809466355,
+      "EyeZ": 43.661382188463321,
+      "LookX": 15.076560737262017,
+      "LookY": 6.7808319630452232,
+      "LookZ": -58.341388689545241,
+      "UpX": -0.080630995164609018,
+      "UpY": 0.9466492601156955,
+      "UpZ": 0.31201573829082652
+    },
+    "NodeViews": [
+      {
+        "ShowGeometry": true,
+        "Name": "Python Script",
+        "Id": "ec5d87db8017416abf3a6c9eb4d2885c",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 419.176816253794,
+        "Y": 165.476738666616
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Input",
+        "Id": "fa919e42206f4333a3659768f7cec433",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 169.087966134565,
+        "Y": 95.3305775546103
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Input",
+        "Id": "418d471528254d6e9aa87404b66a03e0",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 169.087966134565,
+        "Y": 197.028096467256
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Input",
+        "Id": "00f813b6df3d450dbb3818153e611883",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 169.087966134565,
+        "Y": 306.77602889446
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Output",
+        "Id": "a6722d9365ae4ee792f4064fdebeba49",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1010.5541973227976,
+        "Y": -81.398110336307411
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Output",
+        "Id": "051dfedce3d54dd8a3c1a7fd0fd4f25c",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1010.5541973227976,
+        "Y": 15.363244648837679
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Output",
+        "Id": "30873dba1ae3416da341d2f9a138b26e",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1010.5541973227976,
+        "Y": 120.84686841547466
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Output",
+        "Id": "23c311ae19304c1c97570f3e8ea3c63e",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1010.5541973227976,
+        "Y": 231.74485991618769
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Output",
+        "Id": "3bbe6e03459c4645892b42fc6cbf5eb5",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1010.5541973227976,
+        "Y": 341.49279234339264
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "c357afd3af1548b0ab21552e7f327870",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 590.87210302854191,
+        "Y": 162.12220996853728
+      }
+    ],
+    "Annotations": [
+      {
+        "Id": "438cac835d5543a3bcd55b4dfe0419be",
+        "Title": "Colin McCrone\r\nTwitter:  @ColinMcCrone\r\nLinkedIn: https://www.linkedin.com/in/colinmccrone\r\nUpdated:  2019-05-20\r\n\r\nAn example Dynamo script for how to use this node can be found in the 'extra' folder where the package files are stored. To find it, go to the Packages Menu and select \"Manage Packages.\" Where Ampersand is listed, open the drop-down menu link at the right and choose \"Show Root Directory.\" Open the \"extra\" folder to find the example file called AmpersandExamples.dyn.",
+        "Nodes": [],
+        "Left": 163.50306724310616,
+        "Top": -139.688577509293,
+        "Width": 0.0,
+        "Height": 0.0,
+        "FontSize": 36.0,
+        "InitialTop": 0.0,
+        "InitialHeight": 0.0,
+        "TextblockHeight": 0.0,
+        "Background": "#FFC1D676"
+      }
+    ],
+    "X": -17.402211535459628,
+    "Y": 185.8330709672841,
+    "Zoom": 1.1782858655947868
+  }
+}

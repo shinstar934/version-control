@@ -1,0 +1,236 @@
+{
+  "Uuid": "6e96ef8e-1b35-487f-9915-f4072906db2b",
+  "IsCustomNode": true,
+  "Category": "Ampersand.[&] Curve",
+  "Description": "Find the winding vector of the direction of the vertices of a closed PolyCurve. Find the normal of a plane by best fit through points, then sum the outside angles for each vertex to see whether the winding angle aligns with or is the negative of the assumed plane normal vector. Return the plane normal vector aligned with the winding direction of the PolyCurve's vertices.",
+  "Name": "[&] PolyCurve.WindingVector",
+  "ElementResolver": {
+    "ResolutionMap": {
+      "Point": {
+        "Key": "Autodesk.DesignScript.Geometry.Point",
+        "Value": "ProtoGeometry.dll"
+      },
+      "Autodesk.DesignScript.Geometry.PolyCurve": {
+        "Key": "Autodesk.DesignScript.Geometry.PolyCurve",
+        "Value": "ProtoGeometry.dll"
+      },
+      "List": {
+        "Key": "List",
+        "Value": "BuiltIn.ds"
+      },
+      "Plane": {
+        "Key": "Autodesk.DesignScript.Geometry.Plane",
+        "Value": "ProtoGeometry.dll"
+      },
+      "Math": {
+        "Key": "DSCore.Math",
+        "Value": "DSCoreNodes.dll"
+      },
+      "DSCore.List": {
+        "Key": "DSCore.List",
+        "Value": "DSCoreNodes.dll"
+      },
+      "DSCore.List.Count": {
+        "Key": "DSCore.List",
+        "Value": "DSCoreNodes.dll"
+      },
+      "Curve": {
+        "Key": "Autodesk.DesignScript.Geometry.Curve",
+        "Value": "ProtoGeometry.dll"
+      },
+      "Autodesk.DesignScript.Geometry.Plane": {
+        "Key": "Autodesk.DesignScript.Geometry.Plane",
+        "Value": "ProtoGeometry.dll"
+      }
+    }
+  },
+  "Inputs": [],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "WindingVector(pcrv);",
+      "Id": "b0db93bf6e234e7687444da42b810184",
+      "Inputs": [
+        {
+          "Id": "a971f641f3ef495e9640d02ff8c0bb61",
+          "Name": "pcrv",
+          "Description": "pcrv",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "786cd6d898574517b5375a3c822d6789",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "// Find the winding vector of the direction of the vertices\n// of a closed PolyCurve. Find the normal of a plane by best\n// fit through points, then sum the outside angles for each\n// vertex to see whether the winding angle aligns with or is\n// the negative of the assumed plane normal vector. Return the\n// plane normal vector aligned with the winding direction of\n// the PolyCurve's vertices.\n//\n// Colin McCrone\n// Twitter:  https://twitter.com/colinmccrone\n// LinkedIn: https://www.linkedin.com/in/colinmccrone\n// Updated:  2019-12-30\n//\ndef WindingVector(pCrv:PolyCurve)\n{\n\t// All vertices\n\tcrvs = pCrv.Explode();\n\tvertices = crvs.PointAtParameter(0);\n\n\t// Normal of the best-fit plane through vertices, not\n\t// necessarily aligned with winding direction of pCrv\n\tplane1 = Plane.ByBestFitThroughPoints(vertices);\n\tnormal = plane1.Normal;\n\n\t// Cross products at each vertex in the order of the\n\t// curve segments\n\tshifted = List.ShiftIndices(crvs, 1);\n\tvec1 = shifted.TangentAtParameter(1);\n\tvec2 = crvs.TangentAtParameter(0);\n\tcrossProd = vec1.Cross(vec2);\n\n\t// Inside angle at each vertex\n\t// A x B = ABsinTheta\n\tratio = crossProd.Length;\n\tinAng = Math.Asin(ratio>1.0 ? 1.0 : ratio);\n\n\t// Direction of the vertex cross product compared to\n\t// the plane normal\n\tcrossMag = crossProd.Dot(normal);\n\tcrossSign = Math.Sign(crossMag);\n\n\t// Weighted outside angle at each vertex\n\toutAng = crossSign * (180 - inAng);\n\n\t// Sum of the weighted outside angles: either 180 or -180\n\tsumOutAng = Math.Sum(outAng);\n\n\t// Winding Vector is either the original vector or the reverse\n\tdirection = Math.Sign(sumOutAng);\n\twindVec = normal.Scale(direction);\n\n\t// Return\n\treturn = windVec;\n};",
+      "Id": "0498f09cce424082a4497474cb2048c0",
+      "Inputs": [],
+      "Outputs": [],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Output, DynamoCore",
+      "NodeType": "OutputNode",
+      "ElementResolver": null,
+      "Symbol": "vector",
+      "Id": "7fbf3f308c8946728c2e9859d3859738",
+      "Inputs": [
+        {
+          "Id": "bd16bfe20d444fbeb92296bf27eff14b",
+          "Name": "",
+          "Description": "",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [],
+      "Replication": "Disabled",
+      "Description": "A function output, use with custom nodes"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Symbol, DynamoCore",
+      "NodeType": "InputNode",
+      "Parameter": {
+        "Name": "polyCurve",
+        "TypeName": "var",
+        "TypeRank": -1,
+        "DefaultValue": null,
+        "Description": ""
+      },
+      "Id": "0ded876137f04166ac7b616cb9cc0baf",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "b9012de30b924f37b7d00c4e57b530bb",
+          "Name": "",
+          "Description": "Symbol",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "A function parameter, use with custom nodes.\r\n\r\nYou can specify the type and default value for parameter. E.g.,\r\n\r\ninput : var[]..[]\r\nvalue : bool = false"
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "786cd6d898574517b5375a3c822d6789",
+      "End": "bd16bfe20d444fbeb92296bf27eff14b",
+      "Id": "5523339d388d4a3bbb9f574f3f8d54f5"
+    },
+    {
+      "Start": "b9012de30b924f37b7d00c4e57b530bb",
+      "End": "a971f641f3ef495e9640d02ff8c0bb61",
+      "Id": "5534bdbe4aa84e48a61d66ced776e458"
+    }
+  ],
+  "Dependencies": [],
+  "NodeLibraryDependencies": [],
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": false,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "2.3.0.5885",
+      "RunType": "Manual",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "Background Preview",
+      "EyeX": -17.0,
+      "EyeY": 24.0,
+      "EyeZ": 50.0,
+      "LookX": 12.0,
+      "LookY": -13.0,
+      "LookZ": -58.0,
+      "UpX": 0.0,
+      "UpY": 1.0,
+      "UpZ": 0.0
+    },
+    "NodeViews": [
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "b0db93bf6e234e7687444da42b810184",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 425.94450566894864,
+        "Y": 1.6707184968717854
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "0498f09cce424082a4497474cb2048c0",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 303.53223409888767,
+        "Y": 110.7696046425645
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Output",
+        "Id": "7fbf3f308c8946728c2e9859d3859738",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 897.80000000000018,
+        "Y": -0.80000000000001137
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Input",
+        "Id": "0ded876137f04166ac7b616cb9cc0baf",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 60.776427167709357,
+        "Y": 1.8593011551963627
+      }
+    ],
+    "Annotations": [
+      {
+        "Id": "25733fd5f7c740adbed1368dd0d7a53f",
+        "Title": "Colin McCrone\r\nTwitter:  @ColinMcCrone\r\nLinkedIn: https://www.linkedin.com/in/colinmccrone\r\nUpdated:  2019-12-30\r\n\r\nAn example Dynamo script for how to use this node can be found in the 'extra' folder where the package files are stored. To find it, go to the Packages Menu and select \"Manage Packages.\" Where Ampersand is listed, open the drop-down menu link at the right and choose \"Show Root Directory.\" Open the \"extra\" folder to find the example file called AmpersandExamples.dyn.",
+        "Nodes": [],
+        "Left": 60.413909696281479,
+        "Top": -241.81459071580258,
+        "Width": 0.0,
+        "Height": 0.0,
+        "FontSize": 36.0,
+        "InitialTop": 0.0,
+        "InitialHeight": 0.0,
+        "TextblockHeight": 0.0,
+        "Background": "#FFC1D676"
+      }
+    ],
+    "X": -58.245170853594061,
+    "Y": 136.26492930622771,
+    "Zoom": 1.249013024690238
+  }
+}

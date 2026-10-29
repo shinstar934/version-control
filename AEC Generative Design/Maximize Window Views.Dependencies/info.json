@@ -1,0 +1,4 @@
+{
+  "scriptName": "Maximize Window Views.dyn",
+  "Description": "Generates various viewpoints. Calculates scores that represent the quality of views to the outside from those points."
+}

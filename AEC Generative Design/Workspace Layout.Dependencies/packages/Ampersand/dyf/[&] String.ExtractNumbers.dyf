@@ -1,0 +1,269 @@
+{
+  "Uuid": "6dce9549-e9f3-463f-968d-e1b569fe45f4",
+  "IsCustomNode": true,
+  "Category": "Ampersand",
+  "Description": "Extract a number or a list of numbers from a string",
+  "Name": "[&] String.ExtractNumbers",
+  "ElementResolver": {
+    "ResolutionMap": {}
+  },
+  "Inputs": [],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Symbol, DynamoCore",
+      "NodeType": "InputNode",
+      "Parameter": {
+        "Name": "str",
+        "TypeName": "string",
+        "TypeRank": 0,
+        "DefaultValue": null,
+        "Description": ""
+      },
+      "Id": "0b58482837744bb19db0c0d41a301554",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "b88369f4354f42299df4e8f3d5cb135f",
+          "Name": "",
+          "Description": "Symbol",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "A function parameter, use with custom nodes.\r\n\r\nYou can specify the type and default value for parameter. E.g.,\r\n\r\ninput : var[]..[]\r\nvalue : bool = false"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Output, DynamoCore",
+      "NodeType": "OutputNode",
+      "ElementResolver": null,
+      "Symbol": "string",
+      "Id": "13dda583e79243489faf3706d6c95a69",
+      "Inputs": [
+        {
+          "Id": "991082167f044f9c86cad93a9b1f575b",
+          "Name": "",
+          "Description": "",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [],
+      "Replication": "Disabled",
+      "Description": "A function output, use with custom nodes"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Output, DynamoCore",
+      "NodeType": "OutputNode",
+      "ElementResolver": null,
+      "Symbol": "number",
+      "Id": "4da88d58fc2d49e1928c22fdcc362816",
+      "Inputs": [
+        {
+          "Id": "c7c35a0ea3654110893079489a4fd13c",
+          "Name": "",
+          "Description": "",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [],
+      "Replication": "Disabled",
+      "Description": "A function output, use with custom nodes"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "OUT[0];\nOUT[1];",
+      "Id": "c57b8062f3584611bb1c7c741ddf7a0b",
+      "Inputs": [
+        {
+          "Id": "977ed5f570f2435494db3d4abd29a345",
+          "Name": "OUT",
+          "Description": "OUT",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "c191b991a9d6425188b51a87f4316ee1",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "5493588f92dc49bf850839c72d88516d",
+          "Name": "",
+          "Description": "Value of expression at line 2",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    },
+    {
+      "ConcreteType": "PythonNodeModels.PythonNode, PythonNodeModels",
+      "NodeType": "PythonScriptNode",
+      "Code": "# Extract a list of numbers from a string\n#\n# Colin McCrone\n# Twitter:  https://twitter.com/colinmccrone\n# LinkedIn: https://www.linkedin.com/in/colinmccrone\n# Updated:  2017-07-04\n#\nimport clr\n\n\n# True if character is a number, false otherwise\ndef IsNum(char):\n    try:\n        int(char)\n        return True\n    except ValueError:\n        return False\n\n\n# Join a single list of characters into a string\ndef JoinChars(chars):\n\tif not chars:\n\t\treturn None\n\telif len(chars) == 1:\n\t\treturn chars[0]\n\telse:\n\t\treturn \"\".join(chars)\n\n\n# Return a list of contiguous numbers from a string\ndef StringToNumbers(str):\n\t# Extract lists of contiguous number characters\n\tnums = []\n\tlastWasNum = False\n\tls = []\n\tfor i in range(len(str)):\n\t\tif IsNum(str[i]):\n\t\t\tls.append(str[i])\n\t\t\tlastWasNum = True\n\t\telif str[i] == \".\" and lastWasNum:\n\t\t\tls.append(str[i])\n\t\telif lastWasNum:\n\t\t\tnums.append(ls)\n\t\t\tls = []\n\t\t\tlastWasNum = False\n\t\t\n\t\tif i == len(str)-1 and ls:\n\t\t\tnums.append(ls)\n\n\t# Cast character strings to numbers\n\tif not nums:\n\t\treturn [None,None]\n\telif len(nums) == 1:\n\t\tasStr = JoinChars(nums[0])\n\t\treturn [asStr,float(asStr)]\n\telse:\n\t\tasStr = []\n\t\tasNum = []\n\t\tfor i in range(len(nums)):\n\t\t\toneStr = JoinChars(nums[i])\n\t\t\tasStr.append(oneStr)\n\t\t\tasNum.append(float(oneStr))\n\t\treturn [asStr,asNum]\n\n\nstr = IN[0]\nOUT = StringToNumbers(str)\n\n\n\n\n\t\n\n",
+      "VariableInputPorts": true,
+      "Id": "b82602148ea84f6b9dc23b4b017822e4",
+      "Inputs": [
+        {
+          "Id": "215c13f1bb0c49c0af48372f1676c79d",
+          "Name": "IN[0]",
+          "Description": "Input #0",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "14043ad6e9b149b8a16b448dfe2e83bc",
+          "Name": "OUT",
+          "Description": "Result of the python script",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Runs an embedded IronPython script."
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "b88369f4354f42299df4e8f3d5cb135f",
+      "End": "215c13f1bb0c49c0af48372f1676c79d",
+      "Id": "43e456308f164f339c9907b9437fff2c"
+    },
+    {
+      "Start": "c191b991a9d6425188b51a87f4316ee1",
+      "End": "991082167f044f9c86cad93a9b1f575b",
+      "Id": "d9299456405c4e368f4b947c841bbea8"
+    },
+    {
+      "Start": "5493588f92dc49bf850839c72d88516d",
+      "End": "c7c35a0ea3654110893079489a4fd13c",
+      "Id": "e12af587a87b47fea8efce1182cf6cf3"
+    },
+    {
+      "Start": "14043ad6e9b149b8a16b448dfe2e83bc",
+      "End": "977ed5f570f2435494db3d4abd29a345",
+      "Id": "147dffba2e254cc59eb45814d18aa3d4"
+    }
+  ],
+  "Dependencies": [],
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": false,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "2.0.2.6826",
+      "RunType": "Manual",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "Background Preview",
+      "EyeX": -17.0,
+      "EyeY": 24.0,
+      "EyeZ": 50.0,
+      "LookX": 12.0,
+      "LookY": -13.0,
+      "LookZ": -58.0,
+      "UpX": 0.0,
+      "UpY": 1.0,
+      "UpZ": 0.0
+    },
+    "NodeViews": [
+      {
+        "ShowGeometry": true,
+        "Name": "Input",
+        "Id": "0b58482837744bb19db0c0d41a301554",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -2.0734341252700119,
+        "Y": 40.777537796976219
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Output",
+        "Id": "13dda583e79243489faf3706d6c95a69",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 495.361123110151,
+        "Y": -0.691144708423337
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Output",
+        "Id": "4da88d58fc2d49e1928c22fdcc362816",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 494.125269978402,
+        "Y": 72.7524838012959
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "c57b8062f3584611bb1c7c741ddf7a0b",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 333.32181425486,
+        "Y": 21.2332613390929
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Python Script",
+        "Id": "b82602148ea84f6b9dc23b4b017822e4",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 162.66868250539898,
+        "Y": 27.356371490280718
+      }
+    ],
+    "Annotations": [
+      {
+        "Id": "6787d9228a664e5aae9dbc6c46215773",
+        "Title": "Colin McCrone\r\nTwitter:  @ColinMcCrone\r\nLinkedIn: https://www.linkedin.com/in/colinmccrone\r\nUpdated:  2017-07-04\r\n\r\nAn example Dynamo script for how to use this node can be found in the 'extra' folder where the package files are stored. To find it, go to the Packages Menu and select \"Manage Packages.\" Where Ampersand is listed, open the drop-down menu link at the right and choose \"Show Root Directory.\" Open the \"extra\" folder to find the example file called AmpersandExamples.dyn.",
+        "Nodes": [],
+        "Left": -9.3304535637149684,
+        "Top": -226.46997840172821,
+        "Width": 0.0,
+        "Height": 0.0,
+        "FontSize": 36.0,
+        "InitialTop": 0.0,
+        "InitialHeight": 0.0,
+        "TextblockHeight": 0.0,
+        "Background": "#FFC1D676"
+      }
+    ],
+    "X": 261.16186825054,
+    "Y": 382.55137507019441,
+    "Zoom": 1.33823125
+  }
+}

@@ -1,0 +1,4 @@
+{
+  "scriptName": "Three Box Massing.dyn",
+  "Description": "Generates simple massing models by varying the heights and relative positions of three boxes. Calculates facade area and floor area."
+}

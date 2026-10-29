@@ -1,0 +1,284 @@
+{
+  "Uuid": "ff50c179-bb6d-453b-aabd-8a2057450733",
+  "IsCustomNode": true,
+  "Category": "Ampersand",
+  "Description": "Find a series of tangent circles with the given radii whose centers lie along a curve.",
+  "Name": "[&] Misc.ChainOfCircles",
+  "ElementResolver": {
+    "ResolutionMap": {
+      "Autodesk.Curve": {
+        "Key": "Autodesk.DesignScript.Geometry.Curve",
+        "Value": "ProtoGeometry.dll"
+      }
+    }
+  },
+  "Inputs": [],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "PythonNodeModels.PythonNode, PythonNodeModels",
+      "NodeType": "PythonScriptNode",
+      "Code": "#\r\n# Colin McCrone\r\n# Twitter:  https://twitter.com/colinmccrone\r\n# LinkedIn: https://www.linkedin.com/in/colinmccrone\r\n# Updated:  2019-05-20\r\n#\r\nimport clr\r\nclr.AddReference('ProtoGeometry')\r\nfrom Autodesk.DesignScript.Geometry import *\r\n\r\n# Inputs\r\ncrv = IN[0]\r\nradii = IN[1]\r\nstartParam = IN[2]\r\n\r\n# Chord lengths between center points\r\nchordLengths = []\r\nchordLengths.append(0)\r\nfor i in range(len(radii)-1):\r\n\tchordLengths.append(radii[i] + radii[i+1])\r\n\r\n# Circle center point parameters\r\ncntrParams = []\r\ncntrParams.append(startParam)\r\nlastParam = startParam\r\nfor i in range(1,len(chordLengths)):\r\n\tdist = chordLengths[i]\r\n\tparam = (crv.ParameterAtChordLength(dist,lastParam,True))\r\n\tcntrParams.append(param)\r\n\tlastParam = param\r\n\r\n# Center points\r\ncntrPoints = []\r\nfor i in range(len(radii)):\r\n\tcntrPoints.append(crv.PointAtParameter(cntrParams[i]))\r\n\r\n# Circles\r\nrings = []\r\nfor i in range(len(radii)):\r\n\trings.append(Circle.ByCenterPointRadius(cntrPoints[i],radii[i]))\r\n\r\n# Output circles\r\nOUT = rings",
+      "VariableInputPorts": true,
+      "Id": "b2d8f41253584a25aef407b5e7a7bce9",
+      "Inputs": [
+        {
+          "Id": "a503b653dfc844d5a2d3f9c884cfe0ce",
+          "Name": "IN[0]",
+          "Description": "Input #0",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "a5448ea8c8414cfc93869801cb475ca5",
+          "Name": "IN[1]",
+          "Description": "Input #1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "348dfee8ce624da188aca31ce8f525f0",
+          "Name": "IN[2]",
+          "Description": "Input #2",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "4e8d93129a7b4ef38060afaca1ce85f6",
+          "Name": "OUT",
+          "Description": "Result of the python script",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Runs an embedded IronPython script."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Symbol, DynamoCore",
+      "NodeType": "InputNode",
+      "Parameter": {
+        "Name": "baseCurve",
+        "TypeName": "Autodesk.DesignScript.Geometry.Curve",
+        "TypeRank": 0,
+        "DefaultValue": null,
+        "Description": ""
+      },
+      "Id": "6f046f6865314299984b45960e29581d",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "9be6e9a4c9634d76bfaf6e202821055f",
+          "Name": "",
+          "Description": "Symbol",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "A function parameter, use with custom nodes.\r\n\r\nYou can specify the type and default value for parameter. E.g.,\r\n\r\ninput : var[]..[]\r\nvalue : bool = false"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Symbol, DynamoCore",
+      "NodeType": "InputNode",
+      "Parameter": {
+        "Name": "radii",
+        "TypeName": "double",
+        "TypeRank": 1,
+        "DefaultValue": null,
+        "Description": ""
+      },
+      "Id": "1b41fa3eda3b4b5d9ceb08d24c8cc0fa",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "ca81a579713d4d0097dece33363d9846",
+          "Name": "",
+          "Description": "Symbol",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "A function parameter, use with custom nodes.\r\n\r\nYou can specify the type and default value for parameter. E.g.,\r\n\r\ninput : var[]..[]\r\nvalue : bool = false"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Symbol, DynamoCore",
+      "NodeType": "InputNode",
+      "Parameter": {
+        "Name": "startParam",
+        "TypeName": "double",
+        "TypeRank": 0,
+        "DefaultValue": "0",
+        "Description": ""
+      },
+      "Id": "fcb98561e39049fb99ff4d8d8cd9f225",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "7a75be4503274a91b660ae24f582f224",
+          "Name": "",
+          "Description": "Symbol",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "A function parameter, use with custom nodes.\r\n\r\nYou can specify the type and default value for parameter. E.g.,\r\n\r\ninput : var[]..[]\r\nvalue : bool = false"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Output, DynamoCore",
+      "NodeType": "OutputNode",
+      "ElementResolver": null,
+      "Symbol": "circles",
+      "Id": "56efef81b42945ad9b047c5a90dcf9d9",
+      "Inputs": [
+        {
+          "Id": "e7f75f2cb02741fbbf6b3266a88bfa9e",
+          "Name": "",
+          "Description": "",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [],
+      "Replication": "Disabled",
+      "Description": "A function output, use with custom nodes"
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "4e8d93129a7b4ef38060afaca1ce85f6",
+      "End": "e7f75f2cb02741fbbf6b3266a88bfa9e",
+      "Id": "dab0b3c64a01452f877901f38db95858"
+    },
+    {
+      "Start": "9be6e9a4c9634d76bfaf6e202821055f",
+      "End": "a503b653dfc844d5a2d3f9c884cfe0ce",
+      "Id": "6e9f0871046a4f1fbebb65d566fda609"
+    },
+    {
+      "Start": "ca81a579713d4d0097dece33363d9846",
+      "End": "a5448ea8c8414cfc93869801cb475ca5",
+      "Id": "9aa4d142d712421982507fa24cba1360"
+    },
+    {
+      "Start": "7a75be4503274a91b660ae24f582f224",
+      "End": "348dfee8ce624da188aca31ce8f525f0",
+      "Id": "9470513ad03e4959b10e67b6cb1907c6"
+    }
+  ],
+  "Dependencies": [],
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": false,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "2.0.2.6826",
+      "RunType": "Manual",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "Background Preview",
+      "EyeX": -17.0,
+      "EyeY": 24.0,
+      "EyeZ": 50.0,
+      "LookX": 12.0,
+      "LookY": -13.0,
+      "LookZ": -58.0,
+      "UpX": 0.0,
+      "UpY": 1.0,
+      "UpZ": 0.0
+    },
+    "NodeViews": [
+      {
+        "ShowGeometry": true,
+        "Name": "Python Script",
+        "Id": "b2d8f41253584a25aef407b5e7a7bce9",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 282.79999999999995,
+        "Y": 53.600000000000023
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Input",
+        "Id": "6f046f6865314299984b45960e29581d",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -222.4,
+        "Y": -5.4000000000000341
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Input",
+        "Id": "1b41fa3eda3b4b5d9ceb08d24c8cc0fa",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -222.4,
+        "Y": 100.59999999999997
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Input",
+        "Id": "fcb98561e39049fb99ff4d8d8cd9f225",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -222.4,
+        "Y": 200.59999999999997
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Output",
+        "Id": "56efef81b42945ad9b047c5a90dcf9d9",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 482.59999999999997,
+        "Y": 53.600000000000023
+      }
+    ],
+    "Annotations": [
+      {
+        "Id": "372b4a974d7a42baa1a65a1e6d22784f",
+        "Title": "Colin McCrone\r\nTwitter:  @ColinMcCrone\r\nLinkedIn: https://www.linkedin.com/in/colinmccrone\r\nUpdated:  2019-05-20\r\n\r\nAn example Dynamo script for how to use this node can be found in the 'extra' folder where the package files are stored. To find it, go to the Packages Menu and select \"Manage Packages.\" Where Ampersand is listed, open the drop-down menu link at the right and choose \"Show Root Directory.\" Open the \"extra\" folder to find the example file called AmpersandExamples.dyn.",
+        "Nodes": [],
+        "Left": -219.09114470842326,
+        "Top": -234.51749460043192,
+        "Width": 0.0,
+        "Height": 0.0,
+        "FontSize": 36.0,
+        "InitialTop": 0.0,
+        "InitialHeight": 0.0,
+        "TextblockHeight": 0.0,
+        "Background": "#FFC1D676"
+      }
+    ],
+    "X": 378.39800000000008,
+    "Y": 301.85400000000004,
+    "Zoom": 1.1575
+  }
+}

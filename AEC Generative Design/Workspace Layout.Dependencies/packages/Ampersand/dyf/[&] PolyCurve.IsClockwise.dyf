@@ -1,0 +1,383 @@
+{
+  "Uuid": "51166778-61cf-49b6-af1a-1bd35a3b7f36",
+  "IsCustomNode": true,
+  "Category": "Ampersand.[&] Curve",
+  "Description": "For closed polycurves with reasonably straight segments, return true if the curve is clockwise relative to the plane, false otherwise.",
+  "Name": "[&] PolyCurve.IsClockwise",
+  "ElementResolver": {
+    "ResolutionMap": {
+      "Autodesk.Plane": {
+        "Key": "Autodesk.DesignScript.Geometry.Plane",
+        "Value": "ProtoGeometry.dll"
+      },
+      "Vector": {
+        "Key": "Autodesk.DesignScript.Geometry.Vector",
+        "Value": "ProtoGeometry.dll"
+      },
+      "Autodesk.DesignScript.Geometry.Plane": {
+        "Key": "Autodesk.DesignScript.Geometry.Plane",
+        "Value": "ProtoGeometry.dll"
+      },
+      "Autodesk.PolyCurve": {
+        "Key": "Autodesk.DesignScript.Geometry.PolyCurve",
+        "Value": "ProtoGeometry.dll"
+      }
+    }
+  },
+  "Inputs": [],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Symbol, DynamoCore",
+      "NodeType": "InputNode",
+      "Parameter": {
+        "Name": "polycurve",
+        "TypeName": "Autodesk.DesignScript.Geometry.PolyCurve",
+        "TypeRank": 0,
+        "DefaultValue": null,
+        "Description": ""
+      },
+      "Id": "9bec77caaead44b5bd5ec9b0bdb9f783",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "5f28d13e229f4bb38e75804dfd348798",
+          "Name": "",
+          "Description": "Symbol",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "A function parameter, use with custom nodes.\r\n\r\nYou can specify the type and default value for parameter. E.g.,\r\n\r\ninput : var[]..[]\r\nvalue : bool = false"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Output, DynamoCore",
+      "NodeType": "OutputNode",
+      "ElementResolver": null,
+      "Symbol": "bool",
+      "Id": "d08935506faf4fcda7b015e5a8ff22ae",
+      "Inputs": [
+        {
+          "Id": "88d067e218124761b07262566418d2de",
+          "Name": "",
+          "Description": "",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [],
+      "Replication": "Disabled",
+      "Description": "A function output, use with custom nodes"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Symbol, DynamoCore",
+      "NodeType": "InputNode",
+      "Parameter": {
+        "Name": "plane",
+        "TypeName": "Autodesk.DesignScript.Geometry.Plane",
+        "TypeRank": 0,
+        "DefaultValue": "Autodesk.DesignScript.Geometry.Plane.XY()",
+        "Description": ""
+      },
+      "Id": "b6d2285e5c124d438bedd70924dfc907",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "8105f1936f40498a925b4acd66def23d",
+          "Name": "",
+          "Description": "Symbol",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "A function parameter, use with custom nodes.\r\n\r\nYou can specify the type and default value for parameter. E.g.,\r\n\r\ninput : var[]..[]\r\nvalue : bool = false"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.Vector.Dot@Autodesk.DesignScript.Geometry.Vector",
+      "Id": "2a9c46b5239843f29b1febd2a10afcac",
+      "Inputs": [
+        {
+          "Id": "3bad01bd7ab94e37b2013cac6f10578b",
+          "Name": "vector",
+          "Description": "Autodesk.DesignScript.Geometry.Vector",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "ecc0fcebe81742c2b0987329e691883f",
+          "Name": "vec",
+          "Description": "Vector",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "c43d6fc53f63413198b0803f5ad5f28b",
+          "Name": "double",
+          "Description": "double",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Form the dot product of two vectors\n\nVector.Dot (vec: Vector): double"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "dot < 0;",
+      "Id": "d9c80a3bb7eb419ca13ddb757c618cbf",
+      "Inputs": [
+        {
+          "Id": "1f44e55874ae4233b622eaf3f272b08a",
+          "Name": "dot",
+          "Description": "dot",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "26ea98b37e3a430d8d2b11f4fb66d8c8",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Function, DynamoCore",
+      "FunctionSignature": "6e96ef8e-1b35-487f-9915-f4072906db2b",
+      "FunctionType": "Graph",
+      "NodeType": "FunctionNode",
+      "Id": "f16ca40f323d409a93835c8b44920580",
+      "Inputs": [
+        {
+          "Id": "a68431e86dc044e8a6aa1f8c587f6663",
+          "Name": "polyCurve",
+          "Description": "var[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "c079776c20184f4e99ccd2232baf6d7b",
+          "Name": "vector",
+          "Description": "return value",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Find the winding vector of the direction of the vertices of a closed PolyCurve. Find the normal of a plane by best fit through points, then sum the outside angles for each vertex to see whether the winding angle aligns with or is the negative of the assumed plane normal vector. Return the plane normal vector aligned with the winding direction of the PolyCurve's vertices."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.Plane.Normal",
+      "Id": "6fbf40c9ed054426adb01dd198fe436a",
+      "Inputs": [
+        {
+          "Id": "ebe4c6421bcb470b9cdfff304874a4db",
+          "Name": "plane",
+          "Description": "Autodesk.DesignScript.Geometry.Plane",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "d673fd55d150475892d29689f65c5ee5",
+          "Name": "Vector",
+          "Description": "Vector",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Returns the normal direction of the Plane.\n\nPlane.Normal: Vector"
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "5f28d13e229f4bb38e75804dfd348798",
+      "End": "a68431e86dc044e8a6aa1f8c587f6663",
+      "Id": "3cb6c6ca38ea4752afaf21fd79d02003"
+    },
+    {
+      "Start": "8105f1936f40498a925b4acd66def23d",
+      "End": "ebe4c6421bcb470b9cdfff304874a4db",
+      "Id": "5558192cd0da4f30ae1753f5c797a917"
+    },
+    {
+      "Start": "c43d6fc53f63413198b0803f5ad5f28b",
+      "End": "1f44e55874ae4233b622eaf3f272b08a",
+      "Id": "cb20484c4f8342f1a21b4163fae645e0"
+    },
+    {
+      "Start": "26ea98b37e3a430d8d2b11f4fb66d8c8",
+      "End": "88d067e218124761b07262566418d2de",
+      "Id": "cc38385b91614314adf06f14a21d73d3"
+    },
+    {
+      "Start": "c079776c20184f4e99ccd2232baf6d7b",
+      "End": "3bad01bd7ab94e37b2013cac6f10578b",
+      "Id": "c802fa2a8fe849d09d6159567b3812d1"
+    },
+    {
+      "Start": "d673fd55d150475892d29689f65c5ee5",
+      "End": "ecc0fcebe81742c2b0987329e691883f",
+      "Id": "0868282889034bc18b9ea77edb4bedcd"
+    }
+  ],
+  "Dependencies": [
+    "6e96ef8e-1b35-487f-9915-f4072906db2b"
+  ],
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": false,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "2.0.2.6826",
+      "RunType": "Manual",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "Background Preview",
+      "EyeX": -18.776032238936924,
+      "EyeY": 35.222761809466355,
+      "EyeZ": 43.661382188463321,
+      "LookX": 15.076560737262017,
+      "LookY": 6.7808319630452232,
+      "LookZ": -58.341388689545241,
+      "UpX": -0.080630995164609018,
+      "UpY": 0.9466492601156955,
+      "UpZ": 0.31201573829082652
+    },
+    "NodeViews": [
+      {
+        "ShowGeometry": true,
+        "Name": "Input",
+        "Id": "9bec77caaead44b5bd5ec9b0bdb9f783",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -112.75210650486827,
+        "Y": 477.15966370998785
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Output",
+        "Id": "d08935506faf4fcda7b015e5a8ff22ae",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1390.6012310044796,
+        "Y": 522.61835047352156
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Input",
+        "Id": "b6d2285e5c124d438bedd70924dfc907",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -106.96992117010927,
+        "Y": 648.83055110675582
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Vector.Dot",
+        "Id": "2a9c46b5239843f29b1febd2a10afcac",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 949.593695058008,
+        "Y": 523.50854986235811
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "d9c80a3bb7eb419ca13ddb757c618cbf",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1206.3156174761184,
+        "Y": 527.07995680502711
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "[&] PolyCurve.WindingVector",
+        "Id": "f16ca40f323d409a93835c8b44920580",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 648.82439518956835,
+        "Y": 486.4181163249101
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Plane.Normal",
+        "Id": "6fbf40c9ed054426adb01dd198fe436a",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 667.662378841198,
+        "Y": 628.209410648339
+      }
+    ],
+    "Annotations": [
+      {
+        "Id": "d27f7ed31fdf47f89f4ee4f30583a5b5",
+        "Title": "Colin McCrone\r\nTwitter:  @ColinMcCrone\r\nLinkedIn: https://www.linkedin.com/in/colinmccrone\r\nUpdated:  2019-05-20\r\n\r\nAn example Dynamo script for how to use this node can be found in the 'extra' folder where the package files are stored. To find it, go to the Packages Menu and select \"Manage Packages.\" Where Ampersand is listed, open the drop-down menu link at the right and choose \"Show Root Directory.\" Open the \"extra\" folder to find the example file called AmpersandExamples.dyn.",
+        "Nodes": [],
+        "Left": -112.11045079775869,
+        "Top": 234.99520457729074,
+        "Width": 0.0,
+        "Height": 0.0,
+        "FontSize": 36.0,
+        "InitialTop": 0.0,
+        "InitialHeight": 0.0,
+        "TextblockHeight": 0.0,
+        "Background": "#FFC1D676"
+      }
+    ],
+    "X": 159.07981828776184,
+    "Y": -104.58800079918103,
+    "Zoom": 0.91699580037615969
+  }
+}

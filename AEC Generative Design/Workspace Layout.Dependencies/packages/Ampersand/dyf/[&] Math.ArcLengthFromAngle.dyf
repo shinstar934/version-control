@@ -1,0 +1,233 @@
+{
+  "Uuid": "7b27082c-47a3-4968-a0d3-2f5fba87dbd3",
+  "IsCustomNode": true,
+  "Category": "Ampersand",
+  "Description": "",
+  "Name": "[&] Math.ArcLengthFromAngle",
+  "ElementResolver": {
+    "ResolutionMap": {
+      "Math": {
+        "Key": "DSCore.Math",
+        "Value": "DSCoreNodes.dll"
+      }
+    }
+  },
+  "Inputs": [],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "radius * Math.DegreesToRadians(angle);",
+      "Id": "47e835f646794432ba26d554de3f24ad",
+      "Inputs": [
+        {
+          "Id": "e87d368e2d78444eb2a2ac9e6191d283",
+          "Name": "radius",
+          "Description": "radius",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "d11213f743e843c383c984189961ea0f",
+          "Name": "angle",
+          "Description": "angle",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "443f29e3591a4d58a64546c9a9473ddf",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Output, DynamoCore",
+      "NodeType": "OutputNode",
+      "ElementResolver": null,
+      "Symbol": "arcLength",
+      "Id": "b233c0e05fe6406d9d64a390532f33ab",
+      "Inputs": [
+        {
+          "Id": "2e2db07156b44ecd995008b8b30234ae",
+          "Name": "",
+          "Description": "",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [],
+      "Replication": "Disabled",
+      "Description": "A function output, use with custom nodes"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Symbol, DynamoCore",
+      "NodeType": "InputNode",
+      "Parameter": {
+        "Name": "angle",
+        "TypeName": "var",
+        "TypeRank": -1,
+        "DefaultValue": null,
+        "Description": ""
+      },
+      "Id": "cfd5153a437349659bf394d40210bde7",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "440810d04e5f45159d2274d0c33a8232",
+          "Name": "",
+          "Description": "Symbol",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "A function parameter, use with custom nodes.\r\n\r\nYou can specify the type and default value for parameter. E.g.,\r\n\r\ninput : var[]..[]\r\nvalue : bool = false"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Symbol, DynamoCore",
+      "NodeType": "InputNode",
+      "Parameter": {
+        "Name": "radius",
+        "TypeName": "var",
+        "TypeRank": -1,
+        "DefaultValue": null,
+        "Description": ""
+      },
+      "Id": "713c20f89a69429bbf39f2e51dff5e3f",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "d1df981b524f461c92bcfe8cb69a4d2d",
+          "Name": "",
+          "Description": "Symbol",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "A function parameter, use with custom nodes.\r\n\r\nYou can specify the type and default value for parameter. E.g.,\r\n\r\ninput : var[]..[]\r\nvalue : bool = false"
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "443f29e3591a4d58a64546c9a9473ddf",
+      "End": "2e2db07156b44ecd995008b8b30234ae",
+      "Id": "e481b8dee01b48218a6418268ffae0cb"
+    },
+    {
+      "Start": "440810d04e5f45159d2274d0c33a8232",
+      "End": "d11213f743e843c383c984189961ea0f",
+      "Id": "b5a6b3a55f284807a8f4adf31f906e9b"
+    },
+    {
+      "Start": "d1df981b524f461c92bcfe8cb69a4d2d",
+      "End": "e87d368e2d78444eb2a2ac9e6191d283",
+      "Id": "1e5d891bff7249b7a7a412f713586b6c"
+    }
+  ],
+  "Dependencies": [],
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": false,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "2.0.2.6826",
+      "RunType": "Manual",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "Background Preview",
+      "EyeX": -17.0,
+      "EyeY": 24.0,
+      "EyeZ": 50.0,
+      "LookX": 12.0,
+      "LookY": -13.0,
+      "LookZ": -58.0,
+      "UpX": 0.0,
+      "UpY": 1.0,
+      "UpZ": 0.0
+    },
+    "NodeViews": [
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "47e835f646794432ba26d554de3f24ad",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 250.0,
+        "Y": 0.0
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Output",
+        "Id": "b233c0e05fe6406d9d64a390532f33ab",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 717.0,
+        "Y": 0.0
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Input",
+        "Id": "cfd5153a437349659bf394d40210bde7",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -3.0,
+        "Y": -31.600000000000023
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Input",
+        "Id": "713c20f89a69429bbf39f2e51dff5e3f",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -5.0,
+        "Y": 57.399999999999977
+      }
+    ],
+    "Annotations": [
+      {
+        "Id": "07cc7147a03f417e8ee17a4e345317ca",
+        "Title": "Colin McCrone\r\nTwitter:  @ColinMcCrone\r\nLinkedIn: https://www.linkedin.com/in/colinmccrone\r\nUpdated:  2019-05-20\r\n\r\nAn example Dynamo script for how to use this node can be found in the 'extra' folder where the package files are stored. To find it, go to the Packages Menu and select \"Manage Packages.\" Where Ampersand is listed, open the drop-down menu link at the right and choose \"Show Root Directory.\" Open the \"extra\" folder to find the example file called AmpersandExamples.dyn.",
+        "Nodes": [],
+        "Left": -4.2000000000000455,
+        "Top": -266.79999999999984,
+        "Width": 0.0,
+        "Height": 0.0,
+        "FontSize": 36.0,
+        "InitialTop": 0.0,
+        "InitialHeight": 0.0,
+        "TextblockHeight": 0.0,
+        "Background": "#FFC1D676"
+      }
+    ],
+    "X": 206.3275,
+    "Y": 400.76300000000003,
+    "Zoom": 1.1575
+  }
+}

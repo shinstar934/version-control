@@ -1,0 +1,229 @@
+{
+  "Uuid": "eba82e09-f08d-4eb3-ba66-2273f41db0ab",
+  "IsCustomNode": true,
+  "Category": "Ampersand",
+  "Description": "Split one piece of geometry (other than a polysurface) by multiple tools",
+  "Name": "[&] Geometry.SplitByTools",
+  "ElementResolver": {
+    "ResolutionMap": {}
+  },
+  "Inputs": [],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "PythonNodeModels.PythonNode, PythonNodeModels",
+      "NodeType": "PythonScriptNode",
+      "Code": "#\n# Colin McCrone\n# Twitter:  https://twitter.com/colinmccrone\n# LinkedIn: https://www.linkedin.com/in/colinmccrone\n# Updated:  2016-05-15\n#\nimport clr\nclr.AddReference('ProtoGeometry')\nfrom Autodesk.DesignScript.Geometry import *\n\ndef Flatten2D(ls):\n\tflat = []\t\n\tfor x in ls:\n\t\tif type(x) is list:\n\t\t\tfor y in x:\n\t\t\t\tflat.append(y)\n\t\telse:\n\t\t\tflat.append(x)\t\n\treturn flat\n\n# Main function\ngeom = IN[0]\ntools = IN[1]\n\npieces = []\npieces.append(geom)\n\nfor tool in tools:\n\tassert type(tool) is not list\n\tnewPieces = []\n\tfor piece in pieces:\n\t\tassert type(piece) is not list\n\t\tnewPieces.append(Flatten2D(Geometry.Split(piece,tool)))\n\tpieces = Flatten2D(newPieces)\n\nOUT = pieces",
+      "VariableInputPorts": true,
+      "Id": "89e3c05436284876af9d328f446baac0",
+      "Inputs": [
+        {
+          "Id": "c7a16f3c2c6f4367936cbf5567398964",
+          "Name": "IN[0]",
+          "Description": "Input #0",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "d1f9fabcc4154b3a9bf961ba6d4fe5ea",
+          "Name": "IN[1]",
+          "Description": "Input #1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "127072b0fc0d4b88944b3ab7a9103006",
+          "Name": "OUT",
+          "Description": "Result of the python script",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Runs an embedded IronPython script."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Symbol, DynamoCore",
+      "NodeType": "InputNode",
+      "Parameter": {
+        "Name": "geometry",
+        "TypeName": "var",
+        "TypeRank": 0,
+        "DefaultValue": null,
+        "Description": ""
+      },
+      "Id": "f62fe654001340c0b1448a956362c519",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "adbc4ab0468246758f8135a4a90811c7",
+          "Name": "",
+          "Description": "Symbol",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "A function parameter, use with custom nodes.\r\n\r\nYou can specify the type and default value for parameter. E.g.,\r\n\r\ninput : var[]..[]\r\nvalue : bool = false"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Symbol, DynamoCore",
+      "NodeType": "InputNode",
+      "Parameter": {
+        "Name": "tools",
+        "TypeName": "var",
+        "TypeRank": 1,
+        "DefaultValue": null,
+        "Description": ""
+      },
+      "Id": "c8227f15d3dd4c15a35033a98078dd9b",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "9792c6495b4e480daf28b63ea2407787",
+          "Name": "",
+          "Description": "Symbol",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "A function parameter, use with custom nodes.\r\n\r\nYou can specify the type and default value for parameter. E.g.,\r\n\r\ninput : var[]..[]\r\nvalue : bool = false"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Output, DynamoCore",
+      "NodeType": "OutputNode",
+      "ElementResolver": null,
+      "Symbol": "geometry",
+      "Id": "fbe41da028924c129bc692e9e7a93f6b",
+      "Inputs": [
+        {
+          "Id": "7cdf3a7277c749079f937c04def6778c",
+          "Name": "",
+          "Description": "",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [],
+      "Replication": "Disabled",
+      "Description": "A function output, use with custom nodes"
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "127072b0fc0d4b88944b3ab7a9103006",
+      "End": "7cdf3a7277c749079f937c04def6778c",
+      "Id": "0fb40dff5ea04f1fbf77d65409727bd7"
+    },
+    {
+      "Start": "adbc4ab0468246758f8135a4a90811c7",
+      "End": "c7a16f3c2c6f4367936cbf5567398964",
+      "Id": "9f38d2b84d804a81966be83e19535972"
+    },
+    {
+      "Start": "9792c6495b4e480daf28b63ea2407787",
+      "End": "d1f9fabcc4154b3a9bf961ba6d4fe5ea",
+      "Id": "8702608a08764d89a162866c101fa3fb"
+    }
+  ],
+  "Dependencies": [],
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": false,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "2.0.2.6826",
+      "RunType": "Manual",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "Background Preview",
+      "EyeX": -17.0,
+      "EyeY": 24.0,
+      "EyeZ": 50.0,
+      "LookX": 12.0,
+      "LookY": -13.0,
+      "LookZ": -58.0,
+      "UpX": 0.0,
+      "UpY": 1.0,
+      "UpZ": 0.0
+    },
+    "NodeViews": [
+      {
+        "ShowGeometry": true,
+        "Name": "Python Script",
+        "Id": "89e3c05436284876af9d328f446baac0",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -311.78388764203146,
+        "Y": -1.1685253932628967
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Input",
+        "Id": "f62fe654001340c0b1448a956362c519",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -549.38388764203148,
+        "Y": -30.168525393262897
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Input",
+        "Id": "c8227f15d3dd4c15a35033a98078dd9b",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -549.38388764203148,
+        "Y": 53.8314746067371
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Output",
+        "Id": "fbe41da028924c129bc692e9e7a93f6b",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -86.9838876420315,
+        "Y": -1.1685253932628967
+      }
+    ],
+    "Annotations": [
+      {
+        "Id": "ec872927087040568d1747e06d8e10de",
+        "Title": "Colin McCrone\r\nTwitter:  @ColinMcCrone\r\nLinkedIn: https://www.linkedin.com/in/colinmccrone\r\nUpdated:  2016-05-15\r\n\r\nAn example Dynamo script for how to use this node can be found in the 'extra' folder where the package files are stored. To find it, go to the Packages Menu and select \"Manage Packages.\" Where Ampersand is listed, open the drop-down menu link at the right and choose \"Show Root Directory.\" Open the \"extra\" folder to find the example file called AmpersandExamples.dyn.",
+        "Nodes": [],
+        "Left": -547.61499911716794,
+        "Top": -272.71825187105082,
+        "Width": 0.0,
+        "Height": 0.0,
+        "FontSize": 36.0,
+        "InitialTop": 0.0,
+        "InitialHeight": 0.0,
+        "TextblockHeight": 0.0,
+        "Background": "#FFC1D676"
+      }
+    ],
+    "X": 1046.1250033599197,
+    "Y": 440.83926211472851,
+    "Zoom": 1.3775833525586678
+  }
+}

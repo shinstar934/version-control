@@ -1,0 +1,6 @@
+[2026-06-06 20:23:54.940 10944 DEBUG USBDeviceManager.cpp:490] 忽略未知设备: USB\VID_1BCF&PID_2B99\5&2699FB5D&0&5 
+[2026-06-06 20:26:43.017 336 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-06 20:26:43.069 336 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-06 20:26:43.117 336 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-06 22:39:15.004 336 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-06 22:39:15.066 336 DEBUG USBDeviceManager.cpp:163] remove device:  \\?\USB#VID_3515&PID_3020#b120300001#{a5dcbf10-6530-11d2-901f-00c04fb951ed} 

@@ -1,0 +1,1613 @@
+[2026-06-11 03:13:16.797 3552 DEBUG USBDeviceManager.cpp:490] 忽略未知设备: USB\VID_1BCF&PID_2B99\5&2699FB5D&0&5 
+[2026-06-11 03:14:06.086 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-11 03:14:06.094 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-11 03:14:06.140 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-11 03:14:06.142 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-11 05:23:33.176 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-11 05:23:33.295 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-11 05:23:33.370 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-11 18:02:12.614 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-11 18:02:23.412 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-11 18:02:23.431 17268 DEBUG USBDeviceManager.cpp:156] append device:  \\?\USB#VID_3515&PID_3020#b120300001#{a5dcbf10-6530-11d2-901f-00c04fb951ed} 
+[2026-06-11 18:02:23.457 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-11 18:02:23.499 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-11 18:02:23.543 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-11 18:02:23.550 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-11 18:02:23.562 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-11 18:02:23.579 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-11 18:02:23.596 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-11 18:02:23.614 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-11 18:02:23.616 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-11 18:02:23.620 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-11 18:03:53.152 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-11 18:03:53.214 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-11 18:05:03.318 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-11 18:05:03.366 17268 DEBUG USBDeviceManager.cpp:156] append device:  \\?\USB#VID_05AC&PID_12A8#000081010002642621D0001E#{a5dcbf10-6530-11d2-901f-00c04fb951ed} 
+[2026-06-11 18:05:03.409 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-11 18:05:03.641 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-11 18:05:03.728 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-11 18:05:04.400 3552 INFO USBDeviceManager.cpp:622] 
+ 
+[2026-06-11 18:05:04.400 3552 INFO USBDeviceManager.cpp:623] 	              device: 1452 4776
+ 
+[2026-06-11 18:05:04.400 3552 INFO USBDeviceManager.cpp:624] 	               speed: Unknown
+ 
+[2026-06-11 18:05:04.401 3552 INFO USBDeviceManager.cpp:625] 	        Manufacturer: 
+ 
+[2026-06-11 18:05:04.401 3552 INFO USBDeviceManager.cpp:626] 	             Product: 
+ 
+[2026-06-11 18:05:04.401 3552 INFO USBDeviceManager.cpp:627] 	              Serial: 000081010002642621D0001E
+ 
+[2026-06-11 18:05:04.401 3552 INFO USBDeviceManager.cpp:628] 	         ConfigIndex: -1
+ 
+[2026-06-11 18:05:04.401 3552 INFO USBDeviceManager.cpp:629] 	           Interface: -1
+ 
+[2026-06-11 18:05:04.401 3552 INFO USBDeviceManager.cpp:630] 	                  In: 0x01
+ 
+[2026-06-11 18:05:04.401 3552 INFO USBDeviceManager.cpp:631] 	                 Out: 0x81
+ 
+[2026-06-11 18:05:04.401 3552 INFO USBDeviceManager.cpp:632] 
+ 
+[2026-06-11 18:05:04.401 3552 INFO USBDeviceManager.cpp:633] 	          instanceId: USB\VID_05AC&PID_12A8\000081010002642621D0001E
+ 
+[2026-06-11 18:05:04.402 3552 INFO USBDeviceManager.cpp:634] 	      device vid pid: 05AC:12A8
+ 
+[2026-06-11 18:05:04.402 3552 INFO USBDeviceManager.cpp:635] 	              driver: 3
+ 
+[2026-06-11 18:05:04.402 3552 INFO USBDeviceManager.cpp:636] 	                port: 1
+ 
+[2026-06-11 18:05:04.402 3552 INFO USBDeviceManager.cpp:637] 	         device desc: iPhone (Composite Parent)
+ 
+[2026-06-11 18:05:04.402 3552 INFO USBDeviceManager.cpp:638] 	       device is adb: 0
+ 
+[2026-06-11 18:05:04.403 3508 DEBUG USBDeviceManager.cpp:941] addDevice device.type  3    USB\VID_05AC&PID_12A8\000081010002642621D0001E 
+[2026-06-11 18:05:04.643 3552 DEBUG USBDeviceManager.cpp:490] 忽略未知设备: USB\VID_05AC&PID_12A8&MI_01\6&1E854C6F&0&0001 
+[2026-06-11 18:05:04.644 3552 DEBUG USBDeviceManager.cpp:490] 忽略未知设备: USB\VID_05AC&PID_12A8&MI_02\6&1E854C6F&0&0002 
+[2026-06-11 18:05:05.644 3552 INFO USBDeviceManager.cpp:622] 
+ 
+[2026-06-11 18:05:05.644 3552 INFO USBDeviceManager.cpp:623] 	              device: 1452 4776
+ 
+[2026-06-11 18:05:05.644 3552 INFO USBDeviceManager.cpp:624] 	               speed: Unknown
+ 
+[2026-06-11 18:05:05.644 3552 INFO USBDeviceManager.cpp:625] 	        Manufacturer: 
+ 
+[2026-06-11 18:05:05.644 3552 INFO USBDeviceManager.cpp:626] 	             Product: 
+ 
+[2026-06-11 18:05:05.644 3552 INFO USBDeviceManager.cpp:627] 	              Serial: 000081010002642621D0001E
+ 
+[2026-06-11 18:05:05.644 3552 INFO USBDeviceManager.cpp:628] 	         ConfigIndex: -1
+ 
+[2026-06-11 18:05:05.644 3552 INFO USBDeviceManager.cpp:629] 	           Interface: -1
+ 
+[2026-06-11 18:05:05.644 3552 INFO USBDeviceManager.cpp:630] 	                  In: 0x01
+ 
+[2026-06-11 18:05:05.644 3552 INFO USBDeviceManager.cpp:631] 	                 Out: 0x81
+ 
+[2026-06-11 18:05:05.644 3552 INFO USBDeviceManager.cpp:632] 
+ 
+[2026-06-11 18:05:05.644 3552 INFO USBDeviceManager.cpp:633] 	          instanceId: USB\VID_05AC&PID_12A8\000081010002642621D0001E
+ 
+[2026-06-11 18:05:05.644 3552 INFO USBDeviceManager.cpp:634] 	      device vid pid: 05AC:12A8
+ 
+[2026-06-11 18:05:05.646 3552 INFO USBDeviceManager.cpp:635] 	              driver: 3
+ 
+[2026-06-11 18:05:05.646 3552 INFO USBDeviceManager.cpp:636] 	                port: 1
+ 
+[2026-06-11 18:05:05.646 3552 INFO USBDeviceManager.cpp:637] 	         device desc: iPhone (Composite Parent)
+ 
+[2026-06-11 18:05:05.646 3552 INFO USBDeviceManager.cpp:638] 	       device is adb: 0
+ 
+[2026-06-11 18:05:05.647 3508 DEBUG USBDeviceManager.cpp:941] addDevice device.type  3    USB\VID_05AC&PID_12A8\000081010002642621D0001E 
+[2026-06-11 18:05:05.647 3508 DEBUG USBDeviceManager.cpp:990] addDevice device  USB\VID_05AC&PID_12A8\000081010002642621D0001E 
+[2026-06-11 18:05:05.683 3508 INFO USBDeviceManager.cpp:1157] 截取 iOS 设备序列号为: 000081010002642621D0001E usbccgp   15 
+[2026-06-11 18:05:06.765 3508 INFO USBDeviceManager.cpp:1411] ilsc_disable_qtConfig ret  20013 
+[2026-06-11 18:05:06.765 3508 INFO USBDeviceManager.cpp:1418] initUdidAndPair  000081010002642621D0001E 
+[2026-06-11 18:05:07.551 3508 INFO Utils.cpp:1822] get_device_list  1 
+[2026-06-11 18:05:07.552 3508 INFO Utils.cpp:1826] get_device_list  [{"Device_id":5,"Serial_number":"00008101-0002642621D0001E","Conn_type":1}] 
+[2026-06-11 18:05:07.552 3508 INFO Utils.cpp:1827] serialNumber  000081010002642621D0001E 
+[2026-06-11 18:05:07.553 3508 INFO Utils.cpp:1840] udid  00008101-0002642621D0001E 
+[2026-06-11 18:05:07.553 3508 INFO USBDeviceManager.cpp:1425] initUdidAndPair  000081010002642621D0001E 
+[2026-06-11 18:05:08.761 3508 INFO Utils.cpp:1864] r1  0 
+[2026-06-11 18:05:08.761 3508 INFO Utils.cpp:1870] name  Shina’s iphone 
+[2026-06-11 18:05:09.205 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-11 18:05:09.271 3552 DEBUG USBDeviceManager.cpp:490] 忽略未知设备: USB\VID_05AC&PID_12A8&MI_00\6&1E854C6F&0&0000 
+[2026-06-11 18:05:09.609 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-11 18:05:09.611 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-11 18:05:10.430 3508 INFO Utils.cpp:1878] infoResult.r1  0 
+[2026-06-11 18:05:10.430 3508 INFO Utils.cpp:1883] infoResult.r0  {
+  "DeviceName": "Shina’s iphone",
+  "DeviceClass": "iPhone",
+  "ModelNumber": "MGFD3",
+  "ProductVersion": "26.5",
+  "PhoneNumber": "",
+  "PhoneNumber2": "",
+  "SerialNumber": "F17DLFG30DY0",
+  "UniqueDeviceID": "00008101-0002642621D0001E",
+  "ProductType": "iPhone13,2",
+  "ProductTypeEx": "",
+  "UniqueChipID": "673064892235806",
+  "IMEI": "353044116275653",
+  "IMEI2": "353044117370941",
+  "RegionInfo": "LL/A",
+  "RegionInfoEx": "美国",
+  "BuildVersion": "23F77",
+  "BasebandVersion": "6.51.04",
+  "ProductionDate": "2020年10月25日 (第43周)",
+  "WiFiAddress": "44:90:bb:bd:fd:ef",
+  "BluetoothAddress": "44:90:bb:c1:56:b1",
+  "EthernetAddress": "44:90:bb:c4:af:0a",
+  "DeviceColor": "1",
+  "DeviceEnclosureColor": "9",
+  "CPUArchitecture": "arm64e",
+  "MLBSerialNumber": "F3Y042674TZP55DA",
+  "UniqueDeviceIDEx": "00008101-0002642621D0001E",
+  "HardwareModel": "D53gAP",
+  "RegulatoryModelNumber": "A2172",
+  "ActivationState": "Activated",
+  "SIMStatus": "kCTSIMSupportSIMStatusReady",
+  "SIMTrayStatus": "kCTSIMSupportSIMTrayInsertedWithSIM",
+  "BasebandActivationTicketVersion": "V2",
+  "BasebandStatus": "BBInfoAvailable",
+  "BasebandSerialNumber": "9bc4f379",
+  "PartitionType": "GUID_partition_scheme",
+  "ProtocolVersion": "2",
+  "ActiveWirelessTechnology": "kCTWirelessTechnologyLTE",
+  "InternationalMobileSubscriberIdentity": "621300627454990",
+  "Locale": "en_US",
+  "CarrierBundleInfo0": "com.apple.MTN_ng 70.0",
+  "CarrierBundleInfo1": "",
+  "ChipID": 33025,
+  "Bi": {
+    "BatteryCurrentCapacity": 57,
+    "BatteryIsCharging": false,
+    "ExternalChargeCapable": false,
+    "ExternalConnected": true,
+    "FullyCharged": false
+  },
+  "Di": {
+    "AmountDataAvailable": 22657077248,
+    "AmountDataReserved": 209715200,
+    "AmountRestoreAvailable": 30634942464,
+    "TotalDataAvailable": 101174587392,
+    "TotalDataCapacity": 120102830080,
+    "TotalDiskCapacity": 128000000000,
+    "TotalSystemAvailable": 0,
+    "TotalSystemCapacity": 7768150016
+  },
+  "Fix_file": 0,
+  "IsJB": false,
+  "InstallAFC2": false,
+  "IsActivate": true,
+  "IsMonDev": true,
+  "HasPasswordProtected": false,
+  "InstallAppsync": false,
+  "DeviceIsChaperoned": false,
+  "TelephonyCapability": true
+} 
+[2026-06-11 18:05:10.430 3508 INFO USBDeviceManager.cpp:1225] 设备驱动都已就绪 
+[2026-06-11 18:06:02.902 17268 DEBUG USBDeviceManager.cpp:163] remove device:  \\?\USB#VID_05AC&PID_12A8#000081010002642621D0001E#{a5dcbf10-6530-11d2-901f-00c04fb951ed} 
+[2026-06-11 18:06:02.952 3552 INFO USBDeviceManager.cpp:652] 设备被移除: USB\VID_05AC&PID_12A8&MI_01\6&1E854C6F&0&0001 
+[2026-06-11 18:06:02.952 3552 INFO USBDeviceManager.cpp:652] 设备被移除: USB\VID_05AC&PID_12A8&MI_02\6&1E854C6F&0&0002 
+[2026-06-11 18:06:02.952 3552 INFO USBDeviceManager.cpp:652] 设备被移除: USB\VID_05AC&PID_12A8\000081010002642621D0001E 
+[2026-06-11 18:06:02.952 3552 INFO USBDeviceManager.cpp:652] 设备被移除: USB\VID_05AC&PID_12A8&MI_00\6&1E854C6F&0&0000 
+[2026-06-11 18:06:02.952 3552 INFO USBDeviceManager.cpp:652] 设备被移除: USB\VID_05AC&PID_12A8&MI_01\6&1E854C6F&0&0001 
+[2026-06-11 18:06:02.952 3508 DEBUG USBDeviceManager.cpp:1045] remove device  USB\VID_05AC&PID_12A8\000081010002642621D0001E 
+[2026-06-11 18:06:02.952 3552 INFO USBDeviceManager.cpp:652] 设备被移除: USB\VID_05AC&PID_12A8&MI_02\6&1E854C6F&0&0002 
+[2026-06-11 18:06:03.060 17268 DEBUG USBDeviceManager.cpp:156] append device:  \\?\USB#VID_05AC&PID_12A8#000081010002642621D0001E#{a5dcbf10-6530-11d2-901f-00c04fb951ed} 
+[2026-06-11 18:06:03.110 3552 DEBUG USBDeviceManager.cpp:490] 忽略未知设备: USB\VID_05AC&PID_12A8&MI_01\6&1E854C6F&0&0001 
+[2026-06-11 18:06:03.727 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-11 18:06:03.732 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-11 18:06:03.741 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-11 18:06:03.742 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-11 18:06:04.112 3552 INFO USBDeviceManager.cpp:622] 
+ 
+[2026-06-11 18:06:04.112 3552 INFO USBDeviceManager.cpp:623] 	              device: 1452 4776
+ 
+[2026-06-11 18:06:04.112 3552 INFO USBDeviceManager.cpp:624] 	               speed: Unknown
+ 
+[2026-06-11 18:06:04.112 3552 INFO USBDeviceManager.cpp:625] 	        Manufacturer: 
+ 
+[2026-06-11 18:06:04.112 3552 INFO USBDeviceManager.cpp:626] 	             Product: 
+ 
+[2026-06-11 18:06:04.112 3552 INFO USBDeviceManager.cpp:627] 	              Serial: 000081010002642621D0001E
+ 
+[2026-06-11 18:06:04.112 3552 INFO USBDeviceManager.cpp:628] 	         ConfigIndex: -1
+ 
+[2026-06-11 18:06:04.112 3552 INFO USBDeviceManager.cpp:629] 	           Interface: -1
+ 
+[2026-06-11 18:06:04.113 3552 INFO USBDeviceManager.cpp:630] 	                  In: 0x01
+ 
+[2026-06-11 18:06:04.113 3552 INFO USBDeviceManager.cpp:631] 	                 Out: 0x81
+ 
+[2026-06-11 18:06:04.113 3552 INFO USBDeviceManager.cpp:632] 
+ 
+[2026-06-11 18:06:04.113 3552 INFO USBDeviceManager.cpp:633] 	          instanceId: USB\VID_05AC&PID_12A8\000081010002642621D0001E
+ 
+[2026-06-11 18:06:04.113 3552 INFO USBDeviceManager.cpp:634] 	      device vid pid: 05AC:12A8
+ 
+[2026-06-11 18:06:04.113 3552 INFO USBDeviceManager.cpp:635] 	              driver: 3
+ 
+[2026-06-11 18:06:04.113 3552 INFO USBDeviceManager.cpp:636] 	                port: 1
+ 
+[2026-06-11 18:06:04.113 3552 INFO USBDeviceManager.cpp:637] 	         device desc: iPhone (Composite Parent)
+ 
+[2026-06-11 18:06:04.113 3552 INFO USBDeviceManager.cpp:638] 	       device is adb: 0
+ 
+[2026-06-11 18:06:04.114 3508 DEBUG USBDeviceManager.cpp:941] addDevice device.type  3    USB\VID_05AC&PID_12A8\000081010002642621D0001E 
+[2026-06-11 18:06:04.114 3508 DEBUG USBDeviceManager.cpp:990] addDevice device  USB\VID_05AC&PID_12A8\000081010002642621D0001E 
+[2026-06-11 18:06:04.115 3508 INFO USBDeviceManager.cpp:1157] 截取 iOS 设备序列号为: 000081010002642621D0001E usbccgp   15 
+[2026-06-11 18:06:04.175 3552 DEBUG USBDeviceManager.cpp:490] 忽略未知设备: USB\VID_05AC&PID_12A8&MI_02\6&1E854C6F&0&0002 
+[2026-06-11 18:06:06.220 3508 INFO USBDeviceManager.cpp:1411] ilsc_disable_qtConfig ret  10101 
+[2026-06-11 18:06:06.220 3508 INFO USBDeviceManager.cpp:1418] initUdidAndPair  000081010002642621D0001E 
+[2026-06-11 18:06:07.224 3508 INFO Utils.cpp:1822] get_device_list  0 
+[2026-06-11 18:06:07.225 3508 INFO USBDeviceManager.cpp:1425] initUdidAndPair  000081010002642621D0001E 
+[2026-06-11 18:06:07.704 17268 DEBUG USBDeviceManager.cpp:163] remove device:  \\?\USB#VID_05AC&PID_12A8#000081010002642621D0001E#{a5dcbf10-6530-11d2-901f-00c04fb951ed} 
+[2026-06-11 18:06:07.756 3552 INFO USBDeviceManager.cpp:652] 设备被移除: USB\VID_05AC&PID_12A8&MI_01\6&1E854C6F&0&0001 
+[2026-06-11 18:06:07.756 3552 INFO USBDeviceManager.cpp:652] 设备被移除: USB\VID_05AC&PID_12A8\000081010002642621D0001E 
+[2026-06-11 18:06:07.756 3552 INFO USBDeviceManager.cpp:652] 设备被移除: USB\VID_05AC&PID_12A8&MI_01\6&1E854C6F&0&0001 
+[2026-06-11 18:06:07.756 3552 INFO USBDeviceManager.cpp:652] 设备被移除: USB\VID_05AC&PID_12A8&MI_02\6&1E854C6F&0&0002 
+[2026-06-11 18:06:07.802 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-11 18:06:07.805 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-11 18:06:07.811 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-11 18:06:07.812 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-11 18:06:09.853 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-11 18:06:09.856 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-11 18:06:09.874 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-11 18:06:09.875 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-11 18:06:10.770 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-11 18:06:10.774 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-11 18:06:10.795 17268 DEBUG USBDeviceManager.cpp:156] append device:  \\?\USB#VID_05AC&PID_12A8#000081010002642621D0001E#{a5dcbf10-6530-11d2-901f-00c04fb951ed} 
+[2026-06-11 18:06:10.823 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-11 18:06:10.824 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-11 18:06:11.006 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-11 18:06:11.008 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-11 18:06:11.117 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-11 18:06:11.119 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-11 18:06:11.824 3552 INFO USBDeviceManager.cpp:622] 
+ 
+[2026-06-11 18:06:11.824 3552 INFO USBDeviceManager.cpp:623] 	              device: 1452 4776
+ 
+[2026-06-11 18:06:11.824 3552 INFO USBDeviceManager.cpp:624] 	               speed: Unknown
+ 
+[2026-06-11 18:06:11.824 3552 INFO USBDeviceManager.cpp:625] 	        Manufacturer: 
+ 
+[2026-06-11 18:06:11.824 3552 INFO USBDeviceManager.cpp:626] 	             Product: 
+ 
+[2026-06-11 18:06:11.824 3552 INFO USBDeviceManager.cpp:627] 	              Serial: 000081010002642621D0001E
+ 
+[2026-06-11 18:06:11.824 3552 INFO USBDeviceManager.cpp:628] 	         ConfigIndex: -1
+ 
+[2026-06-11 18:06:11.824 3552 INFO USBDeviceManager.cpp:629] 	           Interface: -1
+ 
+[2026-06-11 18:06:11.824 3552 INFO USBDeviceManager.cpp:630] 	                  In: 0x01
+ 
+[2026-06-11 18:06:11.824 3552 INFO USBDeviceManager.cpp:631] 	                 Out: 0x81
+ 
+[2026-06-11 18:06:11.825 3552 INFO USBDeviceManager.cpp:632] 
+ 
+[2026-06-11 18:06:11.825 3552 INFO USBDeviceManager.cpp:633] 	          instanceId: USB\VID_05AC&PID_12A8\000081010002642621D0001E
+ 
+[2026-06-11 18:06:11.825 3552 INFO USBDeviceManager.cpp:634] 	      device vid pid: 05AC:12A8
+ 
+[2026-06-11 18:06:11.825 3552 INFO USBDeviceManager.cpp:635] 	              driver: 3
+ 
+[2026-06-11 18:06:11.825 3552 INFO USBDeviceManager.cpp:636] 	                port: 1
+ 
+[2026-06-11 18:06:11.825 3552 INFO USBDeviceManager.cpp:637] 	         device desc: iPhone (Composite Parent)
+ 
+[2026-06-11 18:06:11.825 3552 INFO USBDeviceManager.cpp:638] 	       device is adb: 0
+ 
+[2026-06-11 18:06:11.878 3552 DEBUG USBDeviceManager.cpp:490] 忽略未知设备: USB\VID_05AC&PID_12A8&MI_01\6&1E854C6F&0&0001 
+[2026-06-11 18:06:11.878 3552 DEBUG USBDeviceManager.cpp:490] 忽略未知设备: USB\VID_05AC&PID_12A8&MI_02\6&1E854C6F&0&0002 
+[2026-06-11 18:06:11.930 3552 DEBUG USBDeviceManager.cpp:490] 忽略未知设备: USB\VID_05AC&PID_12A8&MI_01\6&1E854C6F&0&0001 
+[2026-06-11 18:06:11.931 3552 DEBUG USBDeviceManager.cpp:490] 忽略未知设备: USB\VID_05AC&PID_12A8&MI_02\6&1E854C6F&0&0002 
+[2026-06-11 18:06:11.946 3508 INFO Utils.cpp:1864] r1  0 
+[2026-06-11 18:06:11.946 3508 INFO Utils.cpp:1870] name  Shina’s iphone 
+[2026-06-11 18:06:12.932 3552 INFO USBDeviceManager.cpp:622] 
+ 
+[2026-06-11 18:06:12.932 3552 INFO USBDeviceManager.cpp:623] 	              device: 1452 4776
+ 
+[2026-06-11 18:06:12.932 3552 INFO USBDeviceManager.cpp:624] 	               speed: Unknown
+ 
+[2026-06-11 18:06:12.932 3552 INFO USBDeviceManager.cpp:625] 	        Manufacturer: 
+ 
+[2026-06-11 18:06:12.932 3552 INFO USBDeviceManager.cpp:626] 	             Product: 
+ 
+[2026-06-11 18:06:12.932 3552 INFO USBDeviceManager.cpp:627] 	              Serial: 000081010002642621D0001E
+ 
+[2026-06-11 18:06:12.932 3552 INFO USBDeviceManager.cpp:628] 	         ConfigIndex: -1
+ 
+[2026-06-11 18:06:12.932 3552 INFO USBDeviceManager.cpp:629] 	           Interface: -1
+ 
+[2026-06-11 18:06:12.932 3552 INFO USBDeviceManager.cpp:630] 	                  In: 0x01
+ 
+[2026-06-11 18:06:12.932 3552 INFO USBDeviceManager.cpp:631] 	                 Out: 0x81
+ 
+[2026-06-11 18:06:12.932 3552 INFO USBDeviceManager.cpp:632] 
+ 
+[2026-06-11 18:06:12.932 3552 INFO USBDeviceManager.cpp:633] 	          instanceId: USB\VID_05AC&PID_12A8\000081010002642621D0001E
+ 
+[2026-06-11 18:06:12.932 3552 INFO USBDeviceManager.cpp:634] 	      device vid pid: 05AC:12A8
+ 
+[2026-06-11 18:06:12.934 3552 INFO USBDeviceManager.cpp:635] 	              driver: 3
+ 
+[2026-06-11 18:06:12.934 3552 INFO USBDeviceManager.cpp:636] 	                port: 1
+ 
+[2026-06-11 18:06:12.934 3552 INFO USBDeviceManager.cpp:637] 	         device desc: iPhone (Composite Parent)
+ 
+[2026-06-11 18:06:12.934 3552 INFO USBDeviceManager.cpp:638] 	       device is adb: 0
+ 
+[2026-06-11 18:06:15.876 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-11 18:06:15.877 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-11 18:06:15.937 3552 DEBUG USBDeviceManager.cpp:490] 忽略未知设备: USB\VID_05AC&PID_12A8&MI_00\6&1E854C6F&0&0000 
+[2026-06-11 18:06:16.741 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-11 18:06:16.743 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-11 18:07:00.875 17268 DEBUG USBDeviceManager.cpp:163] remove device:  \\?\USB#VID_05AC&PID_12A8#000081010002642621D0001E#{a5dcbf10-6530-11d2-901f-00c04fb951ed} 
+[2026-06-11 18:07:00.926 3552 INFO USBDeviceManager.cpp:652] 设备被移除: USB\VID_05AC&PID_12A8&MI_01\6&1E854C6F&0&0001 
+[2026-06-11 18:07:00.926 3552 INFO USBDeviceManager.cpp:652] 设备被移除: USB\VID_05AC&PID_12A8&MI_02\6&1E854C6F&0&0002 
+[2026-06-11 18:07:00.926 3552 INFO USBDeviceManager.cpp:652] 设备被移除: USB\VID_05AC&PID_12A8\000081010002642621D0001E 
+[2026-06-11 18:07:00.926 3552 INFO USBDeviceManager.cpp:652] 设备被移除: USB\VID_05AC&PID_12A8&MI_00\6&1E854C6F&0&0000 
+[2026-06-11 18:07:00.926 3552 INFO USBDeviceManager.cpp:652] 设备被移除: USB\VID_05AC&PID_12A8&MI_01\6&1E854C6F&0&0001 
+[2026-06-11 18:07:00.926 3552 INFO USBDeviceManager.cpp:652] 设备被移除: USB\VID_05AC&PID_12A8&MI_02\6&1E854C6F&0&0002 
+[2026-06-11 18:07:01.058 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-11 18:07:01.061 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-11 18:07:01.151 3508 INFO Utils.cpp:1878] infoResult.r1  -19994 
+[2026-06-11 18:07:02.152 3508 INFO USBDeviceManager.cpp:1418] initUdidAndPair  000081010002642621D0001E 
+[2026-06-11 18:07:03.155 3508 INFO Utils.cpp:1822] get_device_list  0 
+[2026-06-11 18:07:03.156 3508 INFO USBDeviceManager.cpp:1425] initUdidAndPair  000081010002642621D0001E 
+[2026-06-11 18:07:04.697 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-11 18:07:04.699 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-11 18:07:04.712 17268 DEBUG USBDeviceManager.cpp:156] append device:  \\?\USB#VID_05AC&PID_12A8#000081010002642621D0001E#{a5dcbf10-6530-11d2-901f-00c04fb951ed} 
+[2026-06-11 18:07:04.768 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-11 18:07:04.770 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-11 18:07:04.914 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-11 18:07:04.915 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-11 18:07:04.950 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-11 18:07:04.957 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-11 18:07:05.745 3552 INFO USBDeviceManager.cpp:622] 
+ 
+[2026-06-11 18:07:05.745 3552 INFO USBDeviceManager.cpp:623] 	              device: 1452 4776
+ 
+[2026-06-11 18:07:05.745 3552 INFO USBDeviceManager.cpp:624] 	               speed: Unknown
+ 
+[2026-06-11 18:07:05.745 3552 INFO USBDeviceManager.cpp:625] 	        Manufacturer: 
+ 
+[2026-06-11 18:07:05.745 3552 INFO USBDeviceManager.cpp:626] 	             Product: 
+ 
+[2026-06-11 18:07:05.745 3552 INFO USBDeviceManager.cpp:627] 	              Serial: 000081010002642621D0001E
+ 
+[2026-06-11 18:07:05.745 3552 INFO USBDeviceManager.cpp:628] 	         ConfigIndex: -1
+ 
+[2026-06-11 18:07:05.745 3552 INFO USBDeviceManager.cpp:629] 	           Interface: -1
+ 
+[2026-06-11 18:07:05.746 3552 INFO USBDeviceManager.cpp:630] 	                  In: 0x01
+ 
+[2026-06-11 18:07:05.747 3552 INFO USBDeviceManager.cpp:631] 	                 Out: 0x81
+ 
+[2026-06-11 18:07:05.747 3552 INFO USBDeviceManager.cpp:632] 
+ 
+[2026-06-11 18:07:05.747 3552 INFO USBDeviceManager.cpp:633] 	          instanceId: USB\VID_05AC&PID_12A8\000081010002642621D0001E
+ 
+[2026-06-11 18:07:05.747 3552 INFO USBDeviceManager.cpp:634] 	      device vid pid: 05AC:12A8
+ 
+[2026-06-11 18:07:05.747 3552 INFO USBDeviceManager.cpp:635] 	              driver: 3
+ 
+[2026-06-11 18:07:05.747 3552 INFO USBDeviceManager.cpp:636] 	                port: 1
+ 
+[2026-06-11 18:07:05.747 3552 INFO USBDeviceManager.cpp:637] 	         device desc: iPhone (Composite Parent)
+ 
+[2026-06-11 18:07:05.747 3552 INFO USBDeviceManager.cpp:638] 	       device is adb: 0
+ 
+[2026-06-11 18:07:05.809 3552 DEBUG USBDeviceManager.cpp:490] 忽略未知设备: USB\VID_05AC&PID_12A8&MI_01\6&1E854C6F&0&0001 
+[2026-06-11 18:07:05.809 3552 DEBUG USBDeviceManager.cpp:490] 忽略未知设备: USB\VID_05AC&PID_12A8&MI_02\6&1E854C6F&0&0002 
+[2026-06-11 18:07:05.869 3552 DEBUG USBDeviceManager.cpp:490] 忽略未知设备: USB\VID_05AC&PID_12A8&MI_01\6&1E854C6F&0&0001 
+[2026-06-11 18:07:05.870 3552 DEBUG USBDeviceManager.cpp:490] 忽略未知设备: USB\VID_05AC&PID_12A8&MI_02\6&1E854C6F&0&0002 
+[2026-06-11 18:07:06.166 3508 INFO Utils.cpp:1864] r1  -8 
+[2026-06-11 18:07:06.871 3552 INFO USBDeviceManager.cpp:622] 
+ 
+[2026-06-11 18:07:06.871 3552 INFO USBDeviceManager.cpp:623] 	              device: 1452 4776
+ 
+[2026-06-11 18:07:06.871 3552 INFO USBDeviceManager.cpp:624] 	               speed: Unknown
+ 
+[2026-06-11 18:07:06.871 3552 INFO USBDeviceManager.cpp:625] 	        Manufacturer: 
+ 
+[2026-06-11 18:07:06.871 3552 INFO USBDeviceManager.cpp:626] 	             Product: 
+ 
+[2026-06-11 18:07:06.871 3552 INFO USBDeviceManager.cpp:627] 	              Serial: 000081010002642621D0001E
+ 
+[2026-06-11 18:07:06.871 3552 INFO USBDeviceManager.cpp:628] 	         ConfigIndex: -1
+ 
+[2026-06-11 18:07:06.871 3552 INFO USBDeviceManager.cpp:629] 	           Interface: -1
+ 
+[2026-06-11 18:07:06.871 3552 INFO USBDeviceManager.cpp:630] 	                  In: 0x01
+ 
+[2026-06-11 18:07:06.871 3552 INFO USBDeviceManager.cpp:631] 	                 Out: 0x81
+ 
+[2026-06-11 18:07:06.871 3552 INFO USBDeviceManager.cpp:632] 
+ 
+[2026-06-11 18:07:06.871 3552 INFO USBDeviceManager.cpp:633] 	          instanceId: USB\VID_05AC&PID_12A8\000081010002642621D0001E
+ 
+[2026-06-11 18:07:06.872 3552 INFO USBDeviceManager.cpp:634] 	      device vid pid: 05AC:12A8
+ 
+[2026-06-11 18:07:06.872 3552 INFO USBDeviceManager.cpp:635] 	              driver: 3
+ 
+[2026-06-11 18:07:06.872 3552 INFO USBDeviceManager.cpp:636] 	                port: 1
+ 
+[2026-06-11 18:07:06.872 3552 INFO USBDeviceManager.cpp:637] 	         device desc: iPhone (Composite Parent)
+ 
+[2026-06-11 18:07:06.872 3552 INFO USBDeviceManager.cpp:638] 	       device is adb: 0
+ 
+[2026-06-11 18:07:07.167 3508 INFO USBDeviceManager.cpp:1418] initUdidAndPair  000081010002642621D0001E 
+[2026-06-11 18:07:08.170 3508 INFO Utils.cpp:1822] get_device_list  0 
+[2026-06-11 18:07:08.171 3508 INFO USBDeviceManager.cpp:1425] initUdidAndPair  000081010002642621D0001E 
+[2026-06-11 18:07:08.799 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-11 18:07:08.801 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-11 18:07:08.847 3552 INFO USBDeviceManager.cpp:652] 设备被移除: USB\VID_05AC&PID_12A8&MI_01\6&1E854C6F&0&0001 
+[2026-06-11 18:07:08.848 3552 INFO USBDeviceManager.cpp:652] 设备被移除: USB\VID_05AC&PID_12A8&MI_02\6&1E854C6F&0&0002 
+[2026-06-11 18:07:08.848 3552 INFO USBDeviceManager.cpp:652] 设备被移除: USB\VID_05AC&PID_12A8\000081010002642621D0001E 
+[2026-06-11 18:07:08.848 3552 INFO USBDeviceManager.cpp:652] 设备被移除: USB\VID_05AC&PID_12A8&MI_01\6&1E854C6F&0&0001 
+[2026-06-11 18:07:08.848 3552 INFO USBDeviceManager.cpp:652] 设备被移除: USB\VID_05AC&PID_12A8&MI_02\6&1E854C6F&0&0002 
+[2026-06-11 18:07:08.859 17268 DEBUG USBDeviceManager.cpp:163] remove device:  \\?\USB#VID_05AC&PID_12A8#000081010002642621D0001E#{a5dcbf10-6530-11d2-901f-00c04fb951ed} 
+[2026-06-11 18:07:08.937 3552 INFO USBDeviceManager.cpp:652] 设备被移除: USB\VID_05AC&PID_12A8&MI_01\6&1E854C6F&0&0001 
+[2026-06-11 18:07:08.937 3552 INFO USBDeviceManager.cpp:652] 设备被移除: USB\VID_05AC&PID_12A8&MI_02\6&1E854C6F&0&0002 
+[2026-06-11 18:07:08.937 3552 INFO USBDeviceManager.cpp:652] 设备被移除: USB\VID_05AC&PID_12A8\000081010002642621D0001E 
+[2026-06-11 18:07:10.176 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-11 18:07:10.178 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-11 18:07:10.197 17268 DEBUG USBDeviceManager.cpp:156] append device:  \\?\USB#VID_05AC&PID_12A8#000081010002642621D0001E#{a5dcbf10-6530-11d2-901f-00c04fb951ed} 
+[2026-06-11 18:07:10.218 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-11 18:07:10.219 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-11 18:07:10.427 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-11 18:07:10.429 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-11 18:07:10.515 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-11 18:07:10.516 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-11 18:07:11.226 3552 INFO USBDeviceManager.cpp:622] 
+ 
+[2026-06-11 18:07:11.226 3552 INFO USBDeviceManager.cpp:623] 	              device: 1452 4776
+ 
+[2026-06-11 18:07:11.226 3552 INFO USBDeviceManager.cpp:624] 	               speed: Unknown
+ 
+[2026-06-11 18:07:11.226 3552 INFO USBDeviceManager.cpp:625] 	        Manufacturer: 
+ 
+[2026-06-11 18:07:11.226 3552 INFO USBDeviceManager.cpp:626] 	             Product: 
+ 
+[2026-06-11 18:07:11.226 3552 INFO USBDeviceManager.cpp:627] 	              Serial: 000081010002642621D0001E
+ 
+[2026-06-11 18:07:11.226 3552 INFO USBDeviceManager.cpp:628] 	         ConfigIndex: -1
+ 
+[2026-06-11 18:07:11.226 3552 INFO USBDeviceManager.cpp:629] 	           Interface: -1
+ 
+[2026-06-11 18:07:11.226 3552 INFO USBDeviceManager.cpp:630] 	                  In: 0x01
+ 
+[2026-06-11 18:07:11.226 3552 INFO USBDeviceManager.cpp:631] 	                 Out: 0x81
+ 
+[2026-06-11 18:07:11.227 3552 INFO USBDeviceManager.cpp:632] 
+ 
+[2026-06-11 18:07:11.227 3552 INFO USBDeviceManager.cpp:633] 	          instanceId: USB\VID_05AC&PID_12A8\000081010002642621D0001E
+ 
+[2026-06-11 18:07:11.227 3552 INFO USBDeviceManager.cpp:634] 	      device vid pid: 05AC:12A8
+ 
+[2026-06-11 18:07:11.227 3552 INFO USBDeviceManager.cpp:635] 	              driver: 3
+ 
+[2026-06-11 18:07:11.227 3552 INFO USBDeviceManager.cpp:636] 	                port: 1
+ 
+[2026-06-11 18:07:11.227 3552 INFO USBDeviceManager.cpp:637] 	         device desc: iPhone (Composite Parent)
+ 
+[2026-06-11 18:07:11.227 3552 INFO USBDeviceManager.cpp:638] 	       device is adb: 0
+ 
+[2026-06-11 18:07:11.284 3552 DEBUG USBDeviceManager.cpp:490] 忽略未知设备: USB\VID_05AC&PID_12A8&MI_01\6&1E854C6F&0&0001 
+[2026-06-11 18:07:11.284 3552 DEBUG USBDeviceManager.cpp:490] 忽略未知设备: USB\VID_05AC&PID_12A8&MI_02\6&1E854C6F&0&0002 
+[2026-06-11 18:07:11.344 3552 DEBUG USBDeviceManager.cpp:490] 忽略未知设备: USB\VID_05AC&PID_12A8&MI_01\6&1E854C6F&0&0001 
+[2026-06-11 18:07:11.344 3552 DEBUG USBDeviceManager.cpp:490] 忽略未知设备: USB\VID_05AC&PID_12A8&MI_02\6&1E854C6F&0&0002 
+[2026-06-11 18:07:11.701 3508 INFO Utils.cpp:1864] r1  -8 
+[2026-06-11 18:07:12.345 3552 INFO USBDeviceManager.cpp:622] 
+ 
+[2026-06-11 18:07:12.345 3552 INFO USBDeviceManager.cpp:623] 	              device: 1452 4776
+ 
+[2026-06-11 18:07:12.345 3552 INFO USBDeviceManager.cpp:624] 	               speed: Unknown
+ 
+[2026-06-11 18:07:12.345 3552 INFO USBDeviceManager.cpp:625] 	        Manufacturer: 
+ 
+[2026-06-11 18:07:12.345 3552 INFO USBDeviceManager.cpp:626] 	             Product: 
+ 
+[2026-06-11 18:07:12.345 3552 INFO USBDeviceManager.cpp:627] 	              Serial: 000081010002642621D0001E
+ 
+[2026-06-11 18:07:12.345 3552 INFO USBDeviceManager.cpp:628] 	         ConfigIndex: -1
+ 
+[2026-06-11 18:07:12.345 3552 INFO USBDeviceManager.cpp:629] 	           Interface: -1
+ 
+[2026-06-11 18:07:12.345 3552 INFO USBDeviceManager.cpp:630] 	                  In: 0x01
+ 
+[2026-06-11 18:07:12.345 3552 INFO USBDeviceManager.cpp:631] 	                 Out: 0x81
+ 
+[2026-06-11 18:07:12.345 3552 INFO USBDeviceManager.cpp:632] 
+ 
+[2026-06-11 18:07:12.345 3552 INFO USBDeviceManager.cpp:633] 	          instanceId: USB\VID_05AC&PID_12A8\000081010002642621D0001E
+ 
+[2026-06-11 18:07:12.345 3552 INFO USBDeviceManager.cpp:634] 	      device vid pid: 05AC:12A8
+ 
+[2026-06-11 18:07:12.345 3552 INFO USBDeviceManager.cpp:635] 	              driver: 3
+ 
+[2026-06-11 18:07:12.346 3552 INFO USBDeviceManager.cpp:636] 	                port: 1
+ 
+[2026-06-11 18:07:12.346 3552 INFO USBDeviceManager.cpp:637] 	         device desc: iPhone (Composite Parent)
+ 
+[2026-06-11 18:07:12.346 3552 INFO USBDeviceManager.cpp:638] 	       device is adb: 0
+ 
+[2026-06-11 18:07:12.702 3508 INFO USBDeviceManager.cpp:1418] initUdidAndPair  000081010002642621D0001E 
+[2026-06-11 18:07:13.705 3508 INFO Utils.cpp:1822] get_device_list  0 
+[2026-06-11 18:07:13.705 3508 INFO USBDeviceManager.cpp:1425] initUdidAndPair  000081010002642621D0001E 
+[2026-06-11 18:07:14.516 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-11 18:07:14.519 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-11 18:07:14.525 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-11 18:07:14.526 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-11 18:07:14.559 17268 DEBUG USBDeviceManager.cpp:163] remove device:  \\?\USB#VID_05AC&PID_12A8#000081010002642621D0001E#{a5dcbf10-6530-11d2-901f-00c04fb951ed} 
+[2026-06-11 18:07:14.567 3552 INFO USBDeviceManager.cpp:652] 设备被移除: USB\VID_05AC&PID_12A8&MI_01\6&1E854C6F&0&0001 
+[2026-06-11 18:07:14.567 3552 INFO USBDeviceManager.cpp:652] 设备被移除: USB\VID_05AC&PID_12A8&MI_02\6&1E854C6F&0&0002 
+[2026-06-11 18:07:14.567 3552 INFO USBDeviceManager.cpp:652] 设备被移除: USB\VID_05AC&PID_12A8\000081010002642621D0001E 
+[2026-06-11 18:07:14.567 3552 INFO USBDeviceManager.cpp:652] 设备被移除: USB\VID_05AC&PID_12A8&MI_01\6&1E854C6F&0&0001 
+[2026-06-11 18:07:14.567 3552 INFO USBDeviceManager.cpp:652] 设备被移除: USB\VID_05AC&PID_12A8&MI_02\6&1E854C6F&0&0002 
+[2026-06-11 18:07:14.729 3552 INFO USBDeviceManager.cpp:652] 设备被移除: USB\VID_05AC&PID_12A8&MI_01\6&1E854C6F&0&0001 
+[2026-06-11 18:07:14.729 3552 INFO USBDeviceManager.cpp:652] 设备被移除: USB\VID_05AC&PID_12A8&MI_02\6&1E854C6F&0&0002 
+[2026-06-11 18:07:14.729 3552 INFO USBDeviceManager.cpp:652] 设备被移除: USB\VID_05AC&PID_12A8\000081010002642621D0001E 
+[2026-06-11 18:07:19.149 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-11 18:07:19.151 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-11 18:07:19.197 17268 DEBUG USBDeviceManager.cpp:156] append device:  \\?\USB#VID_05AC&PID_12A8#000081010002642621D0001E#{a5dcbf10-6530-11d2-901f-00c04fb951ed} 
+[2026-06-11 18:07:19.230 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-11 18:07:19.231 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-11 18:07:19.408 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-11 18:07:19.410 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-11 18:07:19.443 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-11 18:07:19.449 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-11 18:07:20.203 3552 INFO USBDeviceManager.cpp:622] 
+ 
+[2026-06-11 18:07:20.203 3552 INFO USBDeviceManager.cpp:623] 	              device: 1452 4776
+ 
+[2026-06-11 18:07:20.203 3552 INFO USBDeviceManager.cpp:624] 	               speed: Unknown
+ 
+[2026-06-11 18:07:20.203 3552 INFO USBDeviceManager.cpp:625] 	        Manufacturer: 
+ 
+[2026-06-11 18:07:20.203 3552 INFO USBDeviceManager.cpp:626] 	             Product: 
+ 
+[2026-06-11 18:07:20.203 3552 INFO USBDeviceManager.cpp:627] 	              Serial: 000081010002642621D0001E
+ 
+[2026-06-11 18:07:20.203 3552 INFO USBDeviceManager.cpp:628] 	         ConfigIndex: -1
+ 
+[2026-06-11 18:07:20.203 3552 INFO USBDeviceManager.cpp:629] 	           Interface: -1
+ 
+[2026-06-11 18:07:20.203 3552 INFO USBDeviceManager.cpp:630] 	                  In: 0x01
+ 
+[2026-06-11 18:07:20.204 3552 INFO USBDeviceManager.cpp:631] 	                 Out: 0x81
+ 
+[2026-06-11 18:07:20.204 3552 INFO USBDeviceManager.cpp:632] 
+ 
+[2026-06-11 18:07:20.204 3552 INFO USBDeviceManager.cpp:633] 	          instanceId: USB\VID_05AC&PID_12A8\000081010002642621D0001E
+ 
+[2026-06-11 18:07:20.204 3552 INFO USBDeviceManager.cpp:634] 	      device vid pid: 05AC:12A8
+ 
+[2026-06-11 18:07:20.204 3552 INFO USBDeviceManager.cpp:635] 	              driver: 3
+ 
+[2026-06-11 18:07:20.204 3552 INFO USBDeviceManager.cpp:636] 	                port: 1
+ 
+[2026-06-11 18:07:20.204 3552 INFO USBDeviceManager.cpp:637] 	         device desc: iPhone (Composite Parent)
+ 
+[2026-06-11 18:07:20.204 3552 INFO USBDeviceManager.cpp:638] 	       device is adb: 0
+ 
+[2026-06-11 18:07:20.262 3552 DEBUG USBDeviceManager.cpp:490] 忽略未知设备: USB\VID_05AC&PID_12A8&MI_01\6&1E854C6F&0&0001 
+[2026-06-11 18:07:20.262 3552 DEBUG USBDeviceManager.cpp:490] 忽略未知设备: USB\VID_05AC&PID_12A8&MI_02\6&1E854C6F&0&0002 
+[2026-06-11 18:07:20.296 3508 INFO Utils.cpp:1864] r1  0 
+[2026-06-11 18:07:20.296 3508 INFO Utils.cpp:1870] name  Shina’s iphone 
+[2026-06-11 18:07:20.321 3552 DEBUG USBDeviceManager.cpp:490] 忽略未知设备: USB\VID_05AC&PID_12A8&MI_01\6&1E854C6F&0&0001 
+[2026-06-11 18:07:20.321 3552 DEBUG USBDeviceManager.cpp:490] 忽略未知设备: USB\VID_05AC&PID_12A8&MI_02\6&1E854C6F&0&0002 
+[2026-06-11 18:07:21.322 3552 INFO USBDeviceManager.cpp:622] 
+ 
+[2026-06-11 18:07:21.322 3552 INFO USBDeviceManager.cpp:623] 	              device: 1452 4776
+ 
+[2026-06-11 18:07:21.322 3552 INFO USBDeviceManager.cpp:624] 	               speed: Unknown
+ 
+[2026-06-11 18:07:21.322 3552 INFO USBDeviceManager.cpp:625] 	        Manufacturer: 
+ 
+[2026-06-11 18:07:21.322 3552 INFO USBDeviceManager.cpp:626] 	             Product: 
+ 
+[2026-06-11 18:07:21.322 3552 INFO USBDeviceManager.cpp:627] 	              Serial: 000081010002642621D0001E
+ 
+[2026-06-11 18:07:21.322 3552 INFO USBDeviceManager.cpp:628] 	         ConfigIndex: -1
+ 
+[2026-06-11 18:07:21.322 3552 INFO USBDeviceManager.cpp:629] 	           Interface: -1
+ 
+[2026-06-11 18:07:21.322 3552 INFO USBDeviceManager.cpp:630] 	                  In: 0x01
+ 
+[2026-06-11 18:07:21.322 3552 INFO USBDeviceManager.cpp:631] 	                 Out: 0x81
+ 
+[2026-06-11 18:07:21.323 3552 INFO USBDeviceManager.cpp:632] 
+ 
+[2026-06-11 18:07:21.323 3552 INFO USBDeviceManager.cpp:633] 	          instanceId: USB\VID_05AC&PID_12A8\000081010002642621D0001E
+ 
+[2026-06-11 18:07:21.323 3552 INFO USBDeviceManager.cpp:634] 	      device vid pid: 05AC:12A8
+ 
+[2026-06-11 18:07:21.323 3552 INFO USBDeviceManager.cpp:635] 	              driver: 3
+ 
+[2026-06-11 18:07:21.323 3552 INFO USBDeviceManager.cpp:636] 	                port: 1
+ 
+[2026-06-11 18:07:21.323 3552 INFO USBDeviceManager.cpp:637] 	         device desc: iPhone (Composite Parent)
+ 
+[2026-06-11 18:07:21.323 3552 INFO USBDeviceManager.cpp:638] 	       device is adb: 0
+ 
+[2026-06-11 18:07:24.270 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-11 18:07:24.272 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-11 18:07:24.318 3552 DEBUG USBDeviceManager.cpp:490] 忽略未知设备: USB\VID_05AC&PID_12A8&MI_00\6&1E854C6F&0&0000 
+[2026-06-11 18:07:24.629 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-11 18:07:24.632 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-11 18:08:38.491 17268 DEBUG USBDeviceManager.cpp:163] remove device:  \\?\USB#VID_05AC&PID_12A8#000081010002642621D0001E#{a5dcbf10-6530-11d2-901f-00c04fb951ed} 
+[2026-06-11 18:08:38.542 3552 INFO USBDeviceManager.cpp:652] 设备被移除: USB\VID_05AC&PID_12A8&MI_01\6&1E854C6F&0&0001 
+[2026-06-11 18:08:38.542 3552 INFO USBDeviceManager.cpp:652] 设备被移除: USB\VID_05AC&PID_12A8&MI_02\6&1E854C6F&0&0002 
+[2026-06-11 18:08:38.542 3552 INFO USBDeviceManager.cpp:652] 设备被移除: USB\VID_05AC&PID_12A8\000081010002642621D0001E 
+[2026-06-11 18:08:38.542 3552 INFO USBDeviceManager.cpp:652] 设备被移除: USB\VID_05AC&PID_12A8&MI_00\6&1E854C6F&0&0000 
+[2026-06-11 18:08:38.542 3552 INFO USBDeviceManager.cpp:652] 设备被移除: USB\VID_05AC&PID_12A8&MI_01\6&1E854C6F&0&0001 
+[2026-06-11 18:08:38.542 3552 INFO USBDeviceManager.cpp:652] 设备被移除: USB\VID_05AC&PID_12A8&MI_02\6&1E854C6F&0&0002 
+[2026-06-11 18:08:38.635 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-11 18:08:38.637 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-11 18:08:38.883 3508 INFO Utils.cpp:1878] infoResult.r1  -19994 
+[2026-06-11 18:08:39.885 3508 INFO USBDeviceManager.cpp:1418] initUdidAndPair  000081010002642621D0001E 
+[2026-06-11 18:08:40.888 3508 INFO Utils.cpp:1822] get_device_list  0 
+[2026-06-11 18:08:40.889 3508 INFO USBDeviceManager.cpp:1425] initUdidAndPair  000081010002642621D0001E 
+[2026-06-11 18:08:49.892 3508 INFO Utils.cpp:1864] r1  -10003 
+[2026-06-11 18:08:49.892 3508 INFO USBDeviceManager.cpp:1418] initUdidAndPair  000081010002642621D0001E 
+[2026-06-11 18:08:50.896 3508 INFO Utils.cpp:1822] get_device_list  0 
+[2026-06-11 18:08:50.896 3508 INFO USBDeviceManager.cpp:1425] initUdidAndPair  000081010002642621D0001E 
+[2026-06-11 18:08:51.230 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-11 18:08:51.233 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-11 18:08:51.253 17268 DEBUG USBDeviceManager.cpp:156] append device:  \\?\USB#VID_05AC&PID_12A8#000081010002642621D0001E#{a5dcbf10-6530-11d2-901f-00c04fb951ed} 
+[2026-06-11 18:08:51.281 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-11 18:08:51.283 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-11 18:08:51.470 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-11 18:08:51.472 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-11 18:08:51.585 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-11 18:08:51.587 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-11 18:08:52.287 3552 INFO USBDeviceManager.cpp:622] 
+ 
+[2026-06-11 18:08:52.287 3552 INFO USBDeviceManager.cpp:623] 	              device: 1452 4776
+ 
+[2026-06-11 18:08:52.287 3552 INFO USBDeviceManager.cpp:624] 	               speed: Unknown
+ 
+[2026-06-11 18:08:52.287 3552 INFO USBDeviceManager.cpp:625] 	        Manufacturer: 
+ 
+[2026-06-11 18:08:52.288 3552 INFO USBDeviceManager.cpp:626] 	             Product: 
+ 
+[2026-06-11 18:08:52.288 3552 INFO USBDeviceManager.cpp:627] 	              Serial: 000081010002642621D0001E
+ 
+[2026-06-11 18:08:52.288 3552 INFO USBDeviceManager.cpp:628] 	         ConfigIndex: -1
+ 
+[2026-06-11 18:08:52.288 3552 INFO USBDeviceManager.cpp:629] 	           Interface: -1
+ 
+[2026-06-11 18:08:52.288 3552 INFO USBDeviceManager.cpp:630] 	                  In: 0x01
+ 
+[2026-06-11 18:08:52.288 3552 INFO USBDeviceManager.cpp:631] 	                 Out: 0x81
+ 
+[2026-06-11 18:08:52.288 3552 INFO USBDeviceManager.cpp:632] 
+ 
+[2026-06-11 18:08:52.288 3552 INFO USBDeviceManager.cpp:633] 	          instanceId: USB\VID_05AC&PID_12A8\000081010002642621D0001E
+ 
+[2026-06-11 18:08:52.288 3552 INFO USBDeviceManager.cpp:634] 	      device vid pid: 05AC:12A8
+ 
+[2026-06-11 18:08:52.289 3552 INFO USBDeviceManager.cpp:635] 	              driver: 3
+ 
+[2026-06-11 18:08:52.289 3552 INFO USBDeviceManager.cpp:636] 	                port: 1
+ 
+[2026-06-11 18:08:52.289 3552 INFO USBDeviceManager.cpp:637] 	         device desc: iPhone (Composite Parent)
+ 
+[2026-06-11 18:08:52.289 3552 INFO USBDeviceManager.cpp:638] 	       device is adb: 0
+ 
+[2026-06-11 18:08:52.348 3552 DEBUG USBDeviceManager.cpp:490] 忽略未知设备: USB\VID_05AC&PID_12A8&MI_01\6&1E854C6F&0&0001 
+[2026-06-11 18:08:52.348 3552 DEBUG USBDeviceManager.cpp:490] 忽略未知设备: USB\VID_05AC&PID_12A8&MI_02\6&1E854C6F&0&0002 
+[2026-06-11 18:08:52.405 3552 DEBUG USBDeviceManager.cpp:490] 忽略未知设备: USB\VID_05AC&PID_12A8&MI_01\6&1E854C6F&0&0001 
+[2026-06-11 18:08:52.405 3552 DEBUG USBDeviceManager.cpp:490] 忽略未知设备: USB\VID_05AC&PID_12A8&MI_02\6&1E854C6F&0&0002 
+[2026-06-11 18:08:52.465 3508 INFO Utils.cpp:1864] r1  0 
+[2026-06-11 18:08:52.465 3508 INFO Utils.cpp:1870] name  Shina’s iphone 
+[2026-06-11 18:08:53.406 3552 INFO USBDeviceManager.cpp:622] 
+ 
+[2026-06-11 18:08:53.406 3552 INFO USBDeviceManager.cpp:623] 	              device: 1452 4776
+ 
+[2026-06-11 18:08:53.406 3552 INFO USBDeviceManager.cpp:624] 	               speed: Unknown
+ 
+[2026-06-11 18:08:53.406 3552 INFO USBDeviceManager.cpp:625] 	        Manufacturer: 
+ 
+[2026-06-11 18:08:53.406 3552 INFO USBDeviceManager.cpp:626] 	             Product: 
+ 
+[2026-06-11 18:08:53.406 3552 INFO USBDeviceManager.cpp:627] 	              Serial: 000081010002642621D0001E
+ 
+[2026-06-11 18:08:53.406 3552 INFO USBDeviceManager.cpp:628] 	         ConfigIndex: -1
+ 
+[2026-06-11 18:08:53.406 3552 INFO USBDeviceManager.cpp:629] 	           Interface: -1
+ 
+[2026-06-11 18:08:53.407 3552 INFO USBDeviceManager.cpp:630] 	                  In: 0x01
+ 
+[2026-06-11 18:08:53.407 3552 INFO USBDeviceManager.cpp:631] 	                 Out: 0x81
+ 
+[2026-06-11 18:08:53.407 3552 INFO USBDeviceManager.cpp:632] 
+ 
+[2026-06-11 18:08:53.407 3552 INFO USBDeviceManager.cpp:633] 	          instanceId: USB\VID_05AC&PID_12A8\000081010002642621D0001E
+ 
+[2026-06-11 18:08:53.407 3552 INFO USBDeviceManager.cpp:634] 	      device vid pid: 05AC:12A8
+ 
+[2026-06-11 18:08:53.407 3552 INFO USBDeviceManager.cpp:635] 	              driver: 3
+ 
+[2026-06-11 18:08:53.407 3552 INFO USBDeviceManager.cpp:636] 	                port: 1
+ 
+[2026-06-11 18:08:53.407 3552 INFO USBDeviceManager.cpp:637] 	         device desc: iPhone (Composite Parent)
+ 
+[2026-06-11 18:08:53.407 3552 INFO USBDeviceManager.cpp:638] 	       device is adb: 0
+ 
+[2026-06-11 18:08:56.321 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-11 18:08:56.326 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-11 18:08:56.369 3552 DEBUG USBDeviceManager.cpp:490] 忽略未知设备: USB\VID_05AC&PID_12A8&MI_00\6&1E854C6F&0&0000 
+[2026-06-11 18:08:56.705 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-11 18:08:56.710 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-11 18:09:14.789 3508 INFO Utils.cpp:1878] infoResult.r1  0 
+[2026-06-11 18:09:14.789 3508 INFO Utils.cpp:1883] infoResult.r0  {
+  "DeviceName": "Shina’s iphone",
+  "DeviceClass": "iPhone",
+  "ModelNumber": "MGFD3",
+  "ProductVersion": "26.5",
+  "PhoneNumber": "",
+  "PhoneNumber2": "",
+  "SerialNumber": "F17DLFG30DY0",
+  "UniqueDeviceID": "00008101-0002642621D0001E",
+  "ProductType": "iPhone13,2",
+  "ProductTypeEx": "",
+  "UniqueChipID": "673064892235806",
+  "IMEI": "353044116275653",
+  "IMEI2": "353044117370941",
+  "RegionInfo": "LL/A",
+  "RegionInfoEx": "美国",
+  "BuildVersion": "23F77",
+  "BasebandVersion": "6.51.04",
+  "ProductionDate": "2020年10月25日 (第43周)",
+  "WiFiAddress": "44:90:bb:bd:fd:ef",
+  "BluetoothAddress": "44:90:bb:c1:56:b1",
+  "EthernetAddress": "44:90:bb:c4:af:0a",
+  "DeviceColor": "1",
+  "DeviceEnclosureColor": "9",
+  "CPUArchitecture": "arm64e",
+  "MLBSerialNumber": "F3Y042674TZP55DA",
+  "UniqueDeviceIDEx": "00008101-0002642621D0001E",
+  "HardwareModel": "D53gAP",
+  "RegulatoryModelNumber": "A2172",
+  "ActivationState": "Activated",
+  "SIMStatus": "kCTSIMSupportSIMStatusReady",
+  "SIMTrayStatus": "kCTSIMSupportSIMTrayInsertedWithSIM",
+  "BasebandActivationTicketVersion": "V2",
+  "BasebandStatus": "BBInfoAvailable",
+  "BasebandSerialNumber": "9bc4f379",
+  "PartitionType": "GUID_partition_scheme",
+  "ProtocolVersion": "2",
+  "ActiveWirelessTechnology": "kCTWirelessTechnologyLTE",
+  "InternationalMobileSubscriberIdentity": "621300627454990",
+  "Locale": "en_US",
+  "CarrierBundleInfo0": "com.apple.MTN_ng 70.0",
+  "CarrierBundleInfo1": "",
+  "ChipID": 33025,
+  "Bi": {
+    "BatteryCurrentCapacity": 57,
+    "BatteryIsCharging": true,
+    "ExternalChargeCapable": false,
+    "ExternalConnected": true,
+    "FullyCharged": false
+  },
+  "Di": {
+    "AmountDataAvailable": 22630912000,
+    "AmountDataReserved": 209715200,
+    "AmountRestoreAvailable": 30608777216,
+    "TotalDataAvailable": 101165453312,
+    "TotalDataCapacity": 120102830080,
+    "TotalDiskCapacity": 128000000000,
+    "TotalSystemAvailable": 0,
+    "TotalSystemCapacity": 7768150016
+  },
+  "Fix_file": 0,
+  "IsJB": false,
+  "InstallAFC2": false,
+  "IsActivate": true,
+  "IsMonDev": true,
+  "HasPasswordProtected": true,
+  "InstallAppsync": false,
+  "DeviceIsChaperoned": false,
+  "TelephonyCapability": true
+} 
+[2026-06-11 18:09:14.791 3508 INFO USBDeviceManager.cpp:1225] 设备驱动都已就绪 
+[2026-06-11 18:09:14.794 3508 DEBUG USBDeviceManager.cpp:1045] remove device  USB\VID_05AC&PID_12A8\000081010002642621D0001E 
+[2026-06-11 18:09:14.794 3508 DEBUG USBDeviceManager.cpp:941] addDevice device.type  3    USB\VID_05AC&PID_12A8\000081010002642621D0001E 
+[2026-06-11 18:09:14.794 3508 DEBUG USBDeviceManager.cpp:941] addDevice device.type  3    USB\VID_05AC&PID_12A8\000081010002642621D0001E 
+[2026-06-11 18:09:14.794 3508 DEBUG USBDeviceManager.cpp:990] addDevice device  USB\VID_05AC&PID_12A8\000081010002642621D0001E 
+[2026-06-11 18:09:14.795 3508 INFO USBDeviceManager.cpp:1157] 截取 iOS 设备序列号为: 000081010002642621D0001E usbccgp   15 
+[2026-06-11 18:09:15.389 3508 INFO USBDeviceManager.cpp:1411] ilsc_disable_qtConfig ret  20013 
+[2026-06-11 18:09:15.389 3508 INFO USBDeviceManager.cpp:1418] initUdidAndPair  000081010002642621D0001E 
+[2026-06-11 18:09:15.893 3508 INFO Utils.cpp:1822] get_device_list  1 
+[2026-06-11 18:09:15.893 3508 INFO Utils.cpp:1826] get_device_list  [{"Device_id":11,"Serial_number":"00008101-0002642621D0001E","Conn_type":1}] 
+[2026-06-11 18:09:15.893 3508 INFO Utils.cpp:1827] serialNumber  000081010002642621D0001E 
+[2026-06-11 18:09:15.894 3508 INFO Utils.cpp:1840] udid  00008101-0002642621D0001E 
+[2026-06-11 18:09:15.894 3508 INFO USBDeviceManager.cpp:1425] initUdidAndPair  000081010002642621D0001E 
+[2026-06-11 18:09:16.567 3508 INFO Utils.cpp:1864] r1  0 
+[2026-06-11 18:09:16.567 3508 INFO Utils.cpp:1870] name  Shina’s iphone 
+[2026-06-11 18:09:17.456 3508 INFO Utils.cpp:1878] infoResult.r1  0 
+[2026-06-11 18:09:17.457 3508 INFO Utils.cpp:1883] infoResult.r0  {
+  "DeviceName": "Shina’s iphone",
+  "DeviceClass": "iPhone",
+  "ModelNumber": "MGFD3",
+  "ProductVersion": "26.5",
+  "PhoneNumber": "",
+  "PhoneNumber2": "",
+  "SerialNumber": "F17DLFG30DY0",
+  "UniqueDeviceID": "00008101-0002642621D0001E",
+  "ProductType": "iPhone13,2",
+  "ProductTypeEx": "",
+  "UniqueChipID": "673064892235806",
+  "IMEI": "353044116275653",
+  "IMEI2": "353044117370941",
+  "RegionInfo": "LL/A",
+  "RegionInfoEx": "美国",
+  "BuildVersion": "23F77",
+  "BasebandVersion": "6.51.04",
+  "ProductionDate": "2020年10月25日 (第43周)",
+  "WiFiAddress": "44:90:bb:bd:fd:ef",
+  "BluetoothAddress": "44:90:bb:c1:56:b1",
+  "EthernetAddress": "44:90:bb:c4:af:0a",
+  "DeviceColor": "1",
+  "DeviceEnclosureColor": "9",
+  "CPUArchitecture": "arm64e",
+  "MLBSerialNumber": "F3Y042674TZP55DA",
+  "UniqueDeviceIDEx": "00008101-0002642621D0001E",
+  "HardwareModel": "D53gAP",
+  "RegulatoryModelNumber": "A2172",
+  "ActivationState": "Activated",
+  "SIMStatus": "kCTSIMSupportSIMStatusReady",
+  "SIMTrayStatus": "kCTSIMSupportSIMTrayInsertedWithSIM",
+  "BasebandActivationTicketVersion": "V2",
+  "BasebandStatus": "BBInfoAvailable",
+  "BasebandSerialNumber": "9bc4f379",
+  "PartitionType": "GUID_partition_scheme",
+  "ProtocolVersion": "2",
+  "ActiveWirelessTechnology": "kCTWirelessTechnologyLTE",
+  "InternationalMobileSubscriberIdentity": "621300627454990",
+  "Locale": "en_US",
+  "CarrierBundleInfo0": "com.apple.MTN_ng 70.0",
+  "CarrierBundleInfo1": "",
+  "ChipID": 33025,
+  "Bi": {
+    "BatteryCurrentCapacity": 57,
+    "BatteryIsCharging": true,
+    "ExternalChargeCapable": false,
+    "ExternalConnected": true,
+    "FullyCharged": false
+  },
+  "Di": {
+    "AmountDataAvailable": 22612480000,
+    "AmountDataReserved": 209715200,
+    "AmountRestoreAvailable": 30590345216,
+    "TotalDataAvailable": 101163458560,
+    "TotalDataCapacity": 120102830080,
+    "TotalDiskCapacity": 128000000000,
+    "TotalSystemAvailable": 0,
+    "TotalSystemCapacity": 7768150016
+  },
+  "Fix_file": 0,
+  "IsJB": false,
+  "InstallAFC2": false,
+  "IsActivate": true,
+  "IsMonDev": true,
+  "HasPasswordProtected": false,
+  "InstallAppsync": false,
+  "DeviceIsChaperoned": false,
+  "TelephonyCapability": true
+} 
+[2026-06-11 18:09:17.457 3508 INFO USBDeviceManager.cpp:1225] 设备驱动都已就绪 
+[2026-06-11 18:09:17.458 3508 DEBUG USBDeviceManager.cpp:1045] remove device  USB\VID_05AC&PID_12A8\000081010002642621D0001E 
+[2026-06-11 18:09:17.458 3508 DEBUG USBDeviceManager.cpp:941] addDevice device.type  3    USB\VID_05AC&PID_12A8\000081010002642621D0001E 
+[2026-06-11 18:09:17.458 3508 DEBUG USBDeviceManager.cpp:941] addDevice device.type  3    USB\VID_05AC&PID_12A8\000081010002642621D0001E 
+[2026-06-11 18:09:17.458 3508 DEBUG USBDeviceManager.cpp:990] addDevice device  USB\VID_05AC&PID_12A8\000081010002642621D0001E 
+[2026-06-11 18:09:17.459 3508 INFO USBDeviceManager.cpp:1157] 截取 iOS 设备序列号为: 000081010002642621D0001E usbccgp   15 
+[2026-06-11 18:09:17.928 3508 INFO USBDeviceManager.cpp:1411] ilsc_disable_qtConfig ret  20013 
+[2026-06-11 18:09:17.928 3508 INFO USBDeviceManager.cpp:1418] initUdidAndPair  000081010002642621D0001E 
+[2026-06-11 18:09:18.431 3508 INFO Utils.cpp:1822] get_device_list  1 
+[2026-06-11 18:09:18.432 3508 INFO Utils.cpp:1826] get_device_list  [{"Device_id":11,"Serial_number":"00008101-0002642621D0001E","Conn_type":1}] 
+[2026-06-11 18:09:18.432 3508 INFO Utils.cpp:1827] serialNumber  000081010002642621D0001E 
+[2026-06-11 18:09:18.432 3508 INFO Utils.cpp:1840] udid  00008101-0002642621D0001E 
+[2026-06-11 18:09:18.432 3508 INFO USBDeviceManager.cpp:1425] initUdidAndPair  000081010002642621D0001E 
+[2026-06-11 18:09:18.995 3508 INFO Utils.cpp:1864] r1  0 
+[2026-06-11 18:09:18.995 3508 INFO Utils.cpp:1870] name  Shina’s iphone 
+[2026-06-11 18:09:20.015 3508 INFO Utils.cpp:1878] infoResult.r1  0 
+[2026-06-11 18:09:20.016 3508 INFO Utils.cpp:1883] infoResult.r0  {
+  "DeviceName": "Shina’s iphone",
+  "DeviceClass": "iPhone",
+  "ModelNumber": "MGFD3",
+  "ProductVersion": "26.5",
+  "PhoneNumber": "",
+  "PhoneNumber2": "",
+  "SerialNumber": "F17DLFG30DY0",
+  "UniqueDeviceID": "00008101-0002642621D0001E",
+  "ProductType": "iPhone13,2",
+  "ProductTypeEx": "",
+  "UniqueChipID": "673064892235806",
+  "IMEI": "353044116275653",
+  "IMEI2": "353044117370941",
+  "RegionInfo": "LL/A",
+  "RegionInfoEx": "美国",
+  "BuildVersion": "23F77",
+  "BasebandVersion": "6.51.04",
+  "ProductionDate": "2020年10月25日 (第43周)",
+  "WiFiAddress": "44:90:bb:bd:fd:ef",
+  "BluetoothAddress": "44:90:bb:c1:56:b1",
+  "EthernetAddress": "44:90:bb:c4:af:0a",
+  "DeviceColor": "1",
+  "DeviceEnclosureColor": "9",
+  "CPUArchitecture": "arm64e",
+  "MLBSerialNumber": "F3Y042674TZP55DA",
+  "UniqueDeviceIDEx": "00008101-0002642621D0001E",
+  "HardwareModel": "D53gAP",
+  "RegulatoryModelNumber": "A2172",
+  "ActivationState": "Activated",
+  "SIMStatus": "kCTSIMSupportSIMStatusReady",
+  "SIMTrayStatus": "kCTSIMSupportSIMTrayInsertedWithSIM",
+  "BasebandActivationTicketVersion": "V2",
+  "BasebandStatus": "BBInfoAvailable",
+  "BasebandSerialNumber": "9bc4f379",
+  "PartitionType": "GUID_partition_scheme",
+  "ProtocolVersion": "2",
+  "ActiveWirelessTechnology": "kCTWirelessTechnologyLTE",
+  "InternationalMobileSubscriberIdentity": "621300627454990",
+  "Locale": "en_US",
+  "CarrierBundleInfo0": "com.apple.MTN_ng 70.0",
+  "CarrierBundleInfo1": "",
+  "ChipID": 33025,
+  "Bi": {
+    "BatteryCurrentCapacity": 57,
+    "BatteryIsCharging": true,
+    "ExternalChargeCapable": false,
+    "ExternalConnected": true,
+    "FullyCharged": false
+  },
+  "Di": {
+    "AmountDataAvailable": 22612377600,
+    "AmountDataReserved": 209715200,
+    "AmountRestoreAvailable": 30590242816,
+    "TotalDataAvailable": 101163245568,
+    "TotalDataCapacity": 120102830080,
+    "TotalDiskCapacity": 128000000000,
+    "TotalSystemAvailable": 0,
+    "TotalSystemCapacity": 7768150016
+  },
+  "Fix_file": 0,
+  "IsJB": false,
+  "InstallAFC2": false,
+  "IsActivate": true,
+  "IsMonDev": true,
+  "HasPasswordProtected": false,
+  "InstallAppsync": false,
+  "DeviceIsChaperoned": false,
+  "TelephonyCapability": true
+} 
+[2026-06-11 18:09:20.016 3508 INFO USBDeviceManager.cpp:1225] 设备驱动都已就绪 
+[2026-06-11 18:09:20.017 3508 DEBUG USBDeviceManager.cpp:1045] remove device  USB\VID_05AC&PID_12A8\000081010002642621D0001E 
+[2026-06-11 18:09:20.017 3508 DEBUG USBDeviceManager.cpp:941] addDevice device.type  3    USB\VID_05AC&PID_12A8\000081010002642621D0001E 
+[2026-06-11 18:09:20.017 3508 DEBUG USBDeviceManager.cpp:941] addDevice device.type  3    USB\VID_05AC&PID_12A8\000081010002642621D0001E 
+[2026-06-11 18:09:20.017 3508 DEBUG USBDeviceManager.cpp:990] addDevice device  USB\VID_05AC&PID_12A8\000081010002642621D0001E 
+[2026-06-11 18:09:20.017 3508 INFO USBDeviceManager.cpp:1157] 截取 iOS 设备序列号为: 000081010002642621D0001E usbccgp   15 
+[2026-06-11 18:09:20.541 3508 INFO USBDeviceManager.cpp:1411] ilsc_disable_qtConfig ret  20013 
+[2026-06-11 18:09:20.541 3508 INFO USBDeviceManager.cpp:1418] initUdidAndPair  000081010002642621D0001E 
+[2026-06-11 18:09:21.046 3508 INFO Utils.cpp:1822] get_device_list  1 
+[2026-06-11 18:09:21.047 3508 INFO Utils.cpp:1826] get_device_list  [{"Device_id":11,"Serial_number":"00008101-0002642621D0001E","Conn_type":1}] 
+[2026-06-11 18:09:21.047 3508 INFO Utils.cpp:1827] serialNumber  000081010002642621D0001E 
+[2026-06-11 18:09:21.047 3508 INFO Utils.cpp:1840] udid  00008101-0002642621D0001E 
+[2026-06-11 18:09:21.047 3508 INFO USBDeviceManager.cpp:1425] initUdidAndPair  000081010002642621D0001E 
+[2026-06-11 18:09:21.642 3508 INFO Utils.cpp:1864] r1  0 
+[2026-06-11 18:09:21.642 3508 INFO Utils.cpp:1870] name  Shina’s iphone 
+[2026-06-11 18:09:23.417 3508 INFO Utils.cpp:1878] infoResult.r1  0 
+[2026-06-11 18:09:23.417 3508 INFO Utils.cpp:1883] infoResult.r0  {
+  "DeviceName": "Shina’s iphone",
+  "DeviceClass": "iPhone",
+  "ModelNumber": "MGFD3",
+  "ProductVersion": "26.5",
+  "PhoneNumber": "",
+  "PhoneNumber2": "",
+  "SerialNumber": "F17DLFG30DY0",
+  "UniqueDeviceID": "00008101-0002642621D0001E",
+  "ProductType": "iPhone13,2",
+  "ProductTypeEx": "",
+  "UniqueChipID": "673064892235806",
+  "IMEI": "353044116275653",
+  "IMEI2": "353044117370941",
+  "RegionInfo": "LL/A",
+  "RegionInfoEx": "美国",
+  "BuildVersion": "23F77",
+  "BasebandVersion": "6.51.04",
+  "ProductionDate": "2020年10月25日 (第43周)",
+  "WiFiAddress": "44:90:bb:bd:fd:ef",
+  "BluetoothAddress": "44:90:bb:c1:56:b1",
+  "EthernetAddress": "44:90:bb:c4:af:0a",
+  "DeviceColor": "1",
+  "DeviceEnclosureColor": "9",
+  "CPUArchitecture": "arm64e",
+  "MLBSerialNumber": "F3Y042674TZP55DA",
+  "UniqueDeviceIDEx": "00008101-0002642621D0001E",
+  "HardwareModel": "D53gAP",
+  "RegulatoryModelNumber": "A2172",
+  "ActivationState": "Activated",
+  "SIMStatus": "kCTSIMSupportSIMStatusReady",
+  "SIMTrayStatus": "kCTSIMSupportSIMTrayInsertedWithSIM",
+  "BasebandActivationTicketVersion": "V2",
+  "BasebandStatus": "BBInfoAvailable",
+  "BasebandSerialNumber": "9bc4f379",
+  "PartitionType": "GUID_partition_scheme",
+  "ProtocolVersion": "2",
+  "ActiveWirelessTechnology": "kCTWirelessTechnologyLTE",
+  "InternationalMobileSubscriberIdentity": "621300627454990",
+  "Locale": "en_US",
+  "CarrierBundleInfo0": "com.apple.MTN_ng 70.0",
+  "CarrierBundleInfo1": "",
+  "ChipID": 33025,
+  "Bi": {
+    "BatteryCurrentCapacity": 57,
+    "BatteryIsCharging": true,
+    "ExternalChargeCapable": false,
+    "ExternalConnected": true,
+    "FullyCharged": false
+  },
+  "Di": {
+    "AmountDataAvailable": 22612271104,
+    "AmountDataReserved": 209715200,
+    "AmountRestoreAvailable": 30590136320,
+    "TotalDataAvailable": 101163204608,
+    "TotalDataCapacity": 120102830080,
+    "TotalDiskCapacity": 128000000000,
+    "TotalSystemAvailable": 0,
+    "TotalSystemCapacity": 7768150016
+  },
+  "Fix_file": 0,
+  "IsJB": false,
+  "InstallAFC2": false,
+  "IsActivate": true,
+  "IsMonDev": true,
+  "HasPasswordProtected": false,
+  "InstallAppsync": false,
+  "DeviceIsChaperoned": false,
+  "TelephonyCapability": true
+} 
+[2026-06-11 18:09:23.418 3508 INFO USBDeviceManager.cpp:1225] 设备驱动都已就绪 
+[2026-06-11 18:09:23.419 3508 DEBUG USBDeviceManager.cpp:1045] remove device  USB\VID_05AC&PID_12A8\000081010002642621D0001E 
+[2026-06-11 18:09:23.419 3508 DEBUG USBDeviceManager.cpp:941] addDevice device.type  3    USB\VID_05AC&PID_12A8\000081010002642621D0001E 
+[2026-06-11 18:09:23.419 3508 DEBUG USBDeviceManager.cpp:941] addDevice device.type  3    USB\VID_05AC&PID_12A8\000081010002642621D0001E 
+[2026-06-11 18:09:23.419 3508 DEBUG USBDeviceManager.cpp:990] addDevice device  USB\VID_05AC&PID_12A8\000081010002642621D0001E 
+[2026-06-11 18:09:23.420 3508 INFO USBDeviceManager.cpp:1157] 截取 iOS 设备序列号为: 000081010002642621D0001E usbccgp   15 
+[2026-06-11 18:09:23.997 3508 INFO USBDeviceManager.cpp:1411] ilsc_disable_qtConfig ret  20013 
+[2026-06-11 18:09:23.997 3508 INFO USBDeviceManager.cpp:1418] initUdidAndPair  000081010002642621D0001E 
+[2026-06-11 18:09:24.501 3508 INFO Utils.cpp:1822] get_device_list  1 
+[2026-06-11 18:09:24.501 3508 INFO Utils.cpp:1826] get_device_list  [{"Device_id":11,"Serial_number":"00008101-0002642621D0001E","Conn_type":1}] 
+[2026-06-11 18:09:24.501 3508 INFO Utils.cpp:1827] serialNumber  000081010002642621D0001E 
+[2026-06-11 18:09:24.501 3508 INFO Utils.cpp:1840] udid  00008101-0002642621D0001E 
+[2026-06-11 18:09:24.502 3508 INFO USBDeviceManager.cpp:1425] initUdidAndPair  000081010002642621D0001E 
+[2026-06-11 18:09:25.113 3508 INFO Utils.cpp:1864] r1  0 
+[2026-06-11 18:09:25.113 3508 INFO Utils.cpp:1870] name  Shina’s iphone 
+[2026-06-11 18:09:26.292 3508 INFO Utils.cpp:1878] infoResult.r1  0 
+[2026-06-11 18:09:26.293 3508 INFO Utils.cpp:1883] infoResult.r0  {
+  "DeviceName": "Shina’s iphone",
+  "DeviceClass": "iPhone",
+  "ModelNumber": "MGFD3",
+  "ProductVersion": "26.5",
+  "PhoneNumber": "",
+  "PhoneNumber2": "",
+  "SerialNumber": "F17DLFG30DY0",
+  "UniqueDeviceID": "00008101-0002642621D0001E",
+  "ProductType": "iPhone13,2",
+  "ProductTypeEx": "",
+  "UniqueChipID": "673064892235806",
+  "IMEI": "353044116275653",
+  "IMEI2": "353044117370941",
+  "RegionInfo": "LL/A",
+  "RegionInfoEx": "美国",
+  "BuildVersion": "23F77",
+  "BasebandVersion": "6.51.04",
+  "ProductionDate": "2020年10月25日 (第43周)",
+  "WiFiAddress": "44:90:bb:bd:fd:ef",
+  "BluetoothAddress": "44:90:bb:c1:56:b1",
+  "EthernetAddress": "44:90:bb:c4:af:0a",
+  "DeviceColor": "1",
+  "DeviceEnclosureColor": "9",
+  "CPUArchitecture": "arm64e",
+  "MLBSerialNumber": "F3Y042674TZP55DA",
+  "UniqueDeviceIDEx": "00008101-0002642621D0001E",
+  "HardwareModel": "D53gAP",
+  "RegulatoryModelNumber": "A2172",
+  "ActivationState": "Activated",
+  "SIMStatus": "kCTSIMSupportSIMStatusReady",
+  "SIMTrayStatus": "kCTSIMSupportSIMTrayInsertedWithSIM",
+  "BasebandActivationTicketVersion": "V2",
+  "BasebandStatus": "BBInfoAvailable",
+  "BasebandSerialNumber": "9bc4f379",
+  "PartitionType": "GUID_partition_scheme",
+  "ProtocolVersion": "2",
+  "ActiveWirelessTechnology": "kCTWirelessTechnologyLTE",
+  "InternationalMobileSubscriberIdentity": "621300627454990",
+  "Locale": "en_US",
+  "CarrierBundleInfo0": "com.apple.MTN_ng 70.0",
+  "CarrierBundleInfo1": "",
+  "ChipID": 33025,
+  "Bi": {
+    "BatteryCurrentCapacity": 57,
+    "BatteryIsCharging": true,
+    "ExternalChargeCapable": false,
+    "ExternalConnected": true,
+    "FullyCharged": false
+  },
+  "Di": {
+    "AmountDataAvailable": 22627635200,
+    "AmountDataReserved": 209715200,
+    "AmountRestoreAvailable": 30605500416,
+    "TotalDataAvailable": 101163401216,
+    "TotalDataCapacity": 120102830080,
+    "TotalDiskCapacity": 128000000000,
+    "TotalSystemAvailable": 0,
+    "TotalSystemCapacity": 7768150016
+  },
+  "Fix_file": 0,
+  "IsJB": false,
+  "InstallAFC2": false,
+  "IsActivate": true,
+  "IsMonDev": true,
+  "HasPasswordProtected": false,
+  "InstallAppsync": false,
+  "DeviceIsChaperoned": false,
+  "TelephonyCapability": true
+} 
+[2026-06-11 18:09:26.294 3508 INFO USBDeviceManager.cpp:1225] 设备驱动都已就绪 
+[2026-06-11 18:09:26.294 3508 DEBUG USBDeviceManager.cpp:1045] remove device  USB\VID_05AC&PID_12A8\000081010002642621D0001E 
+[2026-06-11 18:09:26.294 3508 DEBUG USBDeviceManager.cpp:941] addDevice device.type  3    USB\VID_05AC&PID_12A8\000081010002642621D0001E 
+[2026-06-11 18:09:26.294 3508 DEBUG USBDeviceManager.cpp:941] addDevice device.type  3    USB\VID_05AC&PID_12A8\000081010002642621D0001E 
+[2026-06-11 18:09:26.295 3508 DEBUG USBDeviceManager.cpp:990] addDevice device  USB\VID_05AC&PID_12A8\000081010002642621D0001E 
+[2026-06-11 18:09:26.295 3508 INFO USBDeviceManager.cpp:1157] 截取 iOS 设备序列号为: 000081010002642621D0001E usbccgp   15 
+[2026-06-11 18:09:26.936 3508 INFO USBDeviceManager.cpp:1411] ilsc_disable_qtConfig ret  20013 
+[2026-06-11 18:09:26.937 3508 INFO USBDeviceManager.cpp:1418] initUdidAndPair  000081010002642621D0001E 
+[2026-06-11 18:09:27.441 3508 INFO Utils.cpp:1822] get_device_list  1 
+[2026-06-11 18:09:27.442 3508 INFO Utils.cpp:1826] get_device_list  [{"Device_id":11,"Serial_number":"00008101-0002642621D0001E","Conn_type":1}] 
+[2026-06-11 18:09:27.442 3508 INFO Utils.cpp:1827] serialNumber  000081010002642621D0001E 
+[2026-06-11 18:09:27.442 3508 INFO Utils.cpp:1840] udid  00008101-0002642621D0001E 
+[2026-06-11 18:09:27.442 3508 INFO USBDeviceManager.cpp:1425] initUdidAndPair  000081010002642621D0001E 
+[2026-06-11 18:09:27.999 3508 INFO Utils.cpp:1864] r1  0 
+[2026-06-11 18:09:27.999 3508 INFO Utils.cpp:1870] name  Shina’s iphone 
+[2026-06-11 18:09:28.775 3508 INFO Utils.cpp:1878] infoResult.r1  0 
+[2026-06-11 18:09:28.775 3508 INFO Utils.cpp:1883] infoResult.r0  {
+  "DeviceName": "Shina’s iphone",
+  "DeviceClass": "iPhone",
+  "ModelNumber": "MGFD3",
+  "ProductVersion": "26.5",
+  "PhoneNumber": "",
+  "PhoneNumber2": "",
+  "SerialNumber": "F17DLFG30DY0",
+  "UniqueDeviceID": "00008101-0002642621D0001E",
+  "ProductType": "iPhone13,2",
+  "ProductTypeEx": "",
+  "UniqueChipID": "673064892235806",
+  "IMEI": "353044116275653",
+  "IMEI2": "353044117370941",
+  "RegionInfo": "LL/A",
+  "RegionInfoEx": "美国",
+  "BuildVersion": "23F77",
+  "BasebandVersion": "6.51.04",
+  "ProductionDate": "2020年10月25日 (第43周)",
+  "WiFiAddress": "44:90:bb:bd:fd:ef",
+  "BluetoothAddress": "44:90:bb:c1:56:b1",
+  "EthernetAddress": "44:90:bb:c4:af:0a",
+  "DeviceColor": "1",
+  "DeviceEnclosureColor": "9",
+  "CPUArchitecture": "arm64e",
+  "MLBSerialNumber": "F3Y042674TZP55DA",
+  "UniqueDeviceIDEx": "00008101-0002642621D0001E",
+  "HardwareModel": "D53gAP",
+  "RegulatoryModelNumber": "A2172",
+  "ActivationState": "Activated",
+  "SIMStatus": "kCTSIMSupportSIMStatusReady",
+  "SIMTrayStatus": "kCTSIMSupportSIMTrayInsertedWithSIM",
+  "BasebandActivationTicketVersion": "V2",
+  "BasebandStatus": "BBInfoAvailable",
+  "BasebandSerialNumber": "9bc4f379",
+  "PartitionType": "GUID_partition_scheme",
+  "ProtocolVersion": "2",
+  "ActiveWirelessTechnology": "kCTWirelessTechnologyLTE",
+  "InternationalMobileSubscriberIdentity": "621300627454990",
+  "Locale": "en_US",
+  "CarrierBundleInfo0": "com.apple.MTN_ng 70.0",
+  "CarrierBundleInfo1": "",
+  "ChipID": 33025,
+  "Bi": {
+    "BatteryCurrentCapacity": 57,
+    "BatteryIsCharging": true,
+    "ExternalChargeCapable": false,
+    "ExternalConnected": true,
+    "FullyCharged": false
+  },
+  "Di": {
+    "AmountDataAvailable": 22627377152,
+    "AmountDataReserved": 209715200,
+    "AmountRestoreAvailable": 30605242368,
+    "TotalDataAvailable": 101163298816,
+    "TotalDataCapacity": 120102830080,
+    "TotalDiskCapacity": 128000000000,
+    "TotalSystemAvailable": 0,
+    "TotalSystemCapacity": 7768150016
+  },
+  "Fix_file": 0,
+  "IsJB": false,
+  "InstallAFC2": false,
+  "IsActivate": true,
+  "IsMonDev": true,
+  "HasPasswordProtected": true,
+  "InstallAppsync": false,
+  "DeviceIsChaperoned": false,
+  "TelephonyCapability": true
+} 
+[2026-06-11 18:09:28.776 3508 INFO USBDeviceManager.cpp:1225] 设备驱动都已就绪 
+[2026-06-11 18:12:02.038 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-11 18:12:02.049 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-11 18:12:02.067 17268 DEBUG USBDeviceManager.cpp:163] remove device:  \\?\USB#VID_05AC&PID_12A8#000081010002642621D0001E#{a5dcbf10-6530-11d2-901f-00c04fb951ed} 
+[2026-06-11 18:12:02.172 3552 INFO USBDeviceManager.cpp:652] 设备被移除: USB\VID_05AC&PID_12A8&MI_00\6&1E854C6F&0&0000 
+[2026-06-11 18:12:02.172 3552 INFO USBDeviceManager.cpp:652] 设备被移除: USB\VID_05AC&PID_12A8&MI_01\6&1E854C6F&0&0001 
+[2026-06-11 18:12:02.172 3552 INFO USBDeviceManager.cpp:652] 设备被移除: USB\VID_05AC&PID_12A8&MI_02\6&1E854C6F&0&0002 
+[2026-06-11 18:12:02.173 3552 INFO USBDeviceManager.cpp:652] 设备被移除: USB\VID_05AC&PID_12A8\000081010002642621D0001E 
+[2026-06-11 18:12:02.173 3552 INFO USBDeviceManager.cpp:652] 设备被移除: USB\VID_05AC&PID_12A8&MI_00\6&1E854C6F&0&0000 
+[2026-06-11 18:12:02.173 3552 INFO USBDeviceManager.cpp:652] 设备被移除: USB\VID_05AC&PID_12A8&MI_01\6&1E854C6F&0&0001 
+[2026-06-11 18:12:02.173 3552 INFO USBDeviceManager.cpp:652] 设备被移除: USB\VID_05AC&PID_12A8&MI_02\6&1E854C6F&0&0002 
+[2026-06-11 18:12:02.261 3552 INFO USBDeviceManager.cpp:652] 设备被移除: USB\VID_05AC&PID_12A8&MI_01\6&1E854C6F&0&0001 
+[2026-06-11 18:12:02.261 3552 INFO USBDeviceManager.cpp:652] 设备被移除: USB\VID_05AC&PID_12A8&MI_02\6&1E854C6F&0&0002 
+[2026-06-11 18:12:02.261 3552 INFO USBDeviceManager.cpp:652] 设备被移除: USB\VID_05AC&PID_12A8\000081010002642621D0001E 
+[2026-06-11 18:12:02.262 3508 DEBUG USBDeviceManager.cpp:1045] remove device  USB\VID_05AC&PID_12A8\000081010002642621D0001E 
+[2026-06-11 18:48:33.017 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-11 18:48:33.019 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-11 18:48:33.170 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-11 18:48:33.172 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-11 18:48:33.418 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-11 18:48:33.420 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-11 19:07:28.679 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-11 19:07:28.684 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-11 19:07:28.690 17268 DEBUG USBDeviceManager.cpp:163] remove device:  \\?\USB#VID_3515&PID_3020#b120300001#{a5dcbf10-6530-11d2-901f-00c04fb951ed} 
+[2026-06-11 20:48:28.572 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-11 20:48:28.574 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-11 20:48:28.719 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-11 20:48:28.722 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-11 20:48:28.768 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-11 20:48:28.787 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-11 20:48:28.845 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-11 20:48:28.855 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-11 20:48:28.888 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-11 20:48:28.895 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-11 20:48:28.917 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-11 20:48:28.918 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-11 20:48:28.938 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-11 20:48:28.942 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-12 11:22:33.356 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-12 11:22:33.357 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-12 11:22:34.607 17268 DEBUG USBDeviceManager.cpp:163] remove device:  \\?\USB#VID_8087&PID_0AAA#5&2699fb5d&0&14#{a5dcbf10-6530-11d2-901f-00c04fb951ed} 
+[2026-06-12 11:22:34.695 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-12 11:22:34.697 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-12 11:22:34.843 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-12 11:22:34.845 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-12 11:22:36.186 17268 DEBUG USBDeviceManager.cpp:156] append device:  \\?\USB#VID_8087&PID_0AAA#5&2699fb5d&0&14#{a5dcbf10-6530-11d2-901f-00c04fb951ed} 
+[2026-06-12 11:22:36.237 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-12 11:22:36.243 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-12 11:22:36.361 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-12 11:22:36.364 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-12 11:22:53.922 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-12 11:22:53.924 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-12 11:22:53.957 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-12 11:22:53.958 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-12 11:22:53.993 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-12 11:22:53.994 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-12 11:22:54.039 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-12 11:22:54.041 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-12 11:22:54.046 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-12 11:22:54.047 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-12 11:22:54.086 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-12 11:22:54.095 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-12 11:22:54.125 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-12 11:22:54.126 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-12 11:22:54.132 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-12 11:22:54.133 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-12 11:22:54.136 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-12 11:22:54.137 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-12 11:22:54.140 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-12 11:22:54.140 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-12 11:22:54.206 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-12 11:22:54.208 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-12 11:22:54.237 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-12 11:22:54.246 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-12 11:22:54.277 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-12 11:22:54.279 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-12 11:22:54.284 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-12 11:22:54.285 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-12 11:22:54.289 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-12 11:22:54.289 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-12 11:22:54.292 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-12 11:22:54.293 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-12 11:22:54.312 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-12 11:22:54.312 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-12 11:22:54.340 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-12 11:22:54.344 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-12 11:22:54.391 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-12 11:22:54.393 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-12 11:22:54.410 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-12 11:22:54.411 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-12 11:22:54.414 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-12 11:22:54.415 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-12 11:22:54.420 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-12 11:22:54.421 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-12 11:22:54.425 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-12 11:22:54.426 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-12 11:22:54.541 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-12 11:22:54.553 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-12 11:22:54.580 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-12 11:22:54.583 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-12 11:22:54.595 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-12 11:22:54.598 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-12 11:22:54.782 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-12 11:22:54.784 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-12 11:22:55.099 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-12 11:22:55.102 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-12 11:22:55.528 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-12 11:22:55.532 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-12 11:22:55.942 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-12 11:22:55.949 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-12 11:22:55.961 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-12 11:22:55.963 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-12 11:22:56.215 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-12 11:22:56.225 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-12 11:22:56.269 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-12 11:22:56.277 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-12 11:22:56.327 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-12 11:22:56.331 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-12 11:22:56.352 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-12 11:22:56.353 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-12 11:22:56.372 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-12 11:22:56.375 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-12 11:22:56.504 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-12 11:22:56.508 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-12 11:22:56.761 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-12 11:22:56.763 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-12 11:22:59.563 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-12 11:22:59.575 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-12 11:22:59.599 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-12 11:22:59.601 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-12 11:22:59.608 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-12 11:22:59.608 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-12 11:22:59.611 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-12 11:22:59.611 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-12 11:24:18.472 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-12 11:24:18.500 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-12 11:24:18.533 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-12 11:24:18.534 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-12 12:26:45.175 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-12 12:26:45.177 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-12 12:26:45.329 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-12 12:26:45.332 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-12 12:26:45.455 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-12 12:26:45.457 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-12 12:26:56.444 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-12 12:26:56.454 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-12 12:26:56.468 17268 DEBUG USBDeviceManager.cpp:163] remove device:  \\?\USB#VID_1BCF&PID_2B99#5&2699fb5d&0&5#{a5dcbf10-6530-11d2-901f-00c04fb951ed} 
+[2026-06-12 12:26:56.481 3552 INFO USBDeviceManager.cpp:652] 设备被移除: USB\VID_1BCF&PID_2B99\5&2699FB5D&0&5 
+[2026-06-12 12:26:56.482 3552 INFO USBDeviceManager.cpp:652] 设备被移除: USB\VID_1BCF&PID_2B99\5&2699FB5D&0&5 
+[2026-06-12 12:26:56.513 3552 INFO USBDeviceManager.cpp:652] 设备被移除: USB\VID_1BCF&PID_2B99\5&2699FB5D&0&5 
+[2026-06-12 12:26:56.706 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-12 12:26:56.710 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-12 12:26:56.717 17268 DEBUG USBDeviceManager.cpp:156] append device:  \\?\USB#VID_1BCF&PID_2B99#5&2699fb5d&0&5#{a5dcbf10-6530-11d2-901f-00c04fb951ed} 
+[2026-06-12 12:26:56.736 3552 DEBUG USBDeviceManager.cpp:490] 忽略未知设备: USB\VID_1BCF&PID_2B99\5&2699FB5D&0&5 
+[2026-06-12 12:26:56.756 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-12 12:26:56.759 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-12 12:26:56.767 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-12 12:26:56.768 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-12 12:26:56.787 3552 DEBUG USBDeviceManager.cpp:490] 忽略未知设备: USB\VID_1BCF&PID_2B99\5&2699FB5D&0&5 
+[2026-06-12 12:26:57.017 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-12 12:26:57.020 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-12 17:34:20.238 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-12 17:34:20.262 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-12 17:34:20.309 17268 DEBUG USBDeviceManager.cpp:156] append device:  \\?\USB#VID_3515&PID_3020#b120300001#{a5dcbf10-6530-11d2-901f-00c04fb951ed} 
+[2026-06-12 17:34:20.319 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-12 17:34:20.337 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-12 17:34:20.415 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-12 17:34:20.425 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-12 17:34:20.491 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-12 17:34:20.501 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-12 17:34:20.529 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-12 17:34:20.531 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-12 17:34:20.539 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-12 17:34:20.541 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-12 17:34:20.545 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-12 17:34:20.546 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-12 17:34:20.549 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-12 17:34:20.550 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-12 17:34:20.552 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-12 17:34:20.553 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-12 17:34:20.555 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-12 17:34:20.556 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-12 17:34:20.557 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-12 17:34:20.558 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-12 17:35:19.362 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-12 17:35:19.365 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-12 17:35:20.374 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-12 17:35:20.377 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-12 17:35:20.412 3552 INFO USBDeviceManager.cpp:622] 
+ 
+[2026-06-12 17:35:20.426 3552 INFO USBDeviceManager.cpp:623] 	              device: 10007 65344
+ 
+[2026-06-12 17:35:20.426 3552 INFO USBDeviceManager.cpp:624] 	               speed: Unknown
+ 
+[2026-06-12 17:35:20.426 3552 INFO USBDeviceManager.cpp:625] 	        Manufacturer: 
+ 
+[2026-06-12 17:35:20.426 3552 INFO USBDeviceManager.cpp:626] 	             Product: 
+ 
+[2026-06-12 17:35:20.426 3552 INFO USBDeviceManager.cpp:627] 	              Serial: 937C2635
+ 
+[2026-06-12 17:35:20.426 3552 INFO USBDeviceManager.cpp:628] 	         ConfigIndex: -1
+ 
+[2026-06-12 17:35:20.426 3552 INFO USBDeviceManager.cpp:629] 	           Interface: -1
+ 
+[2026-06-12 17:35:20.426 3552 INFO USBDeviceManager.cpp:630] 	                  In: 0x01
+ 
+[2026-06-12 17:35:20.426 3552 INFO USBDeviceManager.cpp:631] 	                 Out: 0x81
+ 
+[2026-06-12 17:35:20.426 3552 INFO USBDeviceManager.cpp:632] 
+ 
+[2026-06-12 17:35:20.426 3552 INFO USBDeviceManager.cpp:633] 	          instanceId: USB\VID_2717&PID_FF40\937C2635
+ 
+[2026-06-12 17:35:20.426 3552 INFO USBDeviceManager.cpp:634] 	      device vid pid: 2717:FF40
+ 
+[2026-06-12 17:35:20.426 3552 INFO USBDeviceManager.cpp:635] 	              driver: 1
+ 
+[2026-06-12 17:35:20.426 3552 INFO USBDeviceManager.cpp:636] 	                port: 1
+ 
+[2026-06-12 17:35:20.426 3552 INFO USBDeviceManager.cpp:637] 	         device desc: Redmi 15
+ 
+[2026-06-12 17:35:20.426 3552 INFO USBDeviceManager.cpp:638] 	       device is adb: 0
+ 
+[2026-06-12 17:35:20.427 3508 DEBUG USBDeviceManager.cpp:941] addDevice device.type  1    USB\VID_2717&PID_FF40\937C2635 
+[2026-06-12 17:35:20.427 3508 DEBUG USBDeviceManager.cpp:990] addDevice device  USB\VID_2717&PID_FF40\937C2635 
+[2026-06-12 17:35:21.460 17268 DEBUG USBDeviceManager.cpp:156] append device:  \\?\USB#VID_2717&PID_FF40#937c2635#{a5dcbf10-6530-11d2-901f-00c04fb951ed} 
+[2026-06-12 17:35:21.519 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-12 17:35:21.526 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-12 17:35:22.548 3552 INFO USBDeviceManager.cpp:622] 
+ 
+[2026-06-12 17:35:22.548 3552 INFO USBDeviceManager.cpp:623] 	              device: 10007 65344
+ 
+[2026-06-12 17:35:22.548 3552 INFO USBDeviceManager.cpp:624] 	               speed: Unknown
+ 
+[2026-06-12 17:35:22.548 3552 INFO USBDeviceManager.cpp:625] 	        Manufacturer: 
+ 
+[2026-06-12 17:35:22.548 3552 INFO USBDeviceManager.cpp:626] 	             Product: 
+ 
+[2026-06-12 17:35:22.548 3552 INFO USBDeviceManager.cpp:627] 	              Serial: 937C2635
+ 
+[2026-06-12 17:35:22.548 3552 INFO USBDeviceManager.cpp:628] 	         ConfigIndex: -1
+ 
+[2026-06-12 17:35:22.548 3552 INFO USBDeviceManager.cpp:629] 	           Interface: -1
+ 
+[2026-06-12 17:35:22.549 3552 INFO USBDeviceManager.cpp:630] 	                  In: 0x01
+ 
+[2026-06-12 17:35:22.549 3552 INFO USBDeviceManager.cpp:631] 	                 Out: 0x81
+ 
+[2026-06-12 17:35:22.549 3552 INFO USBDeviceManager.cpp:632] 
+ 
+[2026-06-12 17:35:22.549 3552 INFO USBDeviceManager.cpp:633] 	          instanceId: USB\VID_2717&PID_FF40\937C2635
+ 
+[2026-06-12 17:35:22.549 3552 INFO USBDeviceManager.cpp:634] 	      device vid pid: 2717:FF40
+ 
+[2026-06-12 17:35:22.549 3552 INFO USBDeviceManager.cpp:635] 	              driver: 1
+ 
+[2026-06-12 17:35:22.549 3552 INFO USBDeviceManager.cpp:636] 	                port: 1
+ 
+[2026-06-12 17:35:22.549 3552 INFO USBDeviceManager.cpp:637] 	         device desc: Redmi 15
+ 
+[2026-06-12 17:35:22.549 3552 INFO USBDeviceManager.cpp:638] 	       device is adb: 0
+ 
+[2026-06-12 17:35:22.552 3508 DEBUG USBDeviceManager.cpp:941] addDevice device.type  1    USB\VID_2717&PID_FF40\937C2635 
+[2026-06-12 17:35:26.951 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-12 17:35:26.968 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-12 17:35:27.005 17268 DEBUG USBDeviceManager.cpp:163] remove device:  \\?\USB#VID_2717&PID_FF40#937c2635#{a5dcbf10-6530-11d2-901f-00c04fb951ed} 
+[2026-06-12 17:35:27.048 3552 INFO USBDeviceManager.cpp:652] 设备被移除: USB\VID_2717&PID_FF40\937C2635 
+[2026-06-12 17:35:27.049 3552 INFO USBDeviceManager.cpp:652] 设备被移除: USB\VID_2717&PID_FF40\937C2635 
+[2026-06-12 17:35:27.050 3508 DEBUG USBDeviceManager.cpp:1045] remove device  USB\VID_2717&PID_FF40\937C2635 
+[2026-06-12 17:35:27.124 3552 INFO USBDeviceManager.cpp:652] 设备被移除: USB\VID_2717&PID_FF40\937C2635 
+[2026-06-12 17:35:27.803 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-12 17:35:27.808 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-12 17:35:28.052 17268 DEBUG USBDeviceManager.cpp:156] append device:  \\?\USB#VID_2717&PID_FF40#937c2635#{a5dcbf10-6530-11d2-901f-00c04fb951ed} 
+[2026-06-12 17:35:28.092 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-12 17:35:28.098 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-12 17:35:28.876 3552 INFO USBDeviceManager.cpp:622] 
+ 
+[2026-06-12 17:35:28.876 3552 INFO USBDeviceManager.cpp:623] 	              device: 10007 65344
+ 
+[2026-06-12 17:35:28.876 3552 INFO USBDeviceManager.cpp:624] 	               speed: Unknown
+ 
+[2026-06-12 17:35:28.876 3552 INFO USBDeviceManager.cpp:625] 	        Manufacturer: 
+ 
+[2026-06-12 17:35:28.876 3552 INFO USBDeviceManager.cpp:626] 	             Product: 
+ 
+[2026-06-12 17:35:28.876 3552 INFO USBDeviceManager.cpp:627] 	              Serial: 937C2635
+ 
+[2026-06-12 17:35:28.876 3552 INFO USBDeviceManager.cpp:628] 	         ConfigIndex: -1
+ 
+[2026-06-12 17:35:28.876 3552 INFO USBDeviceManager.cpp:629] 	           Interface: -1
+ 
+[2026-06-12 17:35:28.876 3552 INFO USBDeviceManager.cpp:630] 	                  In: 0x01
+ 
+[2026-06-12 17:35:28.876 3552 INFO USBDeviceManager.cpp:631] 	                 Out: 0x81
+ 
+[2026-06-12 17:35:28.876 3552 INFO USBDeviceManager.cpp:632] 
+ 
+[2026-06-12 17:35:28.876 3552 INFO USBDeviceManager.cpp:633] 	          instanceId: USB\VID_2717&PID_FF40\937C2635
+ 
+[2026-06-12 17:35:28.877 3552 INFO USBDeviceManager.cpp:634] 	      device vid pid: 2717:FF40
+ 
+[2026-06-12 17:35:28.877 3552 INFO USBDeviceManager.cpp:635] 	              driver: 1
+ 
+[2026-06-12 17:35:28.877 3552 INFO USBDeviceManager.cpp:636] 	                port: 1
+ 
+[2026-06-12 17:35:28.877 3552 INFO USBDeviceManager.cpp:637] 	         device desc: Redmi 15
+ 
+[2026-06-12 17:35:28.877 3552 INFO USBDeviceManager.cpp:638] 	       device is adb: 0
+ 
+[2026-06-12 17:35:28.877 3508 DEBUG USBDeviceManager.cpp:941] addDevice device.type  1    USB\VID_2717&PID_FF40\937C2635 
+[2026-06-12 17:35:28.877 3508 DEBUG USBDeviceManager.cpp:990] addDevice device  USB\VID_2717&PID_FF40\937C2635 
+[2026-06-12 17:35:30.001 3552 INFO USBDeviceManager.cpp:622] 
+ 
+[2026-06-12 17:35:30.001 3552 INFO USBDeviceManager.cpp:623] 	              device: 10007 65344
+ 
+[2026-06-12 17:35:30.001 3552 INFO USBDeviceManager.cpp:624] 	               speed: Unknown
+ 
+[2026-06-12 17:35:30.001 3552 INFO USBDeviceManager.cpp:625] 	        Manufacturer: 
+ 
+[2026-06-12 17:35:30.001 3552 INFO USBDeviceManager.cpp:626] 	             Product: 
+ 
+[2026-06-12 17:35:30.001 3552 INFO USBDeviceManager.cpp:627] 	              Serial: 937C2635
+ 
+[2026-06-12 17:35:30.001 3552 INFO USBDeviceManager.cpp:628] 	         ConfigIndex: -1
+ 
+[2026-06-12 17:35:30.001 3552 INFO USBDeviceManager.cpp:629] 	           Interface: -1
+ 
+[2026-06-12 17:35:30.002 3552 INFO USBDeviceManager.cpp:630] 	                  In: 0x01
+ 
+[2026-06-12 17:35:30.002 3552 INFO USBDeviceManager.cpp:631] 	                 Out: 0x81
+ 
+[2026-06-12 17:35:30.002 3552 INFO USBDeviceManager.cpp:632] 
+ 
+[2026-06-12 17:35:30.002 3552 INFO USBDeviceManager.cpp:633] 	          instanceId: USB\VID_2717&PID_FF40\937C2635
+ 
+[2026-06-12 17:35:30.002 3552 INFO USBDeviceManager.cpp:634] 	      device vid pid: 2717:FF40
+ 
+[2026-06-12 17:35:30.002 3552 INFO USBDeviceManager.cpp:635] 	              driver: 1
+ 
+[2026-06-12 17:35:30.002 3552 INFO USBDeviceManager.cpp:636] 	                port: 1
+ 
+[2026-06-12 17:35:30.002 3552 INFO USBDeviceManager.cpp:637] 	         device desc: Redmi 15
+ 
+[2026-06-12 17:35:30.002 3552 INFO USBDeviceManager.cpp:638] 	       device is adb: 0
+ 
+[2026-06-12 17:35:30.003 3508 DEBUG USBDeviceManager.cpp:941] addDevice device.type  1    USB\VID_2717&PID_FF40\937C2635 
+[2026-06-12 17:39:04.856 17268 DEBUG USBDeviceManager.cpp:163] remove device:  \\?\USB#VID_2717&PID_FF40#937c2635#{a5dcbf10-6530-11d2-901f-00c04fb951ed} 
+[2026-06-12 17:39:04.908 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-12 17:39:04.915 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-12 17:39:04.969 3552 INFO USBDeviceManager.cpp:652] 设备被移除: USB\VID_2717&PID_FF40\937C2635 
+[2026-06-12 17:39:04.969 3552 INFO USBDeviceManager.cpp:652] 设备被移除: USB\VID_2717&PID_FF40\937C2635 
+[2026-06-12 17:39:04.969 3508 DEBUG USBDeviceManager.cpp:1045] remove device  USB\VID_2717&PID_FF40\937C2635 
+[2026-06-12 17:42:33.824 17268 DEBUG USBDeviceManager.cpp:163] remove device:  \\?\USB#VID_3515&PID_3020#b120300001#{a5dcbf10-6530-11d2-901f-00c04fb951ed} 
+[2026-06-12 19:16:47.120 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-12 19:16:47.123 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-12 19:16:47.347 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-12 19:16:47.351 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-12 19:16:47.437 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-12 19:16:47.441 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-12 20:20:58.654 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-12 20:20:58.665 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-12 20:20:58.678 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-12 20:20:58.679 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-12 20:20:58.795 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-12 20:20:58.798 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-12 20:20:58.921 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-12 20:20:58.925 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-12 20:20:58.935 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-12 20:20:58.936 17268 DEBUG USBDeviceManager.cpp:168] device nodes changed  

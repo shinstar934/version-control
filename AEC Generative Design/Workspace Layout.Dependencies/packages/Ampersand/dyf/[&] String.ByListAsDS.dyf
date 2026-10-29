@@ -1,0 +1,179 @@
+{
+  "Uuid": "780bf99a-560c-4426-958e-829161a5e166",
+  "IsCustomNode": true,
+  "Category": "Ampersand",
+  "Description": "Convert a list of strings to a single string in DS format that would produce the same string",
+  "Name": "[&] String.ByListAsDS",
+  "ElementResolver": {
+    "ResolutionMap": {}
+  },
+  "Inputs": [],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "PythonNodeModels.PythonNode, PythonNodeModels",
+      "NodeType": "PythonScriptNode",
+      "Code": "# Translate a list of strings in Dynamo to a single string formatted as if it were text in a code block to yield the same result.\r\n#\r\n# Colin McCrone\r\n# Twitter:  https://twitter.com/colinmccrone\r\n# LinkedIn: https://www.linkedin.com/in/colinmccrone\r\n# Updated:  2019-05-20\r\n#\r\nimport clr\r\nclr.AddReference('ProtoGeometry')\r\n\r\nstrs = IN[0]\r\n\r\nds = \"[\"\r\n\r\nfor i in range(len(strs)):\r\n\tds = ds + \"\\\"\" + strs[i]\r\n\r\n\tif i == len(strs)-1:\r\n\t\tds = ds + \"\\\"\"\r\n\telse:\r\n\t\tds = ds + \"\\\",\\n\"\r\n\r\nds = ds + \"];\"\r\n\r\nOUT = ds",
+      "VariableInputPorts": true,
+      "Id": "4492cf6a8f7d491a85b2a59f9b42e823",
+      "Inputs": [
+        {
+          "Id": "1acfec416f9c46208b3d86a01bf0d59d",
+          "Name": "IN[0]",
+          "Description": "Input #0",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "e6142800b2d2479a9eeeb24f7a1537c0",
+          "Name": "OUT",
+          "Description": "Result of the python script",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Runs an embedded IronPython script."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Symbol, DynamoCore",
+      "NodeType": "InputNode",
+      "Parameter": {
+        "Name": "list",
+        "TypeName": "string",
+        "TypeRank": 1,
+        "DefaultValue": null,
+        "Description": ""
+      },
+      "Id": "ba26d51386524efb9f7b0c8a318e10dc",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "962abba4b214469ba4b034ce75b7508c",
+          "Name": "",
+          "Description": "Symbol",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "A function parameter, use with custom nodes.\r\n\r\nYou can specify the type and default value for parameter. E.g.,\r\n\r\ninput : var[]..[]\r\nvalue : bool = false"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Output, DynamoCore",
+      "NodeType": "OutputNode",
+      "ElementResolver": null,
+      "Symbol": "string",
+      "Id": "56e68e6896844283ba9abced1cf585c8",
+      "Inputs": [
+        {
+          "Id": "527a5714e67a41ee95b308b3a5c7875d",
+          "Name": "",
+          "Description": "",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [],
+      "Replication": "Disabled",
+      "Description": "A function output, use with custom nodes"
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "e6142800b2d2479a9eeeb24f7a1537c0",
+      "End": "527a5714e67a41ee95b308b3a5c7875d",
+      "Id": "9779eaa9be764f579a5cdd455222cbb3"
+    },
+    {
+      "Start": "962abba4b214469ba4b034ce75b7508c",
+      "End": "1acfec416f9c46208b3d86a01bf0d59d",
+      "Id": "106191f1f7aa4197aec60f9743e339a4"
+    }
+  ],
+  "Dependencies": [],
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": false,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "2.0.2.6826",
+      "RunType": "Manual",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "Background Preview",
+      "EyeX": -17.0,
+      "EyeY": 24.0,
+      "EyeZ": 50.0,
+      "LookX": 12.0,
+      "LookY": -13.0,
+      "LookZ": -58.0,
+      "UpX": 0.0,
+      "UpY": 1.0,
+      "UpZ": 0.0
+    },
+    "NodeViews": [
+      {
+        "ShowGeometry": true,
+        "Name": "Python Script",
+        "Id": "4492cf6a8f7d491a85b2a59f9b42e823",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 281.59999999999991,
+        "Y": -53.599999999999994
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Input",
+        "Id": "ba26d51386524efb9f7b0c8a318e10dc",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -26.399999999999977,
+        "Y": -55.19999999999996
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Output",
+        "Id": "56e68e6896844283ba9abced1cf585c8",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 610.4,
+        "Y": -59.999999999999972
+      }
+    ],
+    "Annotations": [
+      {
+        "Id": "983c6fec1f424358b286cac57fda0350",
+        "Title": "Colin McCrone\r\nTwitter:  @ColinMcCrone\r\nLinkedIn: https://www.linkedin.com/in/colinmccrone\r\nUpdated:  2019-05-20\r\n\r\nAn example Dynamo script for how to use this node can be found in the 'extra' folder where the package files are stored. To find it, go to the Packages Menu and select \"Manage Packages.\" Where Ampersand is listed, open the drop-down menu link at the right and choose \"Show Root Directory.\" Open the \"extra\" folder to find the example file called AmpersandExamples.dyn.",
+        "Nodes": [],
+        "Left": -27.999999999999716,
+        "Top": -308.00000000000017,
+        "Width": 0.0,
+        "Height": 0.0,
+        "FontSize": 36.0,
+        "InitialTop": 0.0,
+        "InitialHeight": 0.0,
+        "TextblockHeight": 0.0,
+        "Background": "#FFC1D676"
+      }
+    ],
+    "X": 336.81227074024048,
+    "Y": 481.777991737727,
+    "Zoom": 1.1047642563030273
+  }
+}

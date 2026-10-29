@@ -1,0 +1,245 @@
+[2026-06-17 20:02:34.651 12000 DEBUG USBDeviceManager.cpp:490] 忽略未知设备: USB\VID_1BCF&PID_2B99\5&2699FB5D&0&5 
+[2026-06-17 20:03:55.983 3212 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-17 20:03:55.996 3212 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-17 20:03:56.007 3212 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-17 20:03:56.008 3212 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-17 20:06:43.394 3212 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-17 20:06:43.448 3212 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-17 20:06:43.449 3212 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-17 20:06:43.449 3212 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-17 20:06:43.449 3212 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-17 20:06:43.667 3212 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-17 20:06:47.558 3212 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-17 20:06:47.563 3212 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-17 20:06:47.575 3212 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-17 20:06:47.602 3212 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-17 20:06:47.607 3212 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-17 20:06:47.624 3212 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-17 20:06:47.655 3212 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-17 20:06:47.676 3212 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-17 20:06:47.682 3212 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-17 20:06:47.949 3212 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-17 20:06:47.974 3212 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-17 20:06:47.976 3212 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-17 20:06:47.984 3212 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-17 20:06:47.986 3212 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-17 20:06:48.050 3212 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-17 20:06:48.708 3212 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-17 20:06:48.764 3212 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-17 20:06:48.802 3212 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-17 20:06:48.943 3212 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-17 20:06:49.190 3212 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-17 20:06:49.205 3212 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-17 20:06:50.642 3212 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-17 20:06:50.651 3212 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-17 20:06:50.652 3212 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-17 20:36:13.224 3212 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-17 20:36:14.494 12000 INFO USBDeviceManager.cpp:622] 
+ 
+[2026-06-17 20:36:14.495 12000 INFO USBDeviceManager.cpp:623] 	              device: 10007 65344
+ 
+[2026-06-17 20:36:14.495 12000 INFO USBDeviceManager.cpp:624] 	               speed: Unknown
+ 
+[2026-06-17 20:36:14.495 12000 INFO USBDeviceManager.cpp:625] 	        Manufacturer: 
+ 
+[2026-06-17 20:36:14.496 12000 INFO USBDeviceManager.cpp:626] 	             Product: 
+ 
+[2026-06-17 20:36:14.496 12000 INFO USBDeviceManager.cpp:627] 	              Serial: 937C2635
+ 
+[2026-06-17 20:36:14.496 12000 INFO USBDeviceManager.cpp:628] 	         ConfigIndex: -1
+ 
+[2026-06-17 20:36:14.496 12000 INFO USBDeviceManager.cpp:629] 	           Interface: -1
+ 
+[2026-06-17 20:36:14.496 12000 INFO USBDeviceManager.cpp:630] 	                  In: 0x01
+ 
+[2026-06-17 20:36:14.496 12000 INFO USBDeviceManager.cpp:631] 	                 Out: 0x81
+ 
+[2026-06-17 20:36:14.497 12000 INFO USBDeviceManager.cpp:632] 
+ 
+[2026-06-17 20:36:14.497 12000 INFO USBDeviceManager.cpp:633] 	          instanceId: USB\VID_2717&PID_FF40\937C2635
+ 
+[2026-06-17 20:36:14.497 12000 INFO USBDeviceManager.cpp:634] 	      device vid pid: 2717:FF40
+ 
+[2026-06-17 20:36:14.497 12000 INFO USBDeviceManager.cpp:635] 	              driver: 1
+ 
+[2026-06-17 20:36:14.497 12000 INFO USBDeviceManager.cpp:636] 	                port: 1
+ 
+[2026-06-17 20:36:14.497 12000 INFO USBDeviceManager.cpp:637] 	         device desc: Redmi 15
+ 
+[2026-06-17 20:36:14.498 12000 INFO USBDeviceManager.cpp:638] 	       device is adb: 0
+ 
+[2026-06-17 20:36:14.502 14884 DEBUG USBDeviceManager.cpp:941] addDevice device.type  1    USB\VID_2717&PID_FF40\937C2635 
+[2026-06-17 20:36:14.502 14884 DEBUG USBDeviceManager.cpp:990] addDevice device  USB\VID_2717&PID_FF40\937C2635 
+[2026-06-17 20:36:17.431 3212 DEBUG USBDeviceManager.cpp:156] append device:  \\?\USB#VID_2717&PID_FF40#937c2635#{a5dcbf10-6530-11d2-901f-00c04fb951ed} 
+[2026-06-17 20:36:17.433 3212 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-17 20:36:18.460 12000 INFO USBDeviceManager.cpp:622] 
+ 
+[2026-06-17 20:36:18.460 12000 INFO USBDeviceManager.cpp:623] 	              device: 10007 65344
+ 
+[2026-06-17 20:36:18.460 12000 INFO USBDeviceManager.cpp:624] 	               speed: Unknown
+ 
+[2026-06-17 20:36:18.460 12000 INFO USBDeviceManager.cpp:625] 	        Manufacturer: 
+ 
+[2026-06-17 20:36:18.460 12000 INFO USBDeviceManager.cpp:626] 	             Product: 
+ 
+[2026-06-17 20:36:18.460 12000 INFO USBDeviceManager.cpp:627] 	              Serial: 937C2635
+ 
+[2026-06-17 20:36:18.460 12000 INFO USBDeviceManager.cpp:628] 	         ConfigIndex: -1
+ 
+[2026-06-17 20:36:18.460 12000 INFO USBDeviceManager.cpp:629] 	           Interface: -1
+ 
+[2026-06-17 20:36:18.460 12000 INFO USBDeviceManager.cpp:630] 	                  In: 0x01
+ 
+[2026-06-17 20:36:18.460 12000 INFO USBDeviceManager.cpp:631] 	                 Out: 0x81
+ 
+[2026-06-17 20:36:18.460 12000 INFO USBDeviceManager.cpp:632] 
+ 
+[2026-06-17 20:36:18.460 12000 INFO USBDeviceManager.cpp:633] 	          instanceId: USB\VID_2717&PID_FF40\937C2635
+ 
+[2026-06-17 20:36:18.460 12000 INFO USBDeviceManager.cpp:634] 	      device vid pid: 2717:FF40
+ 
+[2026-06-17 20:36:18.460 12000 INFO USBDeviceManager.cpp:635] 	              driver: 1
+ 
+[2026-06-17 20:36:18.460 12000 INFO USBDeviceManager.cpp:636] 	                port: 1
+ 
+[2026-06-17 20:36:18.460 12000 INFO USBDeviceManager.cpp:637] 	         device desc: Redmi 15
+ 
+[2026-06-17 20:36:18.461 12000 INFO USBDeviceManager.cpp:638] 	       device is adb: 0
+ 
+[2026-06-17 20:36:18.461 14884 DEBUG USBDeviceManager.cpp:941] addDevice device.type  1    USB\VID_2717&PID_FF40\937C2635 
+[2026-06-17 20:36:25.301 3212 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-17 20:36:25.312 3212 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-17 20:36:25.332 3212 DEBUG USBDeviceManager.cpp:163] remove device:  \\?\USB#VID_2717&PID_FF40#937c2635#{a5dcbf10-6530-11d2-901f-00c04fb951ed} 
+[2026-06-17 20:36:25.354 12000 INFO USBDeviceManager.cpp:652] 设备被移除: USB\VID_2717&PID_FF40\937C2635 
+[2026-06-17 20:36:25.355 12000 INFO USBDeviceManager.cpp:652] 设备被移除: USB\VID_2717&PID_FF40\937C2635 
+[2026-06-17 20:36:25.355 14884 DEBUG USBDeviceManager.cpp:1045] remove device  USB\VID_2717&PID_FF40\937C2635 
+[2026-06-17 20:36:25.402 12000 INFO USBDeviceManager.cpp:652] 设备被移除: USB\VID_2717&PID_FF40\937C2635 
+[2026-06-17 20:36:26.141 3212 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-17 20:36:26.145 3212 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-17 20:36:26.317 3212 DEBUG USBDeviceManager.cpp:156] append device:  \\?\USB#VID_2717&PID_FF40#937c2635#{a5dcbf10-6530-11d2-901f-00c04fb951ed} 
+[2026-06-17 20:36:26.360 3212 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-17 20:36:26.363 3212 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-17 20:36:27.174 12000 INFO USBDeviceManager.cpp:622] 
+ 
+[2026-06-17 20:36:27.174 12000 INFO USBDeviceManager.cpp:623] 	              device: 10007 65344
+ 
+[2026-06-17 20:36:27.174 12000 INFO USBDeviceManager.cpp:624] 	               speed: Unknown
+ 
+[2026-06-17 20:36:27.174 12000 INFO USBDeviceManager.cpp:625] 	        Manufacturer: 
+ 
+[2026-06-17 20:36:27.174 12000 INFO USBDeviceManager.cpp:626] 	             Product: 
+ 
+[2026-06-17 20:36:27.174 12000 INFO USBDeviceManager.cpp:627] 	              Serial: 937C2635
+ 
+[2026-06-17 20:36:27.174 12000 INFO USBDeviceManager.cpp:628] 	         ConfigIndex: -1
+ 
+[2026-06-17 20:36:27.174 12000 INFO USBDeviceManager.cpp:629] 	           Interface: -1
+ 
+[2026-06-17 20:36:27.174 12000 INFO USBDeviceManager.cpp:630] 	                  In: 0x01
+ 
+[2026-06-17 20:36:27.174 12000 INFO USBDeviceManager.cpp:631] 	                 Out: 0x81
+ 
+[2026-06-17 20:36:27.175 12000 INFO USBDeviceManager.cpp:632] 
+ 
+[2026-06-17 20:36:27.175 12000 INFO USBDeviceManager.cpp:633] 	          instanceId: USB\VID_2717&PID_FF40\937C2635
+ 
+[2026-06-17 20:36:27.175 12000 INFO USBDeviceManager.cpp:634] 	      device vid pid: 2717:FF40
+ 
+[2026-06-17 20:36:27.175 12000 INFO USBDeviceManager.cpp:635] 	              driver: 1
+ 
+[2026-06-17 20:36:27.175 12000 INFO USBDeviceManager.cpp:636] 	                port: 1
+ 
+[2026-06-17 20:36:27.175 12000 INFO USBDeviceManager.cpp:637] 	         device desc: Redmi 15
+ 
+[2026-06-17 20:36:27.175 12000 INFO USBDeviceManager.cpp:638] 	       device is adb: 0
+ 
+[2026-06-17 20:36:27.175 14884 DEBUG USBDeviceManager.cpp:941] addDevice device.type  1    USB\VID_2717&PID_FF40\937C2635 
+[2026-06-17 20:36:27.175 14884 DEBUG USBDeviceManager.cpp:990] addDevice device  USB\VID_2717&PID_FF40\937C2635 
+[2026-06-17 20:36:28.231 12000 INFO USBDeviceManager.cpp:622] 
+ 
+[2026-06-17 20:36:28.231 12000 INFO USBDeviceManager.cpp:623] 	              device: 10007 65344
+ 
+[2026-06-17 20:36:28.231 12000 INFO USBDeviceManager.cpp:624] 	               speed: Unknown
+ 
+[2026-06-17 20:36:28.231 12000 INFO USBDeviceManager.cpp:625] 	        Manufacturer: 
+ 
+[2026-06-17 20:36:28.231 12000 INFO USBDeviceManager.cpp:626] 	             Product: 
+ 
+[2026-06-17 20:36:28.231 12000 INFO USBDeviceManager.cpp:627] 	              Serial: 937C2635
+ 
+[2026-06-17 20:36:28.231 12000 INFO USBDeviceManager.cpp:628] 	         ConfigIndex: -1
+ 
+[2026-06-17 20:36:28.231 12000 INFO USBDeviceManager.cpp:629] 	           Interface: -1
+ 
+[2026-06-17 20:36:28.231 12000 INFO USBDeviceManager.cpp:630] 	                  In: 0x01
+ 
+[2026-06-17 20:36:28.231 12000 INFO USBDeviceManager.cpp:631] 	                 Out: 0x81
+ 
+[2026-06-17 20:36:28.231 12000 INFO USBDeviceManager.cpp:632] 
+ 
+[2026-06-17 20:36:28.231 12000 INFO USBDeviceManager.cpp:633] 	          instanceId: USB\VID_2717&PID_FF40\937C2635
+ 
+[2026-06-17 20:36:28.231 12000 INFO USBDeviceManager.cpp:634] 	      device vid pid: 2717:FF40
+ 
+[2026-06-17 20:36:28.232 12000 INFO USBDeviceManager.cpp:635] 	              driver: 1
+ 
+[2026-06-17 20:36:28.232 12000 INFO USBDeviceManager.cpp:636] 	                port: 1
+ 
+[2026-06-17 20:36:28.232 12000 INFO USBDeviceManager.cpp:637] 	         device desc: Redmi 15
+ 
+[2026-06-17 20:36:28.232 12000 INFO USBDeviceManager.cpp:638] 	       device is adb: 0
+ 
+[2026-06-17 20:36:28.232 14884 DEBUG USBDeviceManager.cpp:941] addDevice device.type  1    USB\VID_2717&PID_FF40\937C2635 
+[2026-06-17 20:37:33.725 3212 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-17 20:37:33.726 3212 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-17 20:37:33.728 3212 DEBUG USBDeviceManager.cpp:156] append device:  \\?\USB#VID_3515&PID_3020#b120300001#{a5dcbf10-6530-11d2-901f-00c04fb951ed} 
+[2026-06-17 20:37:33.738 3212 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-17 20:37:33.739 3212 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-17 20:37:33.750 3212 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-17 20:37:33.751 3212 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-17 20:37:33.772 3212 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-17 20:37:33.774 3212 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-17 20:37:33.787 3212 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-17 20:37:33.787 3212 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-17 20:37:33.787 3212 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-17 20:37:33.787 3212 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-17 20:37:33.804 3212 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-17 20:37:33.805 3212 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-17 20:37:33.807 3212 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-17 20:37:33.807 3212 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-17 20:37:33.808 3212 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-17 20:37:33.809 3212 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-17 20:37:33.820 3212 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-17 20:37:33.822 3212 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-17 20:37:33.832 3212 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-17 20:37:33.834 3212 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-17 20:46:51.837 3212 DEBUG USBDeviceManager.cpp:163] remove device:  \\?\USB#VID_2717&PID_FF40#937c2635#{a5dcbf10-6530-11d2-901f-00c04fb951ed} 
+[2026-06-17 20:46:51.870 3212 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-17 20:46:51.872 3212 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-17 20:46:51.892 12000 INFO USBDeviceManager.cpp:652] 设备被移除: USB\VID_2717&PID_FF40\937C2635 
+[2026-06-17 20:46:51.892 12000 INFO USBDeviceManager.cpp:652] 设备被移除: USB\VID_2717&PID_FF40\937C2635 
+[2026-06-17 20:46:51.892 14884 DEBUG USBDeviceManager.cpp:1045] remove device  USB\VID_2717&PID_FF40\937C2635 
+[2026-06-17 20:53:08.346 3212 DEBUG USBDeviceManager.cpp:156] append device:  \\?\USB#VID_2717&PID_FF40#937c2635#{a5dcbf10-6530-11d2-901f-00c04fb951ed} 
+[2026-06-17 20:53:08.351 3212 DEBUG USBDeviceManager.cpp:163] remove device:  \\?\USB#VID_2717&PID_FF40#937c2635#{a5dcbf10-6530-11d2-901f-00c04fb951ed} 
+[2026-06-17 20:53:08.431 12000 INFO USBDeviceManager.cpp:652] 设备被移除: USB\VID_2717&PID_FF40\937C2635 
+[2026-06-17 20:55:57.048 3212 DEBUG USBDeviceManager.cpp:163] remove device:  \\?\USB#VID_3515&PID_3020#b120300001#{a5dcbf10-6530-11d2-901f-00c04fb951ed} 
+[2026-06-18 07:39:27.576 3212 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-18 07:39:27.605 3212 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-18 07:41:15.891 3212 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-18 07:41:15.923 3212 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-18 07:41:15.955 3212 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-18 07:41:15.958 3212 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-18 07:43:40.514 3212 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-18 07:43:40.522 3212 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-18 07:43:40.532 3212 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-18 07:43:40.532 3212 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-18 07:43:40.641 3212 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-18 07:43:40.644 3212 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-18 07:43:40.776 3212 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-18 07:43:40.779 3212 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-18 12:11:43.091 3212 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-18 12:11:43.094 3212 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-18 12:11:43.295 3212 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-18 12:11:43.297 3212 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-18 12:11:43.355 3212 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-18 12:11:43.357 3212 DEBUG USBDeviceManager.cpp:168] device nodes changed  

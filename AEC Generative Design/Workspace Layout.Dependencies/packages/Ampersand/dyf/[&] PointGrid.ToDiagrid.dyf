@@ -1,0 +1,456 @@
+{
+  "Uuid": "49156b8c-19ef-4973-9493-8bc92a75054a",
+  "IsCustomNode": true,
+  "Category": "Ampersand.[&] Point",
+  "Description": "Create a diagrid point patterns from a rectangular grid of points.  Change the switchSet Boolean value to swith which set of checker-board points is selected.",
+  "Name": "[&] PointGrid.ToDiagrid",
+  "ElementResolver": {
+    "ResolutionMap": {
+      "Autodesk.Point": {
+        "Key": "Autodesk.DesignScript.Geometry.Point",
+        "Value": "ProtoGeometry.dll"
+      },
+      "Autodesk.DesignScript.Geometry.Point": {
+        "Key": "Autodesk.DesignScript.Geometry.Point",
+        "Value": "ProtoGeometry.dll"
+      },
+      "Vector": {
+        "Key": "Autodesk.DesignScript.Geometry.Vector",
+        "Value": "ProtoGeometry.dll"
+      }
+    }
+  },
+  "Inputs": [],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.List.TakeEveryNthItem@var[]..[],int,int",
+      "Id": "4619832ea44748a195f45a3417e37eae",
+      "Inputs": [
+        {
+          "Id": "0397b8d840d34bd6a7b016bf156b18e2",
+          "Name": "list",
+          "Description": "List to take items from.\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": true,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "0768f6fcae12468d84523cd05b157d22",
+          "Name": "n",
+          "Description": "Indices that are multiples of this number (after the offset) will be fetched.\n\nint",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "f642113ab94a48e9ba1b7831bc70c2f0",
+          "Name": "offset",
+          "Description": "Amount of items to be ignored from the start of the list.\n\nint\nDefault value : 0",
+          "UsingDefaultValue": true,
+          "Level": 1,
+          "UseLevels": true,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "1fe02b92ebfc4f16899ca90c74991c93",
+          "Name": "items",
+          "Description": "Items from the list.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Fetches items from the given list at indices that are multiples of the given value, after the given offset.\n\nList.TakeEveryNthItem (list: var[]..[], n: int, offset: int = 0): var[]..[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "2;",
+      "Id": "7fc89d606c054771bdf528b3ae94c7cc",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "c6ab3e08489a42e5947ce0340ca2d886",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Logic.If, CoreNodeModels",
+      "NodeType": "ExtensionNode",
+      "Id": "bb9805c3b92940089f6db1c40313f385",
+      "Inputs": [
+        {
+          "Id": "9984f68a9a674fd082f4ccf3c6c8d5c8",
+          "Name": "test",
+          "Description": "Test block",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "493e9d2564a34315913bd9ba8cd006a5",
+          "Name": "true",
+          "Description": "True block",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "a6ec229e8f4a442286aa3bf47a65f7c1",
+          "Name": "false",
+          "Description": "False block",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "bb2da6b04ee74b41a0351e134b08c114",
+          "Name": "result",
+          "Description": "result",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Conditional statement"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "(1..n)%2;\n(0..(n-1))%2;",
+      "Id": "458e166e4f164e6d85ca883ba1ab701e",
+      "Inputs": [
+        {
+          "Id": "79d3aa4d0de546c0bf56e7e16a54695c",
+          "Name": "n",
+          "Description": "n",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "46d8e15753604e188b9ba6cb523632f0",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "b215070605e048039cf1cb74a72fd892",
+          "Name": "",
+          "Description": "Value of expression at line 2",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.List.Count@var[]..[]",
+      "Id": "96264f1c0d984e109b2e4888f5d94d86",
+      "Inputs": [
+        {
+          "Id": "9c9f0defda9f42cd8887a278440c41dc",
+          "Name": "list",
+          "Description": "List to get the item count of.\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "61ece3d692ba4913bd43518fdc13f8c9",
+          "Name": "count",
+          "Description": "List length.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Returns the number of items stored in the given list.\n\nList.Count (list: var[]..[]): int"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Symbol, DynamoCore",
+      "NodeType": "InputNode",
+      "Parameter": {
+        "Name": "pointGrid",
+        "TypeName": "Autodesk.DesignScript.Geometry.Point",
+        "TypeRank": -1,
+        "DefaultValue": null,
+        "Description": ""
+      },
+      "Id": "685c9feef3a841aba144877aedc40f5b",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "f6a0b4a9c58f492b873c48abcd72a2b1",
+          "Name": "",
+          "Description": "Symbol",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "A function parameter, use with custom nodes.\r\n\r\nYou can specify the type and default value for parameter. E.g.,\r\n\r\ninput : var[]..[]\r\nvalue : bool = false"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Symbol, DynamoCore",
+      "NodeType": "InputNode",
+      "Parameter": {
+        "Name": "switchSet",
+        "TypeName": "bool",
+        "TypeRank": 0,
+        "DefaultValue": "false",
+        "Description": ""
+      },
+      "Id": "6e337aa6aef64610a7e6f935b8dc756e",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "b27b6b9fe3754b01a1ffd177222c82c3",
+          "Name": "",
+          "Description": "Symbol",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "A function parameter, use with custom nodes.\r\n\r\nYou can specify the type and default value for parameter. E.g.,\r\n\r\ninput : var[]..[]\r\nvalue : bool = false"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Output, DynamoCore",
+      "NodeType": "OutputNode",
+      "ElementResolver": null,
+      "Symbol": "pointGrid",
+      "Id": "bac3dbdebbe34b9dbdf9ced483d42b70",
+      "Inputs": [
+        {
+          "Id": "709ded6711b74b528fec70bb34f0e3d4",
+          "Name": "",
+          "Description": "",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [],
+      "Replication": "Disabled",
+      "Description": "A function output, use with custom nodes"
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "1fe02b92ebfc4f16899ca90c74991c93",
+      "End": "709ded6711b74b528fec70bb34f0e3d4",
+      "Id": "9f7ac7a309fd4eecac393e02e10dda30"
+    },
+    {
+      "Start": "c6ab3e08489a42e5947ce0340ca2d886",
+      "End": "0768f6fcae12468d84523cd05b157d22",
+      "Id": "559ca8e33c22420e931c185be4fd1070"
+    },
+    {
+      "Start": "bb2da6b04ee74b41a0351e134b08c114",
+      "End": "f642113ab94a48e9ba1b7831bc70c2f0",
+      "Id": "620c9af23ab441988817563ec7a57a73"
+    },
+    {
+      "Start": "46d8e15753604e188b9ba6cb523632f0",
+      "End": "493e9d2564a34315913bd9ba8cd006a5",
+      "Id": "ff645e2b2b9745c589f66a62e8d013e6"
+    },
+    {
+      "Start": "b215070605e048039cf1cb74a72fd892",
+      "End": "a6ec229e8f4a442286aa3bf47a65f7c1",
+      "Id": "2b2b0f30c1d04041a412668f599d5d6b"
+    },
+    {
+      "Start": "61ece3d692ba4913bd43518fdc13f8c9",
+      "End": "79d3aa4d0de546c0bf56e7e16a54695c",
+      "Id": "56e68fac92114b6283b5b207358f50e3"
+    },
+    {
+      "Start": "f6a0b4a9c58f492b873c48abcd72a2b1",
+      "End": "0397b8d840d34bd6a7b016bf156b18e2",
+      "Id": "dc12dfdd69994d0185928e8ed2b6c6f1"
+    },
+    {
+      "Start": "f6a0b4a9c58f492b873c48abcd72a2b1",
+      "End": "9c9f0defda9f42cd8887a278440c41dc",
+      "Id": "4736c0fab2574d618ac9523cffd4d3f1"
+    },
+    {
+      "Start": "b27b6b9fe3754b01a1ffd177222c82c3",
+      "End": "9984f68a9a674fd082f4ccf3c6c8d5c8",
+      "Id": "c8f57927d986403eab4800aaad25dda4"
+    }
+  ],
+  "Dependencies": [],
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": false,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "2.0.2.6826",
+      "RunType": "Manual",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "Background Preview",
+      "EyeX": -17.0,
+      "EyeY": 24.0,
+      "EyeZ": 50.0,
+      "LookX": 12.0,
+      "LookY": -13.0,
+      "LookZ": -58.0,
+      "UpX": 0.0,
+      "UpY": 1.0,
+      "UpZ": 0.0
+    },
+    "NodeViews": [
+      {
+        "ShowGeometry": true,
+        "Name": "List.TakeEveryNthItem",
+        "Id": "4619832ea44748a195f45a3417e37eae",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 883.89531016837577,
+        "Y": -2.8486646884272204
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "7fc89d606c054771bdf528b3ae94c7cc",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 754.68591760144375,
+        "Y": 39.439341889145794
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "If",
+        "Id": "bb9805c3b92940089f6db1c40313f385",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 712.25359632552681,
+        "Y": 124.13058448709378
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "458e166e4f164e6d85ca883ba1ab701e",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 520.50933483593371,
+        "Y": 181.84536276081678
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "List.Count",
+        "Id": "96264f1c0d984e109b2e4888f5d94d86",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 308.87240356083078,
+        "Y": 182.44986801246677
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Input",
+        "Id": "685c9feef3a841aba144877aedc40f5b",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -183.8706231454006,
+        "Y": 2.3513353115727682
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Input",
+        "Id": "6e337aa6aef64610a7e6f935b8dc756e",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -186.56973293768544,
+        "Y": 120.80356083086053
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Output",
+        "Id": "bac3dbdebbe34b9dbdf9ced483d42b70",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1141.2953101683806,
+        "Y": -2.8486646884272204
+      }
+    ],
+    "Annotations": [
+      {
+        "Id": "bfe3d9496117469aa4c843938a492f23",
+        "Title": "Colin McCrone\r\nTwitter:  @ColinMcCrone\r\nLinkedIn: https://www.linkedin.com/in/colinmccrone\r\nUpdated:  2019-05-20\r\n\r\nAn example Dynamo script for how to use this node can be found in the 'extra' folder where the package files are stored. To find it, go to the Packages Menu and select \"Manage Packages.\" Where Ampersand is listed, open the drop-down menu link at the right and choose \"Show Root Directory.\" Open the \"extra\" folder to find the example file called AmpersandExamples.dyn.",
+        "Nodes": [],
+        "Left": -180.61721068249267,
+        "Top": -235.87299703264131,
+        "Width": 0.0,
+        "Height": 0.0,
+        "FontSize": 36.0,
+        "InitialTop": 0.0,
+        "InitialHeight": 0.0,
+        "TextblockHeight": 0.0,
+        "Background": "#FFC1D676"
+      }
+    ],
+    "X": 253.63180497032636,
+    "Y": 326.18182944362013,
+    "Zoom": 0.97676875
+  }
+}

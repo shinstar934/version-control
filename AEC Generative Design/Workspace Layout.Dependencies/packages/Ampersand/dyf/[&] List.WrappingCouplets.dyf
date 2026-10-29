@@ -1,0 +1,482 @@
+{
+  "Uuid": "31e942eb-a0ec-4bd8-8693-61d90c62467f",
+  "IsCustomNode": true,
+  "Category": "Ampersand",
+  "Description": "Divide a list into overlapping couplets, connecting the first to the last items.",
+  "Name": "[&] List.WrappingCouplets",
+  "ElementResolver": {
+    "ResolutionMap": {
+      "Plane": {
+        "Key": "Autodesk.DesignScript.Geometry.Plane",
+        "Value": "ProtoGeometry.dll"
+      },
+      "Point": {
+        "Key": "Autodesk.DesignScript.Geometry.Point",
+        "Value": "ProtoGeometry.dll"
+      },
+      "Vector": {
+        "Key": "Autodesk.DesignScript.Geometry.Vector",
+        "Value": "ProtoGeometry.dll"
+      },
+      "Math": {
+        "Key": "DSCore.Math",
+        "Value": "DSCoreNodes.dll"
+      },
+      "List": {
+        "Key": "DSCore.List",
+        "Value": "DSCoreNodes.dll"
+      },
+      "Autodesk.Point": {
+        "Key": "Autodesk.DesignScript.Geometry.Point",
+        "Value": "ProtoGeometry.dll"
+      },
+      "Autodesk.DesignScript.Geometry.Point": {
+        "Key": "Autodesk.DesignScript.Geometry.Point",
+        "Value": "ProtoGeometry.dll"
+      }
+    }
+  },
+  "Inputs": [],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.List.Sublists@var[]..[],var[]..[],int",
+      "Id": "692d1c310ef949e481f5dbfca507e2d4",
+      "Inputs": [
+        {
+          "Id": "6ab0119ad3784a1f9cc6d1efe92241d2",
+          "Name": "list",
+          "Description": "The list from which to create sublists.\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "1b3177b1f59e4bca86dc571c6af42b7d",
+          "Name": "ranges",
+          "Description": "The index ranges of the sublist elements. Ex. \\\"{0..3,5,2}\\\"\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "49c9d875f153490b8f442201d5e79589",
+          "Name": "offset",
+          "Description": "The offset to apply to the sublist. Ex. the range \\\"0..3\\\" with an offset of 2 will yield {0,1,2,3}{2,3,4,5}{4,5,6,7}...\n\nint",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "8dab01b9d6ee413bad8cf243a7c2552b",
+          "Name": "lists",
+          "Description": "Sublists of the given list.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Build sublists from a list using DesignScript range syntax.\n\nList.Sublists (list: var[]..[], ranges: var[]..[], offset: int): var[]..[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "0..1;\n1;",
+      "Id": "42b6338e828f4fbe8c402f3f440786f1",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "d731ce1b36404492a346c65c96cb8699",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "7d0147b24a30498eabc0da0b7f0ea94d",
+          "Name": "",
+          "Description": "Value of expression at line 2",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.List.AddItemToEnd@var[]..[],var[]..[]",
+      "Id": "f6a1595de9e34797811610f5ea71d4e9",
+      "Inputs": [
+        {
+          "Id": "ce7a4bdd811149709bddc0afeb4a36ec",
+          "Name": "item",
+          "Description": "Item to be added.Item could be an object or a list.\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "380c2154956143c193f7c955cf3dc896",
+          "Name": "list",
+          "Description": "List to add on to.\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "ebd1b925f41e4c29936bcee268563833",
+          "Name": "var[]..[]",
+          "Description": "var[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Adds an item to the end of a list.\n\nList.AddItemToEnd (item: var[]..[], list: var[]..[]): var[]..[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.List.Count@var[]..[]",
+      "Id": "6c2d7210eae5480aa5e4a71e7d4cba4f",
+      "Inputs": [
+        {
+          "Id": "16ecab3ae1ee46578c25f22b66613df5",
+          "Name": "list",
+          "Description": "List to get the item count of.\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "c8891fbc5bfc41caaa54cd620baaef8b",
+          "Name": "count",
+          "Description": "List length.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Returns the number of items stored in the given list.\n\nList.Count (list: var[]..[]): int"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "sublists[0..(num-1)];",
+      "Id": "bcea1ac26be64340bd9c5a779b53bb6c",
+      "Inputs": [
+        {
+          "Id": "4978e95cdde341a0854acc82307ba69b",
+          "Name": "sublists",
+          "Description": "sublists",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "c805c89d452a4d6298d8ef86bcaf1017",
+          "Name": "num",
+          "Description": "num",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "4b854e4054d049d0903a605db5a542f8",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.List.FirstItem@var[]..[]",
+      "Id": "3be6e647d4ee40c095d010b328a65d20",
+      "Inputs": [
+        {
+          "Id": "8bcd8e05884b4ca8878151fa03058b00",
+          "Name": "list",
+          "Description": "List to get the first item from.\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "93855a04e62944e3af20675a2f0d439a",
+          "Name": "item",
+          "Description": "First item in the list.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Returns the first item in a list.\n\nList.FirstItem (list: var[]..[]): var[]..[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Symbol, DynamoCore",
+      "NodeType": "InputNode",
+      "Parameter": {
+        "Name": "list",
+        "TypeName": "var",
+        "TypeRank": 1,
+        "DefaultValue": null,
+        "Description": ""
+      },
+      "Id": "621f8b0d2de048d09b13e527403bb673",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "8f2c91d13dbf4eb887268a7eef61a533",
+          "Name": "",
+          "Description": "Symbol",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "A function parameter, use with custom nodes.\r\n\r\nYou can specify the type and default value for parameter. E.g.,\r\n\r\ninput : var[]..[]\r\nvalue : bool = false"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Output, DynamoCore",
+      "NodeType": "OutputNode",
+      "ElementResolver": null,
+      "Symbol": "sublists",
+      "Id": "feba14114db54f00965e9d7e64f79453",
+      "Inputs": [
+        {
+          "Id": "eb1003192d7348d18efdadc565d41515",
+          "Name": "",
+          "Description": "",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [],
+      "Replication": "Disabled",
+      "Description": "A function output, use with custom nodes"
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "8dab01b9d6ee413bad8cf243a7c2552b",
+      "End": "4978e95cdde341a0854acc82307ba69b",
+      "Id": "8d658073f28742d2881299eeb8848d64"
+    },
+    {
+      "Start": "d731ce1b36404492a346c65c96cb8699",
+      "End": "1b3177b1f59e4bca86dc571c6af42b7d",
+      "Id": "1d7ba1fc05ba42c18c7963b3a53c34a7"
+    },
+    {
+      "Start": "7d0147b24a30498eabc0da0b7f0ea94d",
+      "End": "49c9d875f153490b8f442201d5e79589",
+      "Id": "15dafdc8ffb24e3f89fc48538745dee9"
+    },
+    {
+      "Start": "ebd1b925f41e4c29936bcee268563833",
+      "End": "6ab0119ad3784a1f9cc6d1efe92241d2",
+      "Id": "a6eeb36ac81d47f18500777a7c14fe94"
+    },
+    {
+      "Start": "c8891fbc5bfc41caaa54cd620baaef8b",
+      "End": "c805c89d452a4d6298d8ef86bcaf1017",
+      "Id": "6d5cff85e41241f3b31b8a1b40388724"
+    },
+    {
+      "Start": "4b854e4054d049d0903a605db5a542f8",
+      "End": "eb1003192d7348d18efdadc565d41515",
+      "Id": "d0af8de3f0ca42509f10bb853b081ee6"
+    },
+    {
+      "Start": "93855a04e62944e3af20675a2f0d439a",
+      "End": "ce7a4bdd811149709bddc0afeb4a36ec",
+      "Id": "c72f4a338c5245c5bc175f6c997478b2"
+    },
+    {
+      "Start": "8f2c91d13dbf4eb887268a7eef61a533",
+      "End": "380c2154956143c193f7c955cf3dc896",
+      "Id": "22381c90e7594cddafef3463bf583919"
+    },
+    {
+      "Start": "8f2c91d13dbf4eb887268a7eef61a533",
+      "End": "16ecab3ae1ee46578c25f22b66613df5",
+      "Id": "b6a54ee3bb5c4395a6c77d63d5caf8ea"
+    },
+    {
+      "Start": "8f2c91d13dbf4eb887268a7eef61a533",
+      "End": "8bcd8e05884b4ca8878151fa03058b00",
+      "Id": "4216e6d7d2cb438292fc610a8274af68"
+    }
+  ],
+  "Dependencies": [],
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": false,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "2.0.2.6826",
+      "RunType": "Manual",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "Background Preview",
+      "EyeX": -17.0,
+      "EyeY": 24.0,
+      "EyeZ": 50.0,
+      "LookX": 12.0,
+      "LookY": -13.0,
+      "LookZ": -58.0,
+      "UpX": 0.0,
+      "UpY": 1.0,
+      "UpZ": 0.0
+    },
+    "NodeViews": [
+      {
+        "ShowGeometry": true,
+        "Name": "List.Sublists",
+        "Id": "692d1c310ef949e481f5dbfca507e2d4",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 775.609008760979,
+        "Y": 41.2925619618788
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "42b6338e828f4fbe8c402f3f440786f1",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 662.261284994376,
+        "Y": 84.6501600649733
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "List.AddItemToEnd",
+        "Id": "f6a1595de9e34797811610f5ea71d4e9",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 453.294149401735,
+        "Y": 18.0341584146697
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "List.Count",
+        "Id": "6c2d7210eae5480aa5e4a71e7d4cba4f",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 756.091369854469,
+        "Y": 187.788822481906
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "bcea1ac26be64340bd9c5a779b53bb6c",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1008.34304643822,
+        "Y": 166.791907846013
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "List.FirstItem",
+        "Id": "3be6e647d4ee40c095d010b328a65d20",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 250.0,
+        "Y": 0.0
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Input",
+        "Id": "621f8b0d2de048d09b13e527403bb673",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 23.0,
+        "Y": 107.0
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Output",
+        "Id": "feba14114db54f00965e9d7e64f79453",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1343.34304643822,
+        "Y": 83.0
+      }
+    ],
+    "Annotations": [
+      {
+        "Id": "e965e8a1685b40749c819f3e3dea170c",
+        "Title": "Colin McCrone\r\nTwitter:  @ColinMcCrone\r\nLinkedIn: https://www.linkedin.com/in/colinmccrone\r\nUpdated:  2019-05-20\r\n\r\nAn example Dynamo script for how to use this node can be found in the 'extra' folder where the package files are stored. To find it, go to the Packages Menu and select \"Manage Packages.\" Where Ampersand is listed, open the drop-down menu link at the right and choose \"Show Root Directory.\" Open the \"extra\" folder to find the example file called AmpersandExamples.dyn.",
+        "Nodes": [],
+        "Left": 14.698646172301096,
+        "Top": -234.26122887423477,
+        "Width": 0.0,
+        "Height": 0.0,
+        "FontSize": 36.0,
+        "InitialTop": 0.0,
+        "InitialHeight": 0.0,
+        "TextblockHeight": 0.0,
+        "Background": "#FFC1D676"
+      }
+    ],
+    "X": 81.976860613960184,
+    "Y": 309.89526798181697,
+    "Zoom": 0.954042924882813
+  }
+}

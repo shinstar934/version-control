@@ -1,0 +1,208 @@
+{
+  "Uuid": "fb06a76d-250c-48db-8c5d-95bf30dd2610",
+  "IsCustomNode": true,
+  "Category": "Ampersand.[&] Revit",
+  "Description": "List of all Revit Categories",
+  "Name": "[&] Categories.ListAll",
+  "ElementResolver": {
+    "ResolutionMap": {}
+  },
+  "Inputs": [],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "// Revit category names\n\n[\"AdaptivePoints\",\n\"AdaptivePoints_Lines\",\n\"AdaptivePoints_Planes\",\n\"AdaptivePoints_Points\",\n\"AnalysisDisplayStyle\",\n\"AnalysisResults\",\n\"AnalyticalNodes\",\n\"AnalyticalRigidLinks\",\n\"AnnotationCrop\",\n\"AnnotationCropSpecial\",\n\"AreaColorFill\",\n\"AreaInteriorFillVisibility\",\n\"AreaLoads\",\n\"AreaLoadTags\",\n\"AreaReferenceVisibility\",\n\"AreaRein\",\n\"AreaReinBoundary\",\n\"AreaReinSpanSymbol\",\n\"AreaReinTags\",\n\"Areas\",\n\"AreaSchemeLines\",\n\"AreaTags\",\n\"Assemblies\",\n\"AssemblyTags\",\n\"BeamAnalytical\",\n\"BeamAnalyticalTags\",\n\"BeamEndSegment\",\n\"BeamLocalCoordSys\",\n\"BeamStartSegment\",\n\"BeamSystemTags\",\n\"BoundaryConditions\",\n\"BraceAnalytical\",\n\"BraceAnalyticalTags\",\n\"BraceEndSegment\",\n\"BraceLocalCoordSys\",\n\"BraceStartSegment\",\n\"BrokenSectionLine\",\n\"BuildingPad\",\n\"CableTray\",\n\"CableTrayCenterLine\",\n\"CableTrayDrop\",\n\"CableTrayFitting\",\n\"CableTrayFittingCenterLine\",\n\"CableTrayFittingTags\",\n\"CableTrayRiseDrop\",\n\"CableTrayRun\",\n\"CableTrayTags\",\n\"CalloutBoundary\",\n\"CalloutHeads\",\n\"CalloutLeaderLine\",\n\"Callouts\",\n\"Camera_Lines\",\n\"Cameras\",\n\"Casework\",\n\"CaseworkHiddenLines\",\n\"CaseworkTags\",\n\"Ceilings\",\n\"CeilingsCutPattern\",\n\"CeilingsDefault\",\n\"CeilingsFinish1\",\n\"CeilingsFinish2\",\n\"CeilingsHiddenLines\",\n\"CeilingsInsulation\",\n\"CeilingsMembrane\",\n\"CeilingsStructure\",\n\"CeilingsSubstrate\",\n\"CeilingTags\",\n\"CenterLines\",\n\"CLines\",\n\"ColorFillLegends\",\n\"ColumnAnalytical\",\n\"ColumnAnalyticalRigidLinks\",\n\"ColumnAnalyticalTags\",\n\"ColumnEndSegment\",\n\"ColumnLocalCoordSys\",\n\"Columns\",\n\"ColumnsHiddenLines\",\n\"ColumnStartSegment\",\n\"CommunicationDevices\",\n\"CommunicationDeviceTags\",\n\"Conduit\",\n\"ConduitCenterLine\",\n\"ConduitDrop\",\n\"ConduitFitting\",\n\"ConduitFittingCenterLine\",\n\"ConduitFittingTags\",\n\"ConduitRiseDrop\",\n\"ConduitRun\",\n\"ConduitTags\",\n\"ContourLabels\",\n\"Cornices\",\n\"CropBoundary\",\n\"CropBoundarySpecial\",\n\"CurtainGrids\",\n\"CurtainGridsCurtaSystem\",\n\"CurtainGridsRoof\",\n\"CurtainGridsWall\",\n\"CurtainWallMullions\",\n\"CurtainWallMullionsHiddenLines\",\n\"CurtainWallPanels\",\n\"CurtainWallPanelsHiddenLines\",\n\"CurtainWallPanelTags\",\n\"CurtaSystem\",\n\"CurtaSystemHiddenLines\",\n\"CurtaSystemTags\",\n\"CurvesThinLines\",\n\"CurvesWideLines\",\n\"DataDevices\",\n\"DataDeviceTags\",\n\"DemolishedLines\",\n\"DetailComponents\",\n\"DetailComponentsHiddenLines\",\n\"DetailComponentTags\",\n\"Dimensions\",\n\"DisplacementPath\",\n\"DividedSurface_Gridlines\",\n\"DividedSurface_Nodes\",\n\"DividedSurface_PatternLines\",\n\"Doors\",\n\"DoorsFrameMullionProjection\",\n\"DoorsGlassProjection\",\n\"DoorsHiddenLines\",\n\"DoorsOpeningProjection\",\n\"DoorsPanelProjection\",\n\"DoorTags\",\n\"DuctAccessory\",\n\"DuctAccessoryTags\",\n\"DuctColorFillLegends\",\n\"DuctColorFills\",\n\"DuctCurves\",\n\"DuctCurvesCenterLine\",\n\"DuctCurvesDrop\",\n\"DuctCurvesRiseDrop\",\n\"DuctFitting\",\n\"DuctFittingCenterLine\",\n\"DuctFittingTags\",\n\"DuctInsulations\",\n\"DuctInsulationsTags\",\n\"DuctLinings\",\n\"DuctLiningsTags\",\n\"DuctSystem\",\n\"DuctSystem_Reference_Visibility\",\n\"DuctTags\",\n\"DuctTerminal\",\n\"DuctTerminalTags\",\n\"EdgeSlab\",\n\"ElectricalCircuit\",\n\"ElectricalEquipment\",\n\"ElectricalEquipmentHiddenLines\",\n\"ElectricalEquipmentTags\",\n\"ElectricalFixtures\",\n\"ElectricalFixturesHiddenLines\",\n\"ElectricalFixtureTags\",\n\"ElectricalInternalCircuits\",\n\"Elev\",\n\"ElevationMarks\",\n\"Entourage\",\n\"EntourageHiddenLines\",\n\"FabricAreaBoundary\",\n\"FabricAreas\",\n\"FabricAreaSketchEnvelopeLines\",\n\"FabricAreaSketchSheetsLines\",\n\"FabricReinforcement\",\n\"FabricReinforcementBoundary\",\n\"FabricReinforcementTags\",\n\"FabricReinforcementWire\",\n\"FabricReinSpanSymbol\",\n\"Fascia\",\n\"FilledRegion\",\n\"FireAlarmDevices\",\n\"FireAlarmDeviceTags\",\n\"FlexDuctCurves\",\n\"FlexDuctCurvesCenterLine\",\n\"FlexDuctCurvesPattern\",\n\"FlexDuctTags\",\n\"FlexPipeCurves\",\n\"FlexPipeCurvesCenterLine\",\n\"FlexPipeCurvesPattern\",\n\"FlexPipeTags\",\n\"FloorAnalytical\",\n\"FloorAnalyticalTags\",\n\"FloorLocalCoordSys\",\n\"Floors\",\n\"FloorsCutPattern\",\n\"FloorsDefault\",\n\"FloorsFinish1\",\n\"FloorsFinish2\",\n\"FloorsInsulation\",\n\"FloorsInteriorEdges\",\n\"FloorsMembrane\",\n\"FloorsStructure\",\n\"FloorsSubstrate\",\n\"FloorsSurfacePattern\",\n\"FloorTags\",\n\"FndSlabLocalCoordSys\",\n\"FootingSpanDirectionSymbol\",\n\"FoundationSlabAnalytical\",\n\"FoundationSlabAnalyticalTags\",\n\"Furniture\",\n\"FurnitureSystems\",\n\"FurnitureSystemsHiddenLines\",\n\"FurnitureSystemTags\",\n\"FurnitureTags\",\n\"GbXML_Opening\",\n\"GbXML_SType_Interior\",\n\"GbXMLFaces\",\n\"GenericAnnotation\",\n\"GenericLines\",\n\"GenericModel\",\n\"GenericModelHiddenLines\",\n\"GenericModelTags\",\n\"Girder\",\n\"GridHeads\",\n\"Grids\",\n\"GuideGrid\",\n\"Gutter\",\n\"HiddenFloorLines\",\n\"HiddenLines\",\n\"HiddenStructuralColumnLines\",\n\"HiddenStructuralFoundationLines\",\n\"HiddenStructuralFramingLines\",\n\"HiddenWallLines\",\n\"HorizontalBracing\",\n\"HVAC_Zones\",\n\"HVAC_Zones_Boundary\",\n\"HVAC_Zones_ColorFill\",\n\"HVAC_Zones_InteriorFill_Visibility\",\n\"HVAC_Zones_Reference_Visibility\",\n\"ImportObjectStyles\",\n\"InsulationLines\",\n\"InternalAreaLoads\",\n\"InternalAreaLoadTags\",\n\"InternalLineLoads\",\n\"InternalLineLoadTags\",\n\"InternalLoads\",\n\"InternalPointLoads\",\n\"InternalPointLoadTags\",\n\"IsolatedFoundationAnalytical\",\n\"IsolatedFoundationAnalyticalTags\",\n\"Joist\",\n\"KeynoteTags\",\n\"KickerBracing\",\n\"LevelHeads\",\n\"Levels\",\n\"LightingDevices\",\n\"LightingDeviceTags\",\n\"LightingFixtures\",\n\"LightingFixturesHiddenLines\",\n\"LightingFixtureSource\",\n\"LightingFixtureTags\",\n\"LineLoads\",\n\"LineLoadTags\",\n\"Lines\",\n\"LinesBeyond\",\n\"LinesHiddenLines\",\n\"LinksAnalytical\",\n\"LoadCases\",\n\"LoadCasesAccidental\",\n\"LoadCasesDead\",\n\"LoadCasesLive\",\n\"LoadCasesRoofLive\",\n\"LoadCasesSeismic\",\n\"LoadCasesSnow\",\n\"LoadCasesTemperature\",\n\"LoadCasesWind\",\n\"Loads\",\n\"MaskingRegion\",\n\"Mass\",\n\"MassAreaFaceTags\",\n\"MassExteriorWall\",\n\"MassFloor\",\n\"MassForm\",\n\"MassGlazing\",\n\"MassHiddenLines\",\n\"MassInteriorWall\",\n\"MassOpening\",\n\"MassRoof\",\n\"MassShade\",\n\"MassSkylights\",\n\"MassTags\",\n\"MassZone\",\n\"Matchline\",\n\"Materials\",\n\"MaterialTags\",\n\"MechanicalEquipment\",\n\"MechanicalEquipmentHiddenLines\",\n\"MechanicalEquipmentTags\",\n\"MEPSpaceColorFill\",\n\"MEPSpaceInteriorFillVisibility\",\n\"MEPSpaceReferenceVisibility\",\n\"MEPSpaces\",\n\"MEPSpaceTags\",\n\"MultiCategoryTags\",\n\"MultiReferenceAnnotations\",\n\"NurseCallDevices\",\n\"NurseCallDeviceTags\",\n\"OverheadLines\",\n\"PanelScheduleGraphics\",\n\"Parking\",\n\"ParkingHiddenLines\",\n\"ParkingTags\",\n\"PartHiddenLines\",\n\"Parts\",\n\"PartTags\",\n\"PathRein\",\n\"PathReinBoundary\",\n\"PathReinSpanSymbol\",\n\"PathReinTags\",\n\"PipeAccessory\",\n\"PipeAccessoryTags\",\n\"PipeColorFillLegends\",\n\"PipeColorFills\",\n\"PipeCurves\",\n\"PipeCurvesCenterLine\",\n\"PipeCurvesDrop\",\n\"PipeCurvesRiseDrop\",\n\"PipeFitting\",\n\"PipeFittingCenterLine\",\n\"PipeFittingTags\",\n\"PipeInsulations\",\n\"PipeInsulationsTags\",\n\"PipeSegments\",\n\"PipeTags\",\n\"PipingSystem\",\n\"PipingSystem_Reference_Visibility\",\n\"PlaceHolderDucts\",\n\"PlaceHolderPipes\",\n\"PlanRegion\",\n\"Planting\",\n\"PlantingHiddenLines\",\n\"PlantingTags\",\n\"PlumbingFixtures\",\n\"PlumbingFixturesHiddenLines\",\n\"PlumbingFixtureTags\",\n\"PointClouds\",\n\"PointLoads\",\n\"PointLoadTags\",\n\"ProjectBasePoint\",\n\"ProjectInformation\",\n\"Purlin\",\n\"RailingHandRail\",\n\"RailingHandRailAboveCut\",\n\"Railings\",\n\"RailingSupport\",\n\"RailingTermination\",\n\"RailingTopRail\",\n\"RailingTopRailAboveCut\",\n\"Ramps\",\n\"RampsAboveCut\",\n\"RampsDownArrow\",\n\"RampsDownText\",\n\"RampsHiddenLines\",\n\"RampsStringer\",\n\"RampsStringerAboveCut\",\n\"RampsUpArrow\",\n\"RampsUpText\",\n\"RasterImages\",\n\"Rebar\",\n\"RebarCover\",\n\"RebarHiddenLines\",\n\"RebarSetToggle\",\n\"RebarShape\",\n\"RebarTags\",\n\"ReferenceLines\",\n\"ReferencePoints\",\n\"ReferencePoints_Lines\",\n\"ReferencePoints_Planes\",\n\"ReferencePoints_Points\",\n\"ReferenceViewer\",\n\"ReferenceViewerSymbol\",\n\"RenderRegions\",\n\"RevisionClouds\",\n\"RevisionCloudTags\",\n\"Roads\",\n\"RoadsHiddenLines\",\n\"Roofs\",\n\"RoofsCutPattern\",\n\"RoofsDefault\",\n\"RoofsFinish2\",\n\"RoofsHiddenLines\",\n\"RoofsInsulation\",\n\"RoofsInteriorEdges\",\n\"RoofsMembrane\",\n\"RoofSoffit\",\n\"RoofsStructure\",\n\"RoofsSubstrate\",\n\"RoofsSurfacePattern\",\n\"RoofTags\",\n\"RoomColorFill\",\n\"RoomInteriorFillVisibility\",\n\"RoomReferenceVisibility\",\n\"Rooms\",\n\"RoomTags\",\n\"RoutingPreferences\",\n\"ScheduleGraphics\",\n\"SecondaryTopographyContours\",\n\"SectionBox\",\n\"SectionHeadMediumLines\",\n\"SectionHeads\",\n\"SectionHeadThinLines\",\n\"SectionHeadWideLines\",\n\"SectionLine\",\n\"Sections\",\n\"SecurityDevices\",\n\"SecurityDeviceTags\",\n\"ShaftOpening\",\n\"ShaftOpeningHiddenLines\",\n\"SharedBasePoint\",\n\"Sheets\",\n\"Site\",\n\"SiteHiddenLines\",\n\"SitePoint\",\n\"SitePointBoundary\",\n\"SiteProperty\",\n\"SitePropertyLineSegmentTags\",\n\"SitePropertyTags\",\n\"SiteTags\",\n\"SketchLines\",\n\"SpanDirectionSymbol\",\n\"SpecialityEquipment\",\n\"SpecialityEquipmentHiddenLines\",\n\"SpecialityEquipmentTags\",\n\"SpotCoordinates\",\n\"SpotElevations\",\n\"SpotElevSymbols\",\n\"SpotSlopes\",\n\"Sprinklers\",\n\"SprinklerTags\",\n\"Stairs\",\n\"StairsDownArrows\",\n\"StairsDownText\",\n\"StairsHiddenLines\",\n\"StairsLandings\",\n\"StairsLandingTags\",\n\"StairsNosingLines\",\n\"StairsNosingLinesAboveCut\",\n\"StairsOutlines\",\n\"StairsOutlinesAboveCut\",\n\"StairsPaths\",\n\"StairsPathsAboveCut\",\n\"StairsRailing\",\n\"StairsRailingAboveCut\",\n\"StairsRailingBaluster\",\n\"StairsRailingHiddenLines\",\n\"StairsRailingRail\",\n\"StairsRailingTags\",\n\"StairsRiserLines\",\n\"StairsRiserLinesAboveCut\",\n\"StairsRuns\",\n\"StairsRunTags\",\n\"StairsSupportsAboveCut\",\n\"StairsTags\",\n\"StairsTrisers\",\n\"StairsUpArrows\",\n\"StairsUpText\",\n\"StructConnectionHiddenLines\",\n\"StructConnections\",\n\"StructConnectionTags\",\n\"StructuralAnnotations\",\n\"StructuralBracePlanReps\",\n\"StructuralColumnLocationLine\",\n\"StructuralColumns\",\n\"StructuralColumnStickSymbols\",\n\"StructuralColumnTags\",\n\"StructuralFoundation\",\n\"StructuralFoundationTags\",\n\"StructuralFraming\",\n\"StructuralFramingLocationLine\",\n\"StructuralFramingOther\",\n\"StructuralFramingSystem\",\n\"StructuralFramingTags\",\n\"StructuralStiffener\",\n\"StructuralStiffenerHiddenLines\",\n\"StructuralStiffenerTags\",\n\"StructuralTruss\",\n\"StructuralTrussStickSymbols\",\n\"SwitchSystem\",\n\"TelephoneDevices\",\n\"TelephoneDeviceTags\",\n\"TextNotes\",\n\"TitleBlockMediumLines\",\n\"TitleBlocks\",\n\"TitleBlockThinLines\",\n\"Topography\",\n\"TopographyContours\",\n\"TopographyHiddenLines\",\n\"TopographySurface\",\n\"TrussChord\",\n\"TrussTags\",\n\"TrussWeb\",\n\"VerticalBracing\",\n\"ViewportLabel\",\n\"Viewports\",\n\"Views\",\n\"VolumeOfInterest\",\n\"WallAnalytical\",\n\"WallAnalyticalTags\",\n\"WallFoundationAnalytical\",\n\"WallFoundationAnalyticalTags\",\n\"WallLocalCoordSys\",\n\"Walls\",\n\"WallsDefault\",\n\"WallsFinish1\",\n\"WallsFinish2\",\n\"WallsInsulation\",\n\"WallsMembrane\",\n\"WallsStructure\",\n\"WallsSubstrate\",\n\"WallsSurfacePattern\",\n\"WallTags\",\n\"WeakDims\",\n\"Windows\",\n\"WindowsFrameMullionProjection\",\n\"WindowsGlassProjection\",\n\"WindowsHiddenLines\",\n\"WindowsOpeningProjection\",\n\"WindowsSillHeadProjection\",\n\"WindowTags\",\n\"Wire\",\n\"WireTags\",\n\"WireTickMarks\",\n\"ZoneTags\"];",
+      "Id": "066b45278da6486d84997d8e9faef9d0",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "90b2bb774f104e8bbf9711b76a03382b",
+          "Name": "",
+          "Description": "Value of expression at line 3",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Revit.Elements.Category.ByName@string",
+      "Id": "43eaf82723c043909f6557cc1f23bc28",
+      "Inputs": [
+        {
+          "Id": "43ae1eb7bef4479ebdc78d857bb4227e",
+          "Name": "name",
+          "Description": "The built in category name.\n\nstring",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "782eb98439cc4450b36f4723f71deb87",
+          "Name": "Category",
+          "Description": "Category",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Gets a Revit category by the built-in category name.\n\nCategory.ByName (name: string): Category"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Output, DynamoCore",
+      "NodeType": "OutputNode",
+      "ElementResolver": null,
+      "Symbol": "categories",
+      "Id": "e7f06dc4d0a64ae39e78324ade0a3b43",
+      "Inputs": [
+        {
+          "Id": "8ebc2f10421446faacc7bd4fd0c0cc20",
+          "Name": "",
+          "Description": "",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [],
+      "Replication": "Disabled",
+      "Description": "A function output, use with custom nodes"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Output, DynamoCore",
+      "NodeType": "OutputNode",
+      "ElementResolver": null,
+      "Symbol": "names",
+      "Id": "44cccc8ca1644418b5e0a9f29ebb2f87",
+      "Inputs": [
+        {
+          "Id": "19349eb6e8154cbe81c873d925b3a907",
+          "Name": "",
+          "Description": "",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [],
+      "Replication": "Disabled",
+      "Description": "A function output, use with custom nodes"
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "90b2bb774f104e8bbf9711b76a03382b",
+      "End": "19349eb6e8154cbe81c873d925b3a907",
+      "Id": "fd77d8e5e09f444d9de2a45349ac1349"
+    },
+    {
+      "Start": "90b2bb774f104e8bbf9711b76a03382b",
+      "End": "43ae1eb7bef4479ebdc78d857bb4227e",
+      "Id": "03f5c0572be34ce09a871ef8ed0c9082"
+    },
+    {
+      "Start": "782eb98439cc4450b36f4723f71deb87",
+      "End": "8ebc2f10421446faacc7bd4fd0c0cc20",
+      "Id": "ebfefe936aa647c49a04ad0e84186a78"
+    }
+  ],
+  "Dependencies": [],
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": false,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "2.0.2.6826",
+      "RunType": "Manual",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "Background Preview",
+      "EyeX": -17.0,
+      "EyeY": 24.0,
+      "EyeZ": 50.0,
+      "LookX": 12.0,
+      "LookY": -13.0,
+      "LookZ": -58.0,
+      "UpX": 0.0,
+      "UpY": 1.0,
+      "UpZ": 0.0
+    },
+    "NodeViews": [
+      {
+        "Id": "066b45278da6486d84997d8e9faef9d0",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Name": "Code Block",
+        "ShowGeometry": true,
+        "Excluded": false,
+        "X": -540.8,
+        "Y": 111.20000000000005
+      },
+      {
+        "Id": "43eaf82723c043909f6557cc1f23bc28",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Name": "Category.ByName",
+        "ShowGeometry": true,
+        "Excluded": false,
+        "X": -88.800000000000068,
+        "Y": 232.0
+      },
+      {
+        "Id": "e7f06dc4d0a64ae39e78324ade0a3b43",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Name": "Output",
+        "ShowGeometry": true,
+        "Excluded": false,
+        "X": 243.20000000000027,
+        "Y": 227.20000000000005
+      },
+      {
+        "Id": "44cccc8ca1644418b5e0a9f29ebb2f87",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Name": "Output",
+        "ShowGeometry": true,
+        "Excluded": false,
+        "X": 243.91647290804929,
+        "Y": 142.0937339961811
+      }
+    ],
+    "Annotations": [
+      {
+        "Id": "3bfc7c01a39c4ba18bd9a6b4e68fa8c6",
+        "Title": "Colin McCrone\r\nTwitter:  @ColinMcCrone\r\nLinkedIn: https://www.linkedin.com/in/colinmccrone\r\nUpdated:  2019-05-20\r\n\r\nAn example Dynamo script for how to use this node can be found in the 'extra' folder where the package files are stored. To find it, go to the Packages Menu and select \"Manage Packages.\" Where Ampersand is listed, open the drop-down menu link at the right and choose \"Show Root Directory.\" Open the \"extra\" folder to find the example file called AmpersandExamples.dyn.",
+        "Nodes": [],
+        "Left": -539.10795576278713,
+        "Top": -143.5758708334161,
+        "Width": 0.0,
+        "Height": 0.0,
+        "FontSize": 36.0,
+        "InitialTop": 0.0,
+        "InitialHeight": 0.0,
+        "TextblockHeight": 0.0,
+        "Background": "#FFC1D676"
+      }
+    ],
+    "X": 640.9470433669801,
+    "Y": 203.15291172317637,
+    "Zoom": 1.036057875600608
+  }
+}

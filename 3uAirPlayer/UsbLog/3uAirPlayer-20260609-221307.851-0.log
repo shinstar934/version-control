@@ -1,0 +1,9 @@
+[2026-06-09 22:13:09.891 6380 DEBUG USBDeviceManager.cpp:490] 忽略未知设备: USB\VID_1BCF&PID_2B99\5&2699FB5D&0&5 
+[2026-06-09 22:13:51.923 3964 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-09 22:13:51.926 3964 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-09 22:13:51.968 3964 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-09 22:13:51.971 3964 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-09 22:40:04.560 3964 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-09 22:40:04.570 3964 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-09 22:40:04.793 3964 DEBUG USBDeviceManager.cpp:168] device nodes changed  
+[2026-06-09 22:40:04.917 3964 DEBUG USBDeviceManager.cpp:168] device nodes changed  

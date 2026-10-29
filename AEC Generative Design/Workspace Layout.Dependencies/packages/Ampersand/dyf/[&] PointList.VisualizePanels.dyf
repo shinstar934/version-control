@@ -1,0 +1,590 @@
+{
+  "Uuid": "48497f22-0431-4a0c-a69b-d1f19ddd21c1",
+  "IsCustomNode": true,
+  "Category": "Ampersand.[&] Point",
+  "Description": "",
+  "Name": "[&] PointList.VisualizePanels",
+  "ElementResolver": {
+    "ResolutionMap": {
+      "Point": {
+        "Key": "Autodesk.DesignScript.Geometry.Point",
+        "Value": "ProtoGeometry.dll"
+      },
+      "Autodesk.Point": {
+        "Key": "Autodesk.DesignScript.Geometry.Point",
+        "Value": "ProtoGeometry.dll"
+      },
+      "Autodesk.DesignScript.Geometry.Point": {
+        "Key": "Autodesk.DesignScript.Geometry.Point",
+        "Value": "ProtoGeometry.dll"
+      }
+    }
+  },
+  "Inputs": [],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Modifiers.GeometryColor.ByGeometryColor@Autodesk.DesignScript.Geometry.Geometry,DSCore.Color",
+      "Id": "5268c595481d45aab84ba87da6978344",
+      "Inputs": [
+        {
+          "Id": "35411a4d7f154299b4a5e0d66fcf5f29",
+          "Name": "geometry",
+          "Description": "Geometry",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "157794c5187642d09029ba80feaae87e",
+          "Name": "color",
+          "Description": "Color",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "afcf3e82ad704cd2a188d0a384a59396",
+          "Name": "GeometryColor",
+          "Description": "GeometryColor",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "GeometryColor.ByGeometryColor (geometry: Geometry, color: Color): GeometryColor"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.ColorRange, CoreNodeModels",
+      "NodeType": "ExtensionNode",
+      "Id": "613a3062fffa46b382eae08b47a8250a",
+      "Inputs": [
+        {
+          "Id": "6ac7970612b14a88bf3c51db2c6f75ea",
+          "Name": "colors",
+          "Description": "A list of colors to include in the range.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "952eddfeae5945fcb542e4670935acf4",
+          "Name": "indices",
+          "Description": "A list of values between 0.0 and 1.0 which position the input colors along the range.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "0b4f5b1f37e747b49d4574e366128883",
+          "Name": "value",
+          "Description": "A list of values between 0.0 and 1.0. These values are used to look up the color within the range.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "12970917ac6d4949b294ae8d96ec9c2c",
+          "Name": "color",
+          "Description": "The selected colors.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Get a color given a color range."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "0..1..#count;",
+      "Id": "2d769a26dfe044c4b8b88cc33d347470",
+      "Inputs": [
+        {
+          "Id": "5b927aecc53141a08242a3cca736dd16",
+          "Name": "count",
+          "Description": "count",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "a18b5fd526d5461fba7db23eb6e8f484",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.List.Shuffle@var[]..[]",
+      "Id": "77275c7452fe42fea76806f40a2445ae",
+      "Inputs": [
+        {
+          "Id": "3e9b2bd8fd38453790a065bcab9f378c",
+          "Name": "list",
+          "Description": "List to shuffle.\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "b7fb97333d034082b7e896bde118eb84",
+          "Name": "list",
+          "Description": "Randomized list.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Shuffles a list, randomizing the order of its items.\n\nList.Shuffle (list: var[]..[]): var[]..[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.List.Count@var[]..[]",
+      "Id": "91f14a850ca242e1bae11d08c099ea8c",
+      "Inputs": [
+        {
+          "Id": "b295fcb2a0af44dda7fbc132cd536278",
+          "Name": "list",
+          "Description": "List to get the item count of.\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "463d0431cd9b43c7813675bef14fbb5a",
+          "Name": "count",
+          "Description": "List length.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Returns the number of items stored in the given list.\n\nList.Count (list: var[]..[]): int"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.List.Flatten@var[]..[],int",
+      "Id": "3e622dc63fdb4eeda6e62a70a6f01a3c",
+      "Inputs": [
+        {
+          "Id": "334861727d714c8f9b3821437f5dcefa",
+          "Name": "list",
+          "Description": "List to flatten.\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "76c75588260d4e80a79ec2ab1f230ad6",
+          "Name": "amt",
+          "Description": "Layers of nesting to remove.\n\nint\nDefault value : -1",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "9fff8e148a29411f80280e5e0d6b93ea",
+          "Name": "var[]..[]",
+          "Description": "var[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Flattens a nested list of lists by a certain amount.\n\nList.Flatten (list: var[]..[], amt: int = -1): var[]..[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.Surface.ByPatch@Autodesk.DesignScript.Geometry.Curve",
+      "Id": "8293b9b67678417aa9abb6b898a22e50",
+      "Inputs": [
+        {
+          "Id": "d21a5fcab3bc45e3a96d4fc8697395d4",
+          "Name": "closedCurve",
+          "Description": "Curve",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "c676729e5b2e4f99b7225f1c123c9010",
+          "Name": "Surface",
+          "Description": "Surface",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Create a Surface by filling in the interior of a closed boundary defined by input Curves.\n\nSurface.ByPatch (closedCurve: Curve): Surface"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.PolyCurve.ByPoints@Autodesk.DesignScript.Geometry.Point[],bool",
+      "Id": "ce07bed259144b61a6398a870b60985c",
+      "Inputs": [
+        {
+          "Id": "7c17c58c65304b36b43127341e309d43",
+          "Name": "points",
+          "Description": "Points to make polycurve\n\nPoint[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "069564007ef54d7c84a9e58f466bcfa3",
+          "Name": "connectLastToFirst",
+          "Description": "make close or open polycurve\n\nbool\nDefault value : false",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "d8a0a2162f6048559387922c0a4f9a87",
+          "Name": "PolyCurve",
+          "Description": "PolyCurve",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Make PolyCurve by connecting points. Set the 'connectLastToFirst' input to true to close the PolyCurve.\n\nPolyCurve.ByPoints (points: Point[], connectLastToFirst: bool = false): PolyCurve"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "true;",
+      "Id": "aceba61db7544f81a7de4c569b4b95a4",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "9c1a8192a93046ff9e047e82d12f6a4c",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Output, DynamoCore",
+      "NodeType": "OutputNode",
+      "ElementResolver": null,
+      "Symbol": "Display",
+      "Id": "5938f7d7565a4d6c9fea6fc683b42b2e",
+      "Inputs": [
+        {
+          "Id": "4050402ad0e04ac58b6716a65b8edc97",
+          "Name": "",
+          "Description": "",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [],
+      "Replication": "Disabled",
+      "Description": "A function output, use with custom nodes"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Symbol, DynamoCore",
+      "NodeType": "InputNode",
+      "Parameter": {
+        "Name": "vertices",
+        "TypeName": "Autodesk.DesignScript.Geometry.Point",
+        "TypeRank": 2,
+        "DefaultValue": null,
+        "Description": ""
+      },
+      "Id": "587d728900094f20b4fba78a52372777",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "faf8c1d1bde141079e73d74cf654a246",
+          "Name": "",
+          "Description": "Symbol",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "A function parameter, use with custom nodes.\r\n\r\nYou can specify the type and default value for parameter. E.g.,\r\n\r\ninput : var[]..[]\r\nvalue : bool = false"
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "afcf3e82ad704cd2a188d0a384a59396",
+      "End": "4050402ad0e04ac58b6716a65b8edc97",
+      "Id": "b6bb6323cc3b47208788ab0885eb2021"
+    },
+    {
+      "Start": "12970917ac6d4949b294ae8d96ec9c2c",
+      "End": "157794c5187642d09029ba80feaae87e",
+      "Id": "a3aa1abaeb5a499f8974c29e317a1ad1"
+    },
+    {
+      "Start": "a18b5fd526d5461fba7db23eb6e8f484",
+      "End": "0b4f5b1f37e747b49d4574e366128883",
+      "Id": "bd2cbf78c7434d4fae8f66f5bda7832b"
+    },
+    {
+      "Start": "b7fb97333d034082b7e896bde118eb84",
+      "End": "35411a4d7f154299b4a5e0d66fcf5f29",
+      "Id": "50dffc752ff844baa26ac71e7a707130"
+    },
+    {
+      "Start": "463d0431cd9b43c7813675bef14fbb5a",
+      "End": "5b927aecc53141a08242a3cca736dd16",
+      "Id": "212537dba66f4f478c88a621d4872d0b"
+    },
+    {
+      "Start": "9fff8e148a29411f80280e5e0d6b93ea",
+      "End": "b295fcb2a0af44dda7fbc132cd536278",
+      "Id": "c1d382995ff743499198c7a92be00d0d"
+    },
+    {
+      "Start": "9fff8e148a29411f80280e5e0d6b93ea",
+      "End": "3e9b2bd8fd38453790a065bcab9f378c",
+      "Id": "43304cc17cd74e5b8c0fbc840517e6ba"
+    },
+    {
+      "Start": "c676729e5b2e4f99b7225f1c123c9010",
+      "End": "334861727d714c8f9b3821437f5dcefa",
+      "Id": "6d985c6b7387489cbc654341fe728d44"
+    },
+    {
+      "Start": "d8a0a2162f6048559387922c0a4f9a87",
+      "End": "d21a5fcab3bc45e3a96d4fc8697395d4",
+      "Id": "d449d6e6604d4579b7bc2f006392cc5e"
+    },
+    {
+      "Start": "9c1a8192a93046ff9e047e82d12f6a4c",
+      "End": "069564007ef54d7c84a9e58f466bcfa3",
+      "Id": "b6d780521bb74e8eb506e0e521a4cd35"
+    },
+    {
+      "Start": "faf8c1d1bde141079e73d74cf654a246",
+      "End": "7c17c58c65304b36b43127341e309d43",
+      "Id": "dca445b548504b83a0f57617134ee974"
+    }
+  ],
+  "Dependencies": [],
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": false,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "2.0.2.6826",
+      "RunType": "Manual",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "Background Preview",
+      "EyeX": -17.0,
+      "EyeY": 24.0,
+      "EyeZ": 50.0,
+      "LookX": 12.0,
+      "LookY": -13.0,
+      "LookZ": -58.0,
+      "UpX": 0.0,
+      "UpY": 1.0,
+      "UpZ": 0.0
+    },
+    "NodeViews": [
+      {
+        "ShowGeometry": true,
+        "Name": "GeometryColor.ByGeometryColor",
+        "Id": "5268c595481d45aab84ba87da6978344",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 2021.54821826223,
+        "Y": 0.976734795579887
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Color Range",
+        "Id": "613a3062fffa46b382eae08b47a8250a",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1669.83350209358,
+        "Y": 70.77074902138
+      },
+      {
+        "ShowGeometry": false,
+        "Name": "Code Block",
+        "Id": "2d769a26dfe044c4b8b88cc33d347470",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1433.37192601252,
+        "Y": 124.35234557814
+      },
+      {
+        "ShowGeometry": false,
+        "Name": "List.Shuffle",
+        "Id": "77275c7452fe42fea76806f40a2445ae",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1227.92235069697,
+        "Y": 0.0
+      },
+      {
+        "ShowGeometry": false,
+        "Name": "List.Count",
+        "Id": "91f14a850ca242e1bae11d08c099ea8c",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1227.22354867396,
+        "Y": 127.46042146658
+      },
+      {
+        "ShowGeometry": false,
+        "Name": "List.Flatten",
+        "Id": "3e622dc63fdb4eeda6e62a70a6f01a3c",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 984.31561009665,
+        "Y": 14.7180717766
+      },
+      {
+        "ShowGeometry": false,
+        "Name": "Surface.ByPatch",
+        "Id": "8293b9b67678417aa9abb6b898a22e50",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 693.677321587649,
+        "Y": 16.07187118569
+      },
+      {
+        "ShowGeometry": false,
+        "Name": "PolyCurve.ByPoints",
+        "Id": "ce07bed259144b61a6398a870b60985c",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 369.99366524004,
+        "Y": 13.5220878841999
+      },
+      {
+        "ShowGeometry": false,
+        "Name": "Code Block",
+        "Id": "aceba61db7544f81a7de4c569b4b95a4",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 212.952299411686,
+        "Y": 94.117702248565891
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Output",
+        "Id": "5938f7d7565a4d6c9fea6fc683b42b2e",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 2317.34821826223,
+        "Y": 0.0
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Input",
+        "Id": "587d728900094f20b4fba78a52372777",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -149.65744028915796,
+        "Y": 8.9053409484468826
+      }
+    ],
+    "Annotations": [
+      {
+        "Id": "b61c5610ee96435ab8d9368b98a4d3e5",
+        "Title": "Colin McCrone\r\nTwitter:  @ColinMcCrone\r\nLinkedIn: https://www.linkedin.com/in/colinmccrone\r\nUpdated:  2019-05-20\r\n\r\nAn example Dynamo script for how to use this node can be found in the 'extra' folder where the package files are stored. To find it, go to the Packages Menu and select \"Manage Packages.\" Where Ampersand is listed, open the drop-down menu link at the right and choose \"Show Root Directory.\" Open the \"extra\" folder to find the example file called AmpersandExamples.dyn.",
+        "Nodes": [],
+        "Left": -145.97015225477219,
+        "Top": -226.30487699740661,
+        "Width": 0.0,
+        "Height": 0.0,
+        "FontSize": 36.0,
+        "InitialTop": 0.0,
+        "InitialHeight": 0.0,
+        "TextblockHeight": 0.0,
+        "Background": "#FFC1D676"
+      }
+    ],
+    "X": 240.51757326326825,
+    "Y": 336.27406064531118,
+    "Zoom": 1.1988764122516973
+  }
+}

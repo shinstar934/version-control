@@ -1,0 +1,632 @@
+{
+  "Uuid": "930e3d85-439f-41ca-86eb-a34eafe0d8e1",
+  "IsCustomNode": true,
+  "Category": "Ampersand",
+  "Description": "Create a unit vector by its altitude and azimuth.  The positive Y axis is taken as north and the positive Z axis is taken as up.\r\n\r\nAltitudinal convention is:\r\n90° = straight up (+Z axis),\r\n0° = horizontal,\r\n-90° = straight down (-Z axis).\r\n\r\nAzimuthal convention is:\r\n0° = North (+Y axis),\r\n90° = East (+X axis),\r\n180° = South (-Y axis),\r\n270° = West (-X axis).",
+  "Name": "[&] Vector.ByAltitudeAzimuth",
+  "ElementResolver": {
+    "ResolutionMap": {}
+  },
+  "Inputs": [],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.Vector.ByCoordinates@double,double,double,bool",
+      "Id": "ef1c5fa47dbd48c1b16f44434a7bf335",
+      "Inputs": [
+        {
+          "Id": "f18ff7512597409098aaab2def3bed66",
+          "Name": "x",
+          "Description": "X coordinate\n\ndouble\nDefault value : 0",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "0af77df021694330800a5450e79753c8",
+          "Name": "y",
+          "Description": "Y coordinate\n\ndouble\nDefault value : 0",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "c04cb01da3434c85961c47591c9d3f96",
+          "Name": "z",
+          "Description": "Z coordinate\n\ndouble\nDefault value : 0",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "e6b08f72e0dc4737994c27127d999d9e",
+          "Name": "normalized",
+          "Description": "Whether to normalize the result Vector or not\n\nbool\nDefault value : false",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "1208f23018ff4b69a64e3af9e5c94629",
+          "Name": "Vector",
+          "Description": "Vector",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Form a Vector by 3 Euclidean coordinates and normalize the Vector\n\nVector.ByCoordinates (x: double = 0, y: double = 0, z: double = 0, normalized: bool = false): Vector"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "sinPhi * cosTheta;\nsinTheta * sinPhi;\ncosPhi;\ntrue;",
+      "Id": "1c78e10faab0455e841f8e0c3b81f396",
+      "Inputs": [
+        {
+          "Id": "216277f677834e29852723990fa5d91e",
+          "Name": "sinPhi",
+          "Description": "sinPhi",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "e286b7c1919f4754979c1cd48842794e",
+          "Name": "cosTheta",
+          "Description": "cosTheta",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "da52712eeb874ef086885ed7f3009d08",
+          "Name": "sinTheta",
+          "Description": "sinTheta",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "3a558f04057b432f867da68401cc3f8b",
+          "Name": "cosPhi",
+          "Description": "cosPhi",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "3a89ed3fd39a44fab4c0d5a8e6d50f08",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "ce26c8309a1f4c488522696c8fd5b388",
+          "Name": "",
+          "Description": "Value of expression at line 2",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "e929a69d94fe4a38a17ab08ab951a2f3",
+          "Name": "",
+          "Description": "Value of expression at line 3",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "9b950df517b04c209ded4223b5bd8ce5",
+          "Name": "",
+          "Description": "Value of expression at line 4",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.Math.Sin@double",
+      "Id": "6ac488385e2d4af9b5e81ff51905876d",
+      "Inputs": [
+        {
+          "Id": "d6d9b22263d043829e0121cd00b73ad3",
+          "Name": "angle",
+          "Description": "Angle in degrees to take the sine of.\n\ndouble",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "c4bfe8a6b2424695a5d76c2e7c74783d",
+          "Name": "sin",
+          "Description": "Sine of the angle.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Finds the sine of an angle.\n\nMath.Sin (angle: double): double"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.Math.Cos@double",
+      "Id": "b1be291c3d4a4139a4f13fa5379a453e",
+      "Inputs": [
+        {
+          "Id": "7d1ef28561fb4cb5b3ade2fe3c5b1a2a",
+          "Name": "angle",
+          "Description": "Angle in degrees to take the cosine of.\n\ndouble",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "27303d96eca444cfa9524f94f503141a",
+          "Name": "cos",
+          "Description": "Cosine of the angle.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Finds the cosine of an angle.\n\nMath.Cos (angle: double): double"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.Math.Sin@double",
+      "Id": "2ff59a13e93d4c6b93b5a1a2eaa3bb2f",
+      "Inputs": [
+        {
+          "Id": "2204cefce122427094e6d12843364efc",
+          "Name": "angle",
+          "Description": "Angle in degrees to take the sine of.\n\ndouble",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "6738780e956d490e965ee8c1bd459790",
+          "Name": "sin",
+          "Description": "Sine of the angle.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Finds the sine of an angle.\n\nMath.Sin (angle: double): double"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "// altitude=0 is perfectly horizontal\n//translated to angle from +Z axis\nphi = 90 - altitude;\n\n// azimuth=0 is North (+Y axis)\n// translated to CCW from +X axis\ntheta = (90 - azimuth) % 360;",
+      "Id": "35ed48d9a73c48469291087e99685766",
+      "Inputs": [
+        {
+          "Id": "7c83cf42e1054ba4af9e4a071ef6f36e",
+          "Name": "altitude",
+          "Description": "altitude",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "3c74c3eba2e54147b5f84e2575c08f7a",
+          "Name": "azimuth",
+          "Description": "azimuth",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "e41c322d6b584a098f152811479e493d",
+          "Name": "",
+          "Description": "phi",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "76dda38a009d4cc597486a8f373bf424",
+          "Name": "",
+          "Description": "theta",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.Math.Cos@double",
+      "Id": "53c3177c47be40d29c431db1ecd167e4",
+      "Inputs": [
+        {
+          "Id": "e9a17612bb7d4d84ba2ed1f3945c5e51",
+          "Name": "angle",
+          "Description": "Angle in degrees to take the cosine of.\n\ndouble",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "9d818aa357aa45adb1f8e036d5c7806e",
+          "Name": "cos",
+          "Description": "Cosine of the angle.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Finds the cosine of an angle.\n\nMath.Cos (angle: double): double"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Symbol, DynamoCore",
+      "NodeType": "InputNode",
+      "Parameter": {
+        "Name": "altitude",
+        "TypeName": "var",
+        "TypeRank": -1,
+        "DefaultValue": null,
+        "Description": ""
+      },
+      "Id": "6713c81066344187b82c5c07afcf84f8",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "52d9eafe4d18465fb16e3a87a252bfe6",
+          "Name": "",
+          "Description": "Symbol",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "A function parameter, use with custom nodes.\r\n\r\nYou can specify the type and default value for parameter. E.g.,\r\n\r\ninput : var[]..[]\r\nvalue : bool = false"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Symbol, DynamoCore",
+      "NodeType": "InputNode",
+      "Parameter": {
+        "Name": "azimuth",
+        "TypeName": "var",
+        "TypeRank": -1,
+        "DefaultValue": null,
+        "Description": ""
+      },
+      "Id": "faa4529d7c1f46988fcad3504d128704",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "bcc9d245f3414685b9c7efc0d77835f0",
+          "Name": "",
+          "Description": "Symbol",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "A function parameter, use with custom nodes.\r\n\r\nYou can specify the type and default value for parameter. E.g.,\r\n\r\ninput : var[]..[]\r\nvalue : bool = false"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Output, DynamoCore",
+      "NodeType": "OutputNode",
+      "ElementResolver": null,
+      "Symbol": "vector",
+      "Id": "8f96beb87d8d464c81d2d534a3c620e1",
+      "Inputs": [
+        {
+          "Id": "3a8b91846ade46bcb84d38d61c2340d7",
+          "Name": "",
+          "Description": "",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [],
+      "Replication": "Disabled",
+      "Description": "A function output, use with custom nodes"
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "1208f23018ff4b69a64e3af9e5c94629",
+      "End": "3a8b91846ade46bcb84d38d61c2340d7",
+      "Id": "f4d9fbb0884749ccbdb1fe9f9c734820"
+    },
+    {
+      "Start": "3a89ed3fd39a44fab4c0d5a8e6d50f08",
+      "End": "f18ff7512597409098aaab2def3bed66",
+      "Id": "1ea41d905e0042318ac901ae33a1d754"
+    },
+    {
+      "Start": "ce26c8309a1f4c488522696c8fd5b388",
+      "End": "0af77df021694330800a5450e79753c8",
+      "Id": "df24134bbf174e31a522a4285fbd2019"
+    },
+    {
+      "Start": "e929a69d94fe4a38a17ab08ab951a2f3",
+      "End": "c04cb01da3434c85961c47591c9d3f96",
+      "Id": "7352d4431b3f4a3397e52cedad2e9adb"
+    },
+    {
+      "Start": "9b950df517b04c209ded4223b5bd8ce5",
+      "End": "e6b08f72e0dc4737994c27127d999d9e",
+      "Id": "2c02066204084bedbca456f2b0dd7ada"
+    },
+    {
+      "Start": "c4bfe8a6b2424695a5d76c2e7c74783d",
+      "End": "216277f677834e29852723990fa5d91e",
+      "Id": "514ef9e37df64a79a101c60eb3cfebd8"
+    },
+    {
+      "Start": "27303d96eca444cfa9524f94f503141a",
+      "End": "3a558f04057b432f867da68401cc3f8b",
+      "Id": "2648a12bc58f4466a49609a1c6bff931"
+    },
+    {
+      "Start": "6738780e956d490e965ee8c1bd459790",
+      "End": "da52712eeb874ef086885ed7f3009d08",
+      "Id": "26ddec358cd242ffb3fef53d9e7c49d6"
+    },
+    {
+      "Start": "e41c322d6b584a098f152811479e493d",
+      "End": "d6d9b22263d043829e0121cd00b73ad3",
+      "Id": "5e6d254aba2f48dabd0fd987ef509bdb"
+    },
+    {
+      "Start": "e41c322d6b584a098f152811479e493d",
+      "End": "7d1ef28561fb4cb5b3ade2fe3c5b1a2a",
+      "Id": "8b5c815e25fa48b08283da49d29f3b69"
+    },
+    {
+      "Start": "76dda38a009d4cc597486a8f373bf424",
+      "End": "2204cefce122427094e6d12843364efc",
+      "Id": "1d7b770c89aa4ec7a033f0f4e9e78506"
+    },
+    {
+      "Start": "76dda38a009d4cc597486a8f373bf424",
+      "End": "e9a17612bb7d4d84ba2ed1f3945c5e51",
+      "Id": "45acb318ee66413da0919846ab33a348"
+    },
+    {
+      "Start": "9d818aa357aa45adb1f8e036d5c7806e",
+      "End": "e286b7c1919f4754979c1cd48842794e",
+      "Id": "6679ff6ce8604f65954e353f8b16227f"
+    },
+    {
+      "Start": "52d9eafe4d18465fb16e3a87a252bfe6",
+      "End": "7c83cf42e1054ba4af9e4a071ef6f36e",
+      "Id": "3f193e83cd8c4f069eb90b64121e32e0"
+    },
+    {
+      "Start": "bcc9d245f3414685b9c7efc0d77835f0",
+      "End": "3c74c3eba2e54147b5f84e2575c08f7a",
+      "Id": "09edf731a24e482aa3df780561a67f61"
+    }
+  ],
+  "Dependencies": [],
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": false,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "2.0.2.6826",
+      "RunType": "Manual",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "Background Preview",
+      "EyeX": -17.0,
+      "EyeY": 24.0,
+      "EyeZ": 50.0,
+      "LookX": 12.0,
+      "LookY": -13.0,
+      "LookZ": -58.0,
+      "UpX": 0.0,
+      "UpY": 1.0,
+      "UpZ": 0.0
+    },
+    "NodeViews": [
+      {
+        "ShowGeometry": true,
+        "Name": "Vector.ByCoordinates",
+        "Id": "ef1c5fa47dbd48c1b16f44434a7bf335",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1320.47814729607,
+        "Y": 107.119896086384
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "1c78e10faab0455e841f8e0c3b81f396",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1007.4619315679,
+        "Y": 119.749290239406
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Math.Sin",
+        "Id": "6ac488385e2d4af9b5e81ff51905876d",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 753.093841307436,
+        "Y": 0.0
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Math.Cos",
+        "Id": "b1be291c3d4a4139a4f13fa5379a453e",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 753.093841307436,
+        "Y": 87.8525030275528
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Math.Sin",
+        "Id": "2ff59a13e93d4c6b93b5a1a2eaa3bb2f",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 753.093841307436,
+        "Y": 209.81562878444
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "35ed48d9a73c48469291087e99685766",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 250.0,
+        "Y": 98.4594187655778
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Math.Cos",
+        "Id": "53c3177c47be40d29c431db1ecd167e4",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 753.093841307436,
+        "Y": 297.66813181199
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Input",
+        "Id": "6713c81066344187b82c5c07afcf84f8",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -24.88840825588602,
+        "Y": 4.9776816511772495
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Input",
+        "Id": "faa4529d7c1f46988fcad3504d128704",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -24.88840825588602,
+        "Y": 154.97768165117725
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Output",
+        "Id": "8f96beb87d8d464c81d2d534a3c620e1",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1566.67814729607,
+        "Y": 0.0
+      }
+    ],
+    "Annotations": [
+      {
+        "Id": "49498204cf4c4d899b1d1e57f51309b4",
+        "Title": "Create a unit vector by its altitude and azimuth.  The positive Y axis is taken as north and the positive Z axis is taken as up.\r\n\r\nAltitudinal convention is:\r\n90° = straight up (+Z axis),\r\n0° = horizontal,\r\n-90° = straight down (-Z axis).\r\n\r\nAzimuthal convention is:\r\n0° = North (+Y axis),\r\n90° = East (+X axis),\r\n180° = South (-Y axis),\r\n270° = West (-X axis).",
+        "Nodes": [],
+        "Left": 306.53377570813348,
+        "Top": -242.48093877870843,
+        "Width": 0.0,
+        "Height": 0.0,
+        "FontSize": 36.0,
+        "InitialTop": 0.0,
+        "InitialHeight": 0.0,
+        "TextblockHeight": 0.0,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "fc7bd81d14eb4d9583a9d45dcb111233",
+        "Title": "Colin McCrone\r\nTwitter:  @ColinMcCrone\r\nLinkedIn: https://www.linkedin.com/in/colinmccrone\r\nUpdated:  2019-05-20\r\n\r\nAn example Dynamo script for how to use this node can be found in the 'extra' folder where the package files are stored. To find it, go to the Packages Menu and select \"Manage Packages.\" Where Ampersand is listed, open the drop-down menu link at the right and choose \"Show Root Directory.\" Open the \"extra\" folder to find the example file called AmpersandExamples.dyn.",
+        "Nodes": [],
+        "Left": -29.760206430437393,
+        "Top": -244.95484744091738,
+        "Width": 0.0,
+        "Height": 0.0,
+        "FontSize": 36.0,
+        "InitialTop": 0.0,
+        "InitialHeight": 0.0,
+        "TextblockHeight": 0.0,
+        "Background": "#FFC1D676"
+      }
+    ],
+    "X": 106.61071161327175,
+    "Y": 277.95123642899034,
+    "Zoom": 0.82770257044119044
+  }
+}

@@ -1,0 +1,408 @@
+{
+  "Uuid": "8ce8aba2-2334-420b-9eea-ad80a5b77371",
+  "IsCustomNode": true,
+  "Category": "Ampersand",
+  "Description": "Select a sublist by specifying start and end indices, inclusive. If the TO index is smaller than the FROM index, the selection will wrap around to the beginning of the list.",
+  "Name": "[&] List.SublistByRange",
+  "ElementResolver": {
+    "ResolutionMap": {
+      "String": {
+        "Key": "DSCore.String",
+        "Value": "DSCoreNodes.dll"
+      },
+      "List": {
+        "Key": "DSCore.List",
+        "Value": "DSCoreNodes.dll"
+      },
+      "PolyCurve": {
+        "Key": "Autodesk.DesignScript.Geometry.PolyCurve",
+        "Value": "ProtoGeometry.dll"
+      },
+      "Autodesk.PolyCurve": {
+        "Key": "Autodesk.DesignScript.Geometry.PolyCurve",
+        "Value": "ProtoGeometry.dll"
+      }
+    }
+  },
+  "Inputs": [],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "max = end + (end < start ? 1 : 0) * count;\n\n(start..max) % count;",
+      "Id": "dab46c39deba475395cbcd298cc56308",
+      "Inputs": [
+        {
+          "Id": "2250e7c3e7394ee98b66a963aa6a1292",
+          "Name": "end",
+          "Description": "end",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "56daa746c914492fac8732db5187f7c4",
+          "Name": "start",
+          "Description": "start",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "beaa284ad3b54c898183f3f0d90a8655",
+          "Name": "count",
+          "Description": "count",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "398ee3e4eaf94375a04c55ce8e1b02bc",
+          "Name": "",
+          "Description": "max",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "305d58225e804619ab0e54a9a35878bc",
+          "Name": "",
+          "Description": "Value of expression at line 3",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.List.Count@var[]..[]",
+      "Id": "a22ba17ed2394c86bbec9b4850531e74",
+      "Inputs": [
+        {
+          "Id": "8c15102ea7db4f3fb9046d50f783425d",
+          "Name": "list",
+          "Description": "List to get the item count of.\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "9e68242a3bd448c08b93a29093b14a01",
+          "Name": "count",
+          "Description": "List length.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Returns the number of items stored in the given list.\n\nList.Count (list: var[]..[]): int"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Symbol, DynamoCore",
+      "NodeType": "InputNode",
+      "Parameter": {
+        "Name": "list",
+        "TypeName": "var",
+        "TypeRank": -1,
+        "DefaultValue": null,
+        "Description": ""
+      },
+      "Id": "8165aed3d9fd4896aa2b126eb0a4f589",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "101c47b14ff940bc8a076e7e13e11496",
+          "Name": "",
+          "Description": "Symbol",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "A function parameter, use with custom nodes.\r\n\r\nYou can specify the type and default value for parameter. E.g.,\r\n\r\ninput : var[]..[]\r\nvalue : bool = false"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Output, DynamoCore",
+      "NodeType": "OutputNode",
+      "ElementResolver": null,
+      "Symbol": "list",
+      "Id": "46220338a7fb4e49bd4d326192f788a2",
+      "Inputs": [
+        {
+          "Id": "ba8d5e7218c04ea8b3545401350afc1e",
+          "Name": "",
+          "Description": "",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [],
+      "Replication": "Disabled",
+      "Description": "A function output, use with custom nodes"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Symbol, DynamoCore",
+      "NodeType": "InputNode",
+      "Parameter": {
+        "Name": "fromIndex",
+        "TypeName": "var",
+        "TypeRank": -1,
+        "DefaultValue": null,
+        "Description": ""
+      },
+      "Id": "00ed698d94c049fbab9e6e4b67dd22f8",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "76fe58ca46ec40b99abf4b2e0ac3fcff",
+          "Name": "",
+          "Description": "Symbol",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "A function parameter, use with custom nodes.\r\n\r\nYou can specify the type and default value for parameter. E.g.,\r\n\r\ninput : var[]..[]\r\nvalue : bool = false"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Symbol, DynamoCore",
+      "NodeType": "InputNode",
+      "Parameter": {
+        "Name": "toIndex",
+        "TypeName": "var",
+        "TypeRank": -1,
+        "DefaultValue": null,
+        "Description": ""
+      },
+      "Id": "5ab78af07a774914a60fdcbc94becd3e",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "edbbdf4140824caeadde67e6cf2b54e0",
+          "Name": "",
+          "Description": "Symbol",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "A function parameter, use with custom nodes.\r\n\r\nYou can specify the type and default value for parameter. E.g.,\r\n\r\ninput : var[]..[]\r\nvalue : bool = false"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.List.GetItemAtIndex@var[]..[],int",
+      "Id": "bda323db3a934bd89c8e19c469e422f0",
+      "Inputs": [
+        {
+          "Id": "3e482350739f4c56bbe8cadaea70703f",
+          "Name": "list",
+          "Description": "List to fetch an item from.\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "a602a229ff404128bdae53a59bf67ea9",
+          "Name": "index",
+          "Description": "Index of the item to be fetched.\n\nint",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "e47f64170bff4fe7932ccd01981fa96a",
+          "Name": "item",
+          "Description": "Item in the list at the given index.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Returns an item from the given list that's located at the specified index.\n\nList.GetItemAtIndex (list: var[]..[], index: int): var[]..[]"
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "305d58225e804619ab0e54a9a35878bc",
+      "End": "a602a229ff404128bdae53a59bf67ea9",
+      "Id": "c81fd80355354e62ba33176f4696569b"
+    },
+    {
+      "Start": "9e68242a3bd448c08b93a29093b14a01",
+      "End": "beaa284ad3b54c898183f3f0d90a8655",
+      "Id": "5e3b39e4b0c643068cd7be6f1e1f016d"
+    },
+    {
+      "Start": "101c47b14ff940bc8a076e7e13e11496",
+      "End": "8c15102ea7db4f3fb9046d50f783425d",
+      "Id": "28da79a5470f42eeb2384380361d949c"
+    },
+    {
+      "Start": "101c47b14ff940bc8a076e7e13e11496",
+      "End": "3e482350739f4c56bbe8cadaea70703f",
+      "Id": "8391bfb8429c4c36978591bdc2af61f8"
+    },
+    {
+      "Start": "76fe58ca46ec40b99abf4b2e0ac3fcff",
+      "End": "56daa746c914492fac8732db5187f7c4",
+      "Id": "8d1a42e141a24fa99e20b6f6bc8b6a09"
+    },
+    {
+      "Start": "edbbdf4140824caeadde67e6cf2b54e0",
+      "End": "2250e7c3e7394ee98b66a963aa6a1292",
+      "Id": "e07563ec692644c4bb3cf91f22622eef"
+    },
+    {
+      "Start": "e47f64170bff4fe7932ccd01981fa96a",
+      "End": "ba8d5e7218c04ea8b3545401350afc1e",
+      "Id": "65d49753cfc94beb8da23e208b734bf6"
+    }
+  ],
+  "Dependencies": [],
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": false,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "2.0.2.6826",
+      "RunType": "Manual",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "Background Preview",
+      "EyeX": -17.0,
+      "EyeY": 24.0,
+      "EyeZ": 50.0,
+      "LookX": 12.0,
+      "LookY": -13.0,
+      "LookZ": -58.0,
+      "UpX": 0.0,
+      "UpY": 1.0,
+      "UpZ": 0.0
+    },
+    "NodeViews": [
+      {
+        "ShowGeometry": false,
+        "Name": "Code Block",
+        "Id": "dab46c39deba475395cbcd298cc56308",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 501.05175067399,
+        "Y": 88.7594727718059
+      },
+      {
+        "ShowGeometry": false,
+        "Name": "List.Count",
+        "Id": "a22ba17ed2394c86bbec9b4850531e74",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 271.29470255882,
+        "Y": 162.986377277119
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Input",
+        "Id": "8165aed3d9fd4896aa2b126eb0a4f589",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 34.5019438444924,
+        "Y": 7.64578833693305
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Output",
+        "Id": "46220338a7fb4e49bd4d326192f788a2",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1222.00807349861,
+        "Y": 15.5615134083681
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Input",
+        "Id": "00ed698d94c049fbab9e6e4b67dd22f8",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 34.5019438444924,
+        "Y": 83.2198704103672
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Input",
+        "Id": "5ab78af07a774914a60fdcbc94becd3e",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 34.5019438444924,
+        "Y": 158.793952483801
+      },
+      {
+        "ShowGeometry": false,
+        "Name": "List.GetItemAtIndex",
+        "Id": "bda323db3a934bd89c8e19c469e422f0",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 999.316279835652,
+        "Y": 13.717067883816
+      }
+    ],
+    "Annotations": [
+      {
+        "Id": "920039fbe63549c19a2660d23a6c59b2",
+        "Title": "Colin McCrone\r\nTwitter:  @ColinMcCrone\r\nLinkedIn: https://www.linkedin.com/in/colinmccrone\r\nUpdated:  2019-05-20\r\n\r\nAn example Dynamo script for how to use this node can be found in the 'extra' folder where the package files are stored. To find it, go to the Packages Menu and select \"Manage Packages.\" Where Ampersand is listed, open the drop-down menu link at the right and choose \"Show Root Directory.\" Open the \"extra\" folder to find the example file called AmpersandExamples.dyn.",
+        "Nodes": [],
+        "Left": 23.559332027499948,
+        "Top": -236.881261421949,
+        "Width": 0.0,
+        "Height": 0.0,
+        "FontSize": 36.0,
+        "InitialTop": 0.0,
+        "InitialHeight": 0.0,
+        "TextblockHeight": 0.0,
+        "Background": "#FFC1D676"
+      }
+    ],
+    "X": 182.84714281305551,
+    "Y": 273.52869027819895,
+    "Zoom": 0.931811528498331
+  }
+}

@@ -1,0 +1,292 @@
+{
+  "Uuid": "8efd5e1d-ad15-44bf-a27c-b07fdae21dcf",
+  "IsCustomNode": true,
+  "Category": "Ampersand",
+  "Description": "Find the sum of a set of numbers and a list of the partial sums.",
+  "Name": "[&] Math.PartialSums",
+  "ElementResolver": {
+    "ResolutionMap": {
+      "Autodesk.Point": {
+        "Key": "Autodesk.DesignScript.Geometry.Point",
+        "Value": "ProtoGeometry.dll"
+      },
+      "Autodesk.DesignScript.Geometry.Point": {
+        "Key": "Autodesk.DesignScript.Geometry.Point",
+        "Value": "ProtoGeometry.dll"
+      },
+      "List": {
+        "Key": "DSCore.List",
+        "Value": "DSCoreNodes.dll"
+      }
+    }
+  },
+  "Inputs": [],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Symbol, DynamoCore",
+      "NodeType": "InputNode",
+      "Parameter": {
+        "Name": "numbers",
+        "TypeName": "var",
+        "TypeRank": -1,
+        "DefaultValue": null,
+        "Description": ""
+      },
+      "Id": "a8c20931327744b69a23d5b37dc72d10",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "11c58dd84ac44f53a11bee4e224a46a5",
+          "Name": "",
+          "Description": "Symbol",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "A function parameter, use with custom nodes.\r\n\r\nYou can specify the type and default value for parameter. E.g.,\r\n\r\ninput : var[]..[]\r\nvalue : bool = false"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Output, DynamoCore",
+      "NodeType": "OutputNode",
+      "ElementResolver": null,
+      "Symbol": "sum",
+      "Id": "59af74b4ff084ffeb6a0c6953358111a",
+      "Inputs": [
+        {
+          "Id": "a149c143da7445f1afe8564f5f55b5f3",
+          "Name": "",
+          "Description": "",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [],
+      "Replication": "Disabled",
+      "Description": "A function output, use with custom nodes"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Output, DynamoCore",
+      "NodeType": "OutputNode",
+      "ElementResolver": null,
+      "Symbol": "partialSums",
+      "Id": "c831a817fdfb48998b9d191b8c235749",
+      "Inputs": [
+        {
+          "Id": "342a0f5b1b674633bfd29ec00d229b7d",
+          "Name": "",
+          "Description": "",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [],
+      "Replication": "Disabled",
+      "Description": "A function output, use with custom nodes"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.Math.Sum@double[]",
+      "Id": "c0255b2069f74ba39a41a8486bf80e78",
+      "Inputs": [
+        {
+          "Id": "27fac5db956748098bf9e4c3c2ee0800",
+          "Name": "values",
+          "Description": "The numbers to sum\n\ndouble[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "0fc9584bfe504273bba8c4cf96ef884f",
+          "Name": "sum",
+          "Description": "The sum of the values",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Find the sum of a series of numbers\n\nMath.Sum (values: double[]): double"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "PartialSums(n);",
+      "Id": "0358172e1ede497384f64cbc76935044",
+      "Inputs": [
+        {
+          "Id": "af8f0e0eed0c45149bd969d39b6b6bfd",
+          "Name": "n",
+          "Description": "n",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "0ee8fc653cbb4247840cdf0402e93ce5",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "// Create a list of partials sums\n// or the sum at each index of all\n// previous values.\n//\n// Colin McCrone\n// Twitter:  https://twitter.com/colinmccrone\n// LinkedIn: https://www.linkedin.com/in/colinmccrone\n// Updated:  2019-05-20\n//\ndef PartialSums(nums:var[])\n{\n\tct = List.Count(nums);\n\n\treturn = [Imperative]\n\t{\n\t\tsum = 0;\n\t\tps = 0..#ct..0;\n\t\ti = 0;\n\t\twhile(i < ct)\n\t\t{\n\t\t\tsum = sum + nums[i];\n\t\t\tps[i] = sum;\n\t\t\ti = i+1;\n\t\t}\n\n\t\treturn = ps;\n\t}\n};",
+      "Id": "e364fd23ea5a40a0b7aaf304149de686",
+      "Inputs": [],
+      "Outputs": [],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "11c58dd84ac44f53a11bee4e224a46a5",
+      "End": "27fac5db956748098bf9e4c3c2ee0800",
+      "Id": "7ce3c0693c55475c89dcaf8f8672acec"
+    },
+    {
+      "Start": "11c58dd84ac44f53a11bee4e224a46a5",
+      "End": "af8f0e0eed0c45149bd969d39b6b6bfd",
+      "Id": "79f4230a05a04b44b23c2e7dabc19a0f"
+    },
+    {
+      "Start": "0fc9584bfe504273bba8c4cf96ef884f",
+      "End": "a149c143da7445f1afe8564f5f55b5f3",
+      "Id": "fb648fef5a554db1b949eef620a41cc0"
+    },
+    {
+      "Start": "0ee8fc653cbb4247840cdf0402e93ce5",
+      "End": "342a0f5b1b674633bfd29ec00d229b7d",
+      "Id": "58355d68e00c43a1b62e1a6612531707"
+    }
+  ],
+  "Dependencies": [],
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": false,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "2.0.2.6826",
+      "RunType": "Manual",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "Background Preview",
+      "EyeX": -17.0,
+      "EyeY": 24.0,
+      "EyeZ": 50.0,
+      "LookX": 12.0,
+      "LookY": -13.0,
+      "LookZ": -58.0,
+      "UpX": 0.0,
+      "UpY": 1.0,
+      "UpZ": 0.0
+    },
+    "NodeViews": [
+      {
+        "ShowGeometry": true,
+        "Name": "Input",
+        "Id": "a8c20931327744b69a23d5b37dc72d10",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 95.8049148093298,
+        "Y": 40.0276587804388
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Output",
+        "Id": "59af74b4ff084ffeb6a0c6953358111a",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 719.785154503119,
+        "Y": -11.1187941056774
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Output",
+        "Id": "c831a817fdfb48998b9d191b8c235749",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 716.538731672886,
+        "Y": 98.7874401505146
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Math.Sum",
+        "Id": "c0255b2069f74ba39a41a8486bf80e78",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 384.76126237539881,
+        "Y": -15.991109571342598
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "0358172e1ede497384f64cbc76935044",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 391.92050634469882,
+        "Y": 114.4694079352721
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "e364fd23ea5a40a0b7aaf304149de686",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -431.0798191165793,
+        "Y": -272.10871114965067
+      }
+    ],
+    "Annotations": [
+      {
+        "Id": "24772319924a4c18a7e462c5a792064d",
+        "Title": "Colin McCrone\r\nTwitter:  @ColinMcCrone\r\nLinkedIn: https://www.linkedin.com/in/colinmccrone\r\nUpdated:  2019-05-20\r\n\r\nAn example Dynamo script for how to use this node can be found in the 'extra' folder where the package files are stored. To find it, go to the Packages Menu and select \"Manage Packages.\" Where Ampersand is listed, open the drop-down menu link at the right and choose \"Show Root Directory.\" Open the \"extra\" folder to find the example file called AmpersandExamples.dyn.",
+        "Nodes": [],
+        "Left": 101.24086764590379,
+        "Top": -256.14667433038471,
+        "Width": 0.0,
+        "Height": 0.0,
+        "FontSize": 36.0,
+        "InitialTop": 0.0,
+        "InitialHeight": 0.0,
+        "TextblockHeight": 0.0,
+        "Background": "#FFC1D676"
+      }
+    ],
+    "X": 510.867079890382,
+    "Y": 324.13554366930418,
+    "Zoom": 0.95978869958126212
+  }
+}

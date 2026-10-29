@@ -1,0 +1,328 @@
+{
+  "Uuid": "f4357989-6666-4a79-acd8-ba6f6a858c73",
+  "IsCustomNode": true,
+  "Category": "Ampersand.[&] Curve",
+  "Description": "Create polycurves from an unordered list of curves.",
+  "Name": "[&] PolyCurve.ByCurves",
+  "ElementResolver": {
+    "ResolutionMap": {
+      "Autodesk.Point": {
+        "Key": "Autodesk.DesignScript.Geometry.Point",
+        "Value": "ProtoGeometry.dll"
+      },
+      "Autodesk.DesignScript.Geometry.Point": {
+        "Key": "Autodesk.DesignScript.Geometry.Point",
+        "Value": "ProtoGeometry.dll"
+      },
+      "Autodesk.Curve": {
+        "Key": "Autodesk.DesignScript.Geometry.Curve",
+        "Value": "ProtoGeometry.dll"
+      }
+    }
+  },
+  "Inputs": [],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.PolyCurve.ByJoinedCurves@Autodesk.DesignScript.Geometry.Curve[],double",
+      "Id": "fcf12cbbb8dd44cc8b30d88f5c897fb8",
+      "Inputs": [
+        {
+          "Id": "13599fc927a64e888cf13cf3bea36a33",
+          "Name": "curves",
+          "Description": "Curves to join into polycurve\n\nCurve[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "7fe00b24ef6a417c96723377739a1341",
+          "Name": "joinTolerance",
+          "Description": "Tolerance to determine size of gap allowed between curves to be joined\n\ndouble\nDefault value : 0.001",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "a43e3b26d65545c1ae1ef927df06234d",
+          "Name": "PolyCurve",
+          "Description": "PolyCurve",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Make PolyCurve by joining curves. Flips curve as needed for connectivity. Choose a preferred join tolerance between 1e-6 and 1e-3 units.\n\nPolyCurve.ByJoinedCurves (curves: Curve[], joinTolerance: double = 0.001): PolyCurve"
+    },
+    {
+      "ConcreteType": "PythonNodeModels.PythonNode, PythonNodeModels",
+      "NodeType": "PythonScriptNode",
+      "Code": "# Assign curves to groups according to whether they are connected via\n# shared start points and end points.  Group numbers are not important.\n#\n# Colin McCrone\n# Twitter:  https://twitter.com/colinmccrone\n# LinkedIn: https://www.linkedin.com/in/colinmccrone\n# Updated:  2015-09-28\n#\nimport clr\nimport math\nclr.AddReference('ProtoGeometry')\nfrom Autodesk.DesignScript.Geometry import *\n\n\n# Determine whether two points are equal\ndef PointsEqual(pt1, pt2):\n\ttolerance = 0.00001\n\t\n\tif (math.fabs(pt1.X - pt2.X) < tolerance and\n\t    math.fabs(pt1.Y - pt2.Y) < tolerance and\n\t    math.fabs(pt1.Z - pt2.Z) < tolerance):\n\t\treturn True\n\telse:\n\t\treturn False\n\n\n# Get input\ncrvs = IN[0]\n\n\n# List the group to which each curve belongs\ncrvGroup = [-1 for x in range(len(crvs))]\ncrvGroup[0] = 0\nmaxGroupNum = 1\n\n\n# Find start and end points for each curve\nstarts = []\nends = []\nfor crv in crvs:\n\tstarts.append(Curve.PointAtParameter(crv,0))\n\tends.append(crv.PointAtParameter(1))\n\n\n# Find connected groups of curves\nfor i in range(len(crvs)):\n\t# Add i to its own group it not already part of a group\n\tif (crvGroup[i] == -1):\n\t\tcrvGroup[i] = i\n\t\n\t# Find connections\n\tfor j in range(len(crvs)):\n\t\tif (i != j and\n\t\t\t(PointsEqual(starts[i], starts[j]) or\n\t\t\tPointsEqual(starts[i], ends[j]) or\n\t\t\tPointsEqual(ends[i], starts[j]) or\n\t\t\tPointsEqual(ends[i], ends[j]))):\n\t\t\t\n\t\t\t# Add j to i group\n\t\t\tif (crvGroup[j] == -1):\n\t\t\t\tcrvGroup[j] = crvGroup[i]\n\t\t\t# Add j group to i group\n\t\t\telif (crvGroup[i] != crvGroup[j]):\n\t\t\t\toldNum = crvGroup[j]\n\t\t\t\tfor k in range(len(crvs)):\n\t\t\t\t\tif (crvGroup[k] == oldNum):\n\t\t\t\t\t\tcrvGroup[k] = crvGroup[i]\n\n\n# Output the (arbitrary) group numbers\nOUT = crvGroup",
+      "VariableInputPorts": true,
+      "Id": "166b7f8deb844d1d91dfc0a9892d27d0",
+      "Inputs": [
+        {
+          "Id": "05232809de6e4de6859d543419617082",
+          "Name": "IN[0]",
+          "Description": "Input #0",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "d4b4fd9be41d4f179cab3f260a4dc6c5",
+          "Name": "OUT",
+          "Description": "Result of the python script",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Runs an embedded IronPython script."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Symbol, DynamoCore",
+      "NodeType": "InputNode",
+      "Parameter": {
+        "Name": "curves",
+        "TypeName": "Autodesk.DesignScript.Geometry.Curve",
+        "TypeRank": 1,
+        "DefaultValue": null,
+        "Description": ""
+      },
+      "Id": "f07d9f54f6394685b9622e697d232e3d",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "4fc613bdc5d84b08a37653e37d53bc54",
+          "Name": "",
+          "Description": "Symbol",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "A function parameter, use with custom nodes.\r\n\r\nYou can specify the type and default value for parameter. E.g.,\r\n\r\ninput : var[]..[]\r\nvalue : bool = false"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Output, DynamoCore",
+      "NodeType": "OutputNode",
+      "ElementResolver": null,
+      "Symbol": "polyCurve",
+      "Id": "0ec3577a4cca4579ad1e6d05b0319b97",
+      "Inputs": [
+        {
+          "Id": "b212866dab0c4bbbb374f4b9dc4e6ae7",
+          "Name": "",
+          "Description": "",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [],
+      "Replication": "Disabled",
+      "Description": "A function output, use with custom nodes"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.List.GroupByKey@var[]..[],var[]..[]",
+      "Id": "b515fdb507174218b8ba351b90407e32",
+      "Inputs": [
+        {
+          "Id": "f35e91419d924ae4986a855b6fb925aa",
+          "Name": "list",
+          "Description": "List of items to group as sublists\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "3b3d86cec48e442faa2f283657ddbec0",
+          "Name": "keys",
+          "Description": "Key values, one per item in the input list, used for grouping the items\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "8998e79017e34b8bb4b9d7f3aad055d2",
+          "Name": "groups",
+          "Description": "list of sublists, with items grouped by like key values",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "8da0df07f8bb47198bb9ba7b055f8353",
+          "Name": "unique keys",
+          "Description": "key value corresponding to each group",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Group items into sub-lists based on their like key values\n\nList.GroupByKey (list: var[]..[], keys: var[]..[]): var[]..[]"
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "a43e3b26d65545c1ae1ef927df06234d",
+      "End": "b212866dab0c4bbbb374f4b9dc4e6ae7",
+      "Id": "e13c9903066a42feabdebc5d2e4df5b5"
+    },
+    {
+      "Start": "d4b4fd9be41d4f179cab3f260a4dc6c5",
+      "End": "3b3d86cec48e442faa2f283657ddbec0",
+      "Id": "701c9690146b43a087567f70dc59224f"
+    },
+    {
+      "Start": "4fc613bdc5d84b08a37653e37d53bc54",
+      "End": "05232809de6e4de6859d543419617082",
+      "Id": "835c80a4cb954feb9bbd3fc33469926f"
+    },
+    {
+      "Start": "4fc613bdc5d84b08a37653e37d53bc54",
+      "End": "f35e91419d924ae4986a855b6fb925aa",
+      "Id": "930328c37b65438abbd148b1d332a4dd"
+    },
+    {
+      "Start": "8998e79017e34b8bb4b9d7f3aad055d2",
+      "End": "13599fc927a64e888cf13cf3bea36a33",
+      "Id": "831d4f1ee30c4e6cbff4c6b3136fd745"
+    }
+  ],
+  "Dependencies": [],
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": false,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "2.0.2.6826",
+      "RunType": "Manual",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "Background Preview",
+      "EyeX": -17.0,
+      "EyeY": 24.0,
+      "EyeZ": 50.0,
+      "LookX": 12.0,
+      "LookY": -13.0,
+      "LookZ": -58.0,
+      "UpX": 0.0,
+      "UpY": 1.0,
+      "UpZ": 0.0
+    },
+    "NodeViews": [
+      {
+        "ShowGeometry": true,
+        "Name": "PolyCurve.ByJoinedCurves",
+        "Id": "fcf12cbbb8dd44cc8b30d88f5c897fb8",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1018.5180812274447,
+        "Y": -30.087705320771747
+      },
+      {
+        "ShowGeometry": false,
+        "Name": "Python Script",
+        "Id": "166b7f8deb844d1d91dfc0a9892d27d0",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 518.995253243563,
+        "Y": 88.4126914185681
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Input",
+        "Id": "f07d9f54f6394685b9622e697d232e3d",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -7.33863999761418,
+        "Y": -25.519999034530613
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Output",
+        "Id": "0ec3577a4cca4579ad1e6d05b0319b97",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1327.1812426222898,
+        "Y": -30.932684131097329
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "List.GroupByKey",
+        "Id": "b515fdb507174218b8ba351b90407e32",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 765.179772832105,
+        "Y": -29.3624825599277
+      }
+    ],
+    "Annotations": [
+      {
+        "Id": "53cd5f573915448f8394357bb4ceb898",
+        "Title": "Assigns curves to groups with unique (arbirary) numbers.",
+        "Nodes": [],
+        "Left": 451.816088842496,
+        "Top": 33.3772063637869,
+        "Width": 0.0,
+        "Height": 0.0,
+        "FontSize": 36.0,
+        "InitialTop": 0.0,
+        "InitialHeight": 0.0,
+        "TextblockHeight": 0.0,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "3865f18eb63048c2bb41921e14fcbaf3",
+        "Title": "Colin McCrone\r\nTwitter:  @ColinMcCrone\r\nLinkedIn: https://www.linkedin.com/in/colinmccrone\r\nUpdated:  2015-09-28\r\n\r\nAn example Dynamo script for how to use this node can be found in the 'extra' folder where the package files are stored. To find it, go to the Packages Menu and select \"Manage Packages.\" Where Ampersand is listed, open the drop-down menu link at the right and choose \"Show Root Directory.\" Open the \"extra\" folder to find the example file called AmpersandExamples.dyn.",
+        "Nodes": [],
+        "Left": -3.7810136792302274,
+        "Top": -252.67064062600377,
+        "Width": 0.0,
+        "Height": 0.0,
+        "FontSize": 36.0,
+        "InitialTop": 0.0,
+        "InitialHeight": 0.0,
+        "TextblockHeight": 0.0,
+        "Background": "#FFC1D676"
+      }
+    ],
+    "X": 70.214239038597213,
+    "Y": 352.26007211434239,
+    "Zoom": 0.94876882703760179
+  }
+}

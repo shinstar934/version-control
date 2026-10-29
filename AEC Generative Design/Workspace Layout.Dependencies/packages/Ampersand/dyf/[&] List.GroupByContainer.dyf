@@ -1,0 +1,559 @@
+{
+  "Uuid": "27b0457c-db7d-47b2-be03-57de7bfcf8e7",
+  "IsCustomNode": true,
+  "Category": "Ampersand",
+  "Description": "Sort a set of objects into groups using their location points by their inclusion in a set of given list of containers.  Containters must be solids, closed polygons, polycurves.  Objects and points not included are returned separately.",
+  "Name": "[&] List.GroupByContainer",
+  "ElementResolver": {
+    "ResolutionMap": {
+      "Autodesk.Solid": {
+        "Key": "Autodesk.DesignScript.Geometry.Solid",
+        "Value": "ProtoGeometry.dll"
+      },
+      "Autodesk.Point": {
+        "Key": "Autodesk.DesignScript.Geometry.Point",
+        "Value": "ProtoGeometry.dll"
+      }
+    }
+  },
+  "Inputs": [],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "OUT[0];\nOUT[1];\nOUT[2];\nOUT[3];",
+      "Id": "1dbae5098a2446dc9ad7698023901a04",
+      "Inputs": [
+        {
+          "Id": "7eaba2bbe1124fa49af1fd06b17ec6df",
+          "Name": "OUT",
+          "Description": "OUT",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "7d9174feeb0b4be2893d8ddaa7fa2f1b",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "bf0d764aa9e2410f909d597cfdf28f7f",
+          "Name": "",
+          "Description": "Value of expression at line 2",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "037fbd1a2f9f4bb0a2468b5fb78be494",
+          "Name": "",
+          "Description": "Value of expression at line 3",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "71f7193a152e4389bffac511b296b14e",
+          "Name": "",
+          "Description": "Value of expression at line 4",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "objects;\npoints;\nbins;",
+      "Id": "6fc394a9df754263be7cac63987a04e2",
+      "Inputs": [
+        {
+          "Id": "2eeefb8d5f5a4244a4170f89078a1d72",
+          "Name": "objects",
+          "Description": "objects",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "cf8e79b408974122a9f9db0993329897",
+          "Name": "points",
+          "Description": "points",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "e5c4ac060a524310933b83dac02e7453",
+          "Name": "bins",
+          "Description": "bins",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "1d5c4fa21d7540ddae5b9d31f2f4b17d",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "487731cc9aff4abf8821200a0b476c53",
+          "Name": "",
+          "Description": "Value of expression at line 2",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "31d65d76051440069b9f462bf5f791ab",
+          "Name": "",
+          "Description": "Value of expression at line 3",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Output, DynamoCore",
+      "NodeType": "OutputNode",
+      "ElementResolver": null,
+      "Symbol": "itemsByContainer",
+      "Id": "4fd9778b26714cb2b386c7fa1ab1cdd9",
+      "Inputs": [
+        {
+          "Id": "7e0f3b9b2d124c8a8373e2cbeb2d698f",
+          "Name": "",
+          "Description": "",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [],
+      "Replication": "Disabled",
+      "Description": "A function output, use with custom nodes"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Output, DynamoCore",
+      "NodeType": "OutputNode",
+      "ElementResolver": null,
+      "Symbol": "locationPtsByContainer",
+      "Id": "8cc8df2da9014b1b88a50208fbe29a3d",
+      "Inputs": [
+        {
+          "Id": "7fe7b5cd9cf94a218bf15d5b8a0d0cfc",
+          "Name": "",
+          "Description": "",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [],
+      "Replication": "Disabled",
+      "Description": "A function output, use with custom nodes"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Symbol, DynamoCore",
+      "NodeType": "InputNode",
+      "Parameter": {
+        "Name": "list",
+        "TypeName": "var",
+        "TypeRank": 1,
+        "DefaultValue": null,
+        "Description": ""
+      },
+      "Id": "48039156f04b400496dda875e6e8b9a0",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "f0a9dec745fb4593aac4ad5ef1474792",
+          "Name": "",
+          "Description": "Symbol",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "A function parameter, use with custom nodes.\r\n\r\nYou can specify the type and default value for parameter. E.g.,\r\n\r\ninput : var[]..[]\r\nvalue : bool = false"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Symbol, DynamoCore",
+      "NodeType": "InputNode",
+      "Parameter": {
+        "Name": "locationPts",
+        "TypeName": "Autodesk.DesignScript.Geometry.Point",
+        "TypeRank": 1,
+        "DefaultValue": null,
+        "Description": ""
+      },
+      "Id": "7a28ccbb20694663a6c4e7e4fd39850e",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "a81a129f509749818ab199de4bd9f50a",
+          "Name": "",
+          "Description": "Symbol",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "A function parameter, use with custom nodes.\r\n\r\nYou can specify the type and default value for parameter. E.g.,\r\n\r\ninput : var[]..[]\r\nvalue : bool = false"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Symbol, DynamoCore",
+      "NodeType": "InputNode",
+      "Parameter": {
+        "Name": "containers",
+        "TypeName": "var",
+        "TypeRank": 1,
+        "DefaultValue": null,
+        "Description": ""
+      },
+      "Id": "7507ad829fd9468a9597a53b7165e951",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "94ff03ec0456449e84b8fe32d8045319",
+          "Name": "",
+          "Description": "Symbol",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "A function parameter, use with custom nodes.\r\n\r\nYou can specify the type and default value for parameter. E.g.,\r\n\r\ninput : var[]..[]\r\nvalue : bool = false"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Output, DynamoCore",
+      "NodeType": "OutputNode",
+      "ElementResolver": null,
+      "Symbol": "excludedItems",
+      "Id": "ad9c5ae37f1048db842eb4f365f8e5a4",
+      "Inputs": [
+        {
+          "Id": "86fb71d3b5bc4013be108bf298422626",
+          "Name": "",
+          "Description": "",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [],
+      "Replication": "Disabled",
+      "Description": "A function output, use with custom nodes"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Output, DynamoCore",
+      "NodeType": "OutputNode",
+      "ElementResolver": null,
+      "Symbol": "excludedLocationPts",
+      "Id": "2faec93cbc2b41c486020fe0e65879ef",
+      "Inputs": [
+        {
+          "Id": "a99d62e12dc14f8e82862ee7534b2367",
+          "Name": "",
+          "Description": "",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [],
+      "Replication": "Disabled",
+      "Description": "A function output, use with custom nodes"
+    },
+    {
+      "ConcreteType": "PythonNodeModels.PythonNode, PythonNodeModels",
+      "NodeType": "PythonScriptNode",
+      "Code": "# Group a set of objects and their representative location points by their inclusion in a set of given list of \"bins.\"  Bins can be solids or closed polygons or polycurves.  Objects and their corresponding location points are returned, per the first bin that contains them in the order in which they were received.  A list of objects and representative location points not found to included in any bin is also given.\r\n#\r\n# Colin McCrone\r\n# Twitter:  https://twitter.com/colinmccrone\r\n# LinkedIn: https://www.linkedin.com/in/colinmccrone\r\n# Updated:  2019-05-20\r\n#\r\nimport clr\r\nclr.AddReference('ProtoGeometry')\r\nfrom Autodesk.DesignScript.Geometry import *\r\n\r\nobjects = IN[0]\r\npts = IN[1]\r\nbins = IN[2]\r\n\r\nobjPerBin = []\t# Objects per solid\r\nptPerBin = []\t\t# Points per solid\r\nobjNotTaken = []\t# Objects not in a solid\r\nptNotTaken = []\t\t# Points not in a solid\r\n\r\nfor bin in bins:\r\n\tobjPerBin.append([])\r\n\tptPerBin.append([])\r\n\r\nfor j in range(len(pts)):\r\n\ttaken = False\r\n\tfor k in range(len(bins)):\r\n\t\t# For bins as solids\r\n\t\tif type(bins[k]) is Solid:\r\n\t\t\tif pts[j].DoesIntersect(bins[k]):\r\n\t\t\t\tptPerBin[k].append(pts[j])\r\n\t\t\t\tobjPerBin[k].append(objects[j])\r\n\t\t\t\ttaken = True\r\n\t\t\t\tbreak\r\n\t\t# For bins as polygons/polycurves\r\n\t\tif type(bins[k]) is PolyCurve or type(bins[k]) is Polygon or type(bins[k]) is Rectangle:\t\t\r\n\t\t\tif bins[k].ContainmentTest(pts[j]):\r\n\t\t\t\tptPerBin[k].append(pts[j])\r\n\t\t\t\tobjPerBin[k].append(objects[j])\r\n\t\t\t\ttaken = True\r\n\t\t\t\tbreak\r\n\t# Note objects/points not in any bin\r\n\tif not taken:\r\n\t\tptNotTaken.append(pts[j])\r\n\t\tobjNotTaken.append(objects[j])\r\n\r\nOUT = []\r\nOUT.append(objPerBin)\r\nOUT.append(ptPerBin)\r\nOUT.append(objNotTaken)\r\nOUT.append(ptNotTaken)",
+      "VariableInputPorts": true,
+      "Id": "0c034bbdd1dd4495a855e3aea62701ec",
+      "Inputs": [
+        {
+          "Id": "577388e8b8f545bf960be48a418d3120",
+          "Name": "IN[0]",
+          "Description": "Input #0",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "9b9aceff535e418e9b66542a6f9976b9",
+          "Name": "IN[1]",
+          "Description": "Input #1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "7ea126fe28c841208935b0bfd8fa9a66",
+          "Name": "IN[2]",
+          "Description": "Input #2",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "083c192ded644789b0a19b708149a684",
+          "Name": "OUT",
+          "Description": "Result of the python script",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Runs an embedded IronPython script."
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "7d9174feeb0b4be2893d8ddaa7fa2f1b",
+      "End": "7e0f3b9b2d124c8a8373e2cbeb2d698f",
+      "Id": "3f2e158b8b854ba19c7b7d00508668bf"
+    },
+    {
+      "Start": "bf0d764aa9e2410f909d597cfdf28f7f",
+      "End": "7fe7b5cd9cf94a218bf15d5b8a0d0cfc",
+      "Id": "4a70e87e475b4a4284f6cecd278f7447"
+    },
+    {
+      "Start": "037fbd1a2f9f4bb0a2468b5fb78be494",
+      "End": "86fb71d3b5bc4013be108bf298422626",
+      "Id": "1882478c177f4dc086b4a0f15596d104"
+    },
+    {
+      "Start": "71f7193a152e4389bffac511b296b14e",
+      "End": "a99d62e12dc14f8e82862ee7534b2367",
+      "Id": "7dd926f2fdf448c4bda0214cd0b75c82"
+    },
+    {
+      "Start": "1d5c4fa21d7540ddae5b9d31f2f4b17d",
+      "End": "577388e8b8f545bf960be48a418d3120",
+      "Id": "cb064cf62c0c4ff38019576686cd980e"
+    },
+    {
+      "Start": "487731cc9aff4abf8821200a0b476c53",
+      "End": "9b9aceff535e418e9b66542a6f9976b9",
+      "Id": "3038b272c8fd40e291ee4a0cdae5dfb8"
+    },
+    {
+      "Start": "31d65d76051440069b9f462bf5f791ab",
+      "End": "7ea126fe28c841208935b0bfd8fa9a66",
+      "Id": "eb04b0e5d2b544bcb5bfd33fdfc51ec3"
+    },
+    {
+      "Start": "f0a9dec745fb4593aac4ad5ef1474792",
+      "End": "2eeefb8d5f5a4244a4170f89078a1d72",
+      "Id": "c026ab4eb5954543a4c2f4392ac565a8"
+    },
+    {
+      "Start": "a81a129f509749818ab199de4bd9f50a",
+      "End": "cf8e79b408974122a9f9db0993329897",
+      "Id": "10a157a8b96448c6a27e0630841f2780"
+    },
+    {
+      "Start": "94ff03ec0456449e84b8fe32d8045319",
+      "End": "e5c4ac060a524310933b83dac02e7453",
+      "Id": "44515721445f40cbb4b573faa019726e"
+    },
+    {
+      "Start": "083c192ded644789b0a19b708149a684",
+      "End": "7eaba2bbe1124fa49af1fd06b17ec6df",
+      "Id": "488926b88d4b43e093adba4fd96729f6"
+    }
+  ],
+  "Dependencies": [],
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": false,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "2.0.2.6826",
+      "RunType": "Manual",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "Background Preview",
+      "EyeX": -17.0,
+      "EyeY": 24.0,
+      "EyeZ": 50.0,
+      "LookX": 12.0,
+      "LookY": -13.0,
+      "LookZ": -58.0,
+      "UpX": 0.0,
+      "UpY": 1.0,
+      "UpZ": 0.0
+    },
+    "NodeViews": [
+      {
+        "ShowGeometry": false,
+        "Name": "Code Block",
+        "Id": "1dbae5098a2446dc9ad7698023901a04",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 636.73721348048139,
+        "Y": -0.71750853182140872
+      },
+      {
+        "ShowGeometry": false,
+        "Name": "Code Block",
+        "Id": "6fc394a9df754263be7cac63987a04e2",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 250.0,
+        "Y": 7.67773401488603
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Output",
+        "Id": "4fd9778b26714cb2b386c7fa1ab1cdd9",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 872.15009141021847,
+        "Y": -70.607158422036434
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Output",
+        "Id": "8cc8df2da9014b1b88a50208fbe29a3d",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 872.15009141021847,
+        "Y": 2.3292812314853677
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Input",
+        "Id": "48039156f04b400496dda875e6e8b9a0",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -266.919647965075,
+        "Y": -38.569864093873917
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Input",
+        "Id": "7a28ccbb20694663a6c4e7e4fd39850e",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -269.68047251967994,
+        "Y": 48.952467932695974
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Input",
+        "Id": "7507ad829fd9468a9597a53b7165e951",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -271.76828933167189,
+        "Y": 131.47791980691409
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Output",
+        "Id": "ad9c5ae37f1048db842eb4f365f8e5a4",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 872.15009141021847,
+        "Y": 75.265720885006886
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Output",
+        "Id": "2faec93cbc2b41c486020fe0e65879ef",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 872.15009141021847,
+        "Y": 148.20216053852889
+      },
+      {
+        "ShowGeometry": false,
+        "Name": "Python Script",
+        "Id": "0c034bbdd1dd4495a855e3aea62701ec",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 457.758163006586,
+        "Y": -3.8085369329705827
+      }
+    ],
+    "Annotations": [
+      {
+        "Id": "02bdabfdc5114b989109194bcbd7810e",
+        "Title": "Colin McCrone\r\nTwitter:  @ColinMcCrone\r\nLinkedIn: https://www.linkedin.com/in/colinmccrone\r\nUpdated:  2019-05-20\r\n\r\nAn example Dynamo script for how to use this node can be found in the 'extra' folder where the package files are stored. To find it, go to the Packages Menu and select \"Manage Packages.\" Where Ampersand is listed, open the drop-down menu link at the right and choose \"Show Root Directory.\" Open the \"extra\" folder to find the example file called AmpersandExamples.dyn.",
+        "Nodes": [],
+        "Left": -265.0010392797268,
+        "Top": -270.04763857406692,
+        "Width": 0.0,
+        "Height": 0.0,
+        "FontSize": 36.0,
+        "InitialTop": 0.0,
+        "InitialHeight": 0.0,
+        "TextblockHeight": 0.0,
+        "Background": "#FFC1D676"
+      }
+    ],
+    "X": 370.07908596791697,
+    "Y": 360.05989037454265,
+    "Zoom": 0.98309670345675393
+  }
+}

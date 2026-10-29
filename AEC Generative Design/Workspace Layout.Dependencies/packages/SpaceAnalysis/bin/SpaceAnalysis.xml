@@ -1,0 +1,371 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SpaceAnalysis</name>
+    </assembly>
+    <members>
+        <member name="T:Acoustics.AudibilityGrid">
+            <summary>
+            Grid of audibility values ranging from 0 (not audible) to 1 (audible).
+            </summary>
+        </member>
+        <member name="M:Acoustics.AudibilityGrid.BySoundField(Acoustics.SoundField)">
+            <summary>
+            Create AudibilityGrid using a soundField.
+            </summary>
+            <param name="soundField"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Acoustics.AudibilityGrid.ByUnion(System.Collections.Generic.List{Acoustics.SoundField})">
+            <summary>
+            Create a AudibilityGrid by the union of soundFields. 
+            </summary>
+            <param name="SoundFields">SoundField List</param>
+            <returns name="AudibilityGrid"></returns>
+        </member>
+        <member name="M:Acoustics.AudibilityGrid.ByIntersection(System.Collections.Generic.List{Acoustics.SoundField})">
+            <summary>
+            Create a AudibilityGrid by the intersection of soundFields. 
+            </summary>
+            <param name="SoundFields">SoundField List</param>
+            <returns  name="AudibilityGrid"></returns>
+        </member>
+        <member name="M:Acoustics.AudibilityGrid.Values">
+            <summary>
+            2D grid of audibility values, which range from 0.0 (completely invisible) to 1.0 (completely visible).
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Acoustics.AudibilityGrid.ValueAtPoint(Autodesk.DesignScript.Geometry.Point)">
+            <summary>
+            Get audibility at a point.
+            </summary>
+            <param name="point">Point</param>
+            <returns>Audibility value, which ranges from 0.0 (completely invisible) to 1.0 (completely visible).</returns>
+        </member>
+        <member name="M:Acoustics.AudibilityGrid.XCoordinates">
+            <summary>
+            List of X Coordinates
+            </summary>
+            <returns name="XCoordinates">List of XCoordinates</returns>
+        </member>
+        <member name="M:Acoustics.AudibilityGrid.YCoordinates">
+            <summary>
+            List of Y Coordinates
+            </summary>
+            <returns name="YCoordinates">List of YCoordinates</returns>
+        </member>
+        <member name="M:Acoustics.AudibilityGrid.Points">
+            <summary>
+            2D Lists of Points
+            </summary>
+            <returns name="Points">2D Lists of Points</returns>
+        </member>
+        <member name="M:Acoustics.AudibilityGrid.Surface">
+            <summary>
+            Get the bounding surface of the VisibiltyGrid
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Acoustics.SoundField">
+            <summary>
+            Field of sound paths eminating from a single sound point. Used to compute audibility grids.
+            </summary>
+        </member>
+        <member name="M:Acoustics.SoundField.BySpaceLatticeAndSoundPoint(Core.SpaceLattice,Autodesk.DesignScript.Geometry.Point,System.Double,System.Double,System.Double)">
+            <summary>
+            Computes a field of propagated sound intensities from a single point.
+            </summary>
+            <param name="spaceLattice">SpaceLattice</param>
+            <param name="soundPoint">Sound point</param>
+            <param name="radius">Radius of sound field</param>
+            <param name="intensity">Relative intensity of sound source (0 to 1)</param>
+            <param name="absorption">Rate of absorption over distance (0 to 1)</param>
+            <returns>SoundField</returns>
+        </member>
+        <member name="M:Acoustics.SoundField.BySpaceLatticeAndSoundSystem(Core.SpaceLattice,Acoustics.SoundSystem,System.Double,System.Double,System.Double)">
+            <summary>
+            Computes a field of propagated sound intensities from a set of sources.
+            </summary>
+            <param name="spaceLattice">SpaceLattice</param>
+            <param name="soundSystem">Sound system</param>
+            <param name="radius">Radius of sound field</param>
+            <param name="intensity">Relative intensity of sound source (0 to 1)</param>
+            <param name="absorption">Rate of absorption over distance (0 to 1)</param>
+            <returns>SoundField</returns>
+        </member>
+        <member name="M:Acoustics.SoundField.Wavelength(Acoustics.SoundField)">
+            <summary>
+            Wavelength of the sound waves in the acoustics simulation.
+            </summary>
+            <param name="soundField">SoundField</param>
+            <returns></returns>
+        </member>
+        <member name="T:Acoustics.SoundSystem">
+            <summary>
+            Sound system with multiple sources and local intensities.
+            </summary>
+        </member>
+        <member name="M:Acoustics.SoundSystem.BySoundPoints(System.Collections.Generic.List{Autodesk.DesignScript.Geometry.Point})">
+            <summary>
+            Represents a sound system with multiple sources.
+            </summary>
+            <param name = "soundPoints">List of sound points</param>
+            <returns>SoundSystem</returns>
+        </member>
+        <member name="M:Acoustics.SoundSystem.BySoundPointsAndIntensities(System.Collections.Generic.List{Autodesk.DesignScript.Geometry.Point},System.Collections.Generic.List{System.Double})">
+            <summary>
+            Represents a sound system with multiple sources.
+            </summary>
+            <param name = "soundPoints">List of sound points</param>
+            <param name = "localIntensities">List of local intensities associated with each point (0 to 1)</param>
+            <returns>SoundSystem</returns>
+        </member>
+        <member name="T:Pathfinding.PathField">
+            <summary>
+            Field of paths converging on a single end point or starting from a single start point. Used to pre-compute routes.
+            </summary>
+        </member>
+        <member name="M:Pathfinding.PathField.BySpaceLatticeAndStartPoint(Core.SpaceLattice,Autodesk.DesignScript.Geometry.Point)">
+            <summary>
+            Computes a field of paths from a single start point.
+            </summary>
+            <param name="spaceLattice">SpaceLattice</param>
+            <param name="startPoint">Start point of all routes</param>
+            <returns>PathField</returns>
+        </member>
+        <member name="M:Pathfinding.PathField.BySpaceLatticeAndEndPoint(Core.SpaceLattice,Autodesk.DesignScript.Geometry.Point)">
+            <summary>
+            Computes a field of paths converging on a single end point.
+            </summary>
+            <param name="spaceLattice">SpaceLattice</param>
+            <param name="endPoint">End point of all routes</param>
+            <returns>PathField</returns>
+        </member>
+        <member name="T:Pathfinding.Route">
+            <summary>
+            Object representing the shortest Route from a start point to an end point.
+            </summary>
+        </member>
+        <member name="M:Pathfinding.Route.ByPathField(Pathfinding.PathField,Autodesk.DesignScript.Geometry.Point)">
+            <summary>
+            Find the shortest Route using a pre-computed field of paths from a PathField.
+            </summary>
+            <param name="pathField">PathField</param>
+            <param name="otherPoint">End point of route</param>
+            <returns name="Route">Route</returns>
+        </member>
+        <member name="M:Pathfinding.Route.BySpaceLattice(Core.SpaceLattice,Autodesk.DesignScript.Geometry.Point,Autodesk.DesignScript.Geometry.Point)">
+            <summary>
+            Find the shortest Route using a SpaceLattice. Best used for a single Route: use PathField to calculate multiple paths with a common start or end point.
+            </summary>
+            <param name="spaceLattice">SpaceLattice</param>
+            <param name="startPoint">Start point of route</param>
+            <param name="endPoint">End point of route</param>
+            <returns></returns>
+        </member>
+        <member name="M:Pathfinding.Route.Count">
+            <summary>
+            Number of points in the route.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Pathfinding.Route.XPositionAtIndex(System.Int32)">
+            <summary>
+            Get the X position of the point at the given index.
+            </summary>
+            <param name="index">Index</param>
+            <returns>X Position</returns>
+        </member>
+        <member name="M:Pathfinding.Route.YPositionAtIndex(System.Int32)">
+            <summary>
+            Get the Y position of the point at the given index.
+            </summary>
+            <param name="index">Index</param>
+            <returns>Y Position</returns>
+        </member>
+        <member name="M:Pathfinding.Route.Points(System.Int32)">
+            <summary>
+            Get the Points along the Route.
+            </summary>
+            <param name="tidyIterations">Number of tidy/smoothing iterations, where each tidy operation straightens the route while respecting the barriers in the SpaceLattice. Setting the value to 0 will return the raw route path.</param>
+            <returns name="Points">Points</returns>
+        </member>
+        <member name="M:Pathfinding.Route.Curve(System.Int32)">
+            <summary>
+            Get a PolyCurve object representing the Route.
+            </summary>
+            <param name="tidyIterations">Number of tidy/smoothing iterations, where each tidy operation straightens the route while respecting the barriers in the SpaceLattice. Setting the value to 0 will return the raw route path.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Core.SpaceLattice">
+            <summary>
+            2D lattice of axis-aligned and diagonal paths.
+            </summary>
+        </member>
+        <member name="M:Core.SpaceLattice.ByBoundingBoxAndLines(Autodesk.DesignScript.Geometry.BoundingBox,System.Collections.Generic.List{Autodesk.DesignScript.Geometry.Line},System.Double)">
+            <summary>
+            Creates a SpaceLattice.
+            </summary>
+            <param name="boundingBox">Bounding box containing lattice</param>
+            <param name="barriers">List of lines representing barriers</param>
+            <param name="resolution">Distance between two adjacent points on the lattice</param>
+            <returns name="SpaceLattice">SpaceLattice</returns>
+            <search>SpaceLattice, lattice, pathfinding</search>
+        </member>
+        <member name="M:Core.SpaceLattice.NeighborDirections">
+            <summary>
+            List of the 8 directions from a SpaceLattice point to its neighbors.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Core.SpaceLattice.Edges">
+            <summary>
+            Get the Edges of the SpaceLattice.
+            </summary>
+            <returns name="Lines">Edges of the lattice</returns>
+        </member>
+        <member name="M:Core.SpaceLattice.Surface">
+            <summary>
+            Get the bounding Surface of the SpaceLattice
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Core.SpaceLattice.XCoordinates">
+            <summary>
+            List of X coordinates.
+            </summary>
+            <returns name="XCoordinates">List of XCoordinates</returns>
+        </member>
+        <member name="M:Core.SpaceLattice.YCoordinates">
+            <summary>
+            List of Y coordinates.
+            </summary>
+            <returns name="YCoordinates">List of YCoordinates</returns>
+        </member>
+        <member name="M:Core.SpaceLattice.Points">
+            <summary>
+            2D lists of Points.
+            </summary>
+            <returns name="Points">2D Lists of Points</returns>
+        </member>
+        <member name="M:Core.SpaceLattice.HasPath(Autodesk.DesignScript.Geometry.Point,Autodesk.DesignScript.Geometry.Vector)">
+            <summary>
+            Test neighboring connectivity at a given lattice point and direction.
+            </summary>
+            <param name="point">Point on the Lattice to test connectivity</param>
+            <param name="direction">Direction in which to test connectivity</param>
+            <returns></returns>
+        </member>
+        <member name="M:Core.SpaceLattice.ClosestPointTo(Autodesk.DesignScript.Geometry.Point)">
+            <summary>
+            Find closest point on the SpaceLattice to a given point.
+            </summary>
+            <param name="point"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Visibility.ViewCone">
+            <summary>
+            View cone eminating from a single view point.
+            </summary>
+        </member>
+        <member name="M:Visibility.ViewCone.ByViewPointAndViewDirection(Autodesk.DesignScript.Geometry.Point,Autodesk.DesignScript.Geometry.Vector,System.Double,System.Double,System.Double,System.Double)">
+            <summary>
+            Represents a cone of view from a point.
+            </summary>
+            <param name = "viewPoint">View point</param>
+            <param name = "viewDirection">View direction vector</param>
+            <param name = "angularWidth">Angular width of view cone (degrees)</param>
+            <param name = "radialDepth">Radial depth of view cone</param>
+            <param name = "angularSmoothness">Smoothness of visibility gradient at both sides of view cone (0 to 1)</param>
+            <param name = "radialSmoothness">Smoothness of visibility gradient at far end of view cone (0 to 1)</param>
+            <returns>ViewCone</returns>
+        </member>
+        <member name="T:Visibility.ViewField">
+            <summary>
+            Field of view paths eminating from a single view point. Used to compute visibility grids.
+            </summary>
+        </member>
+        <member name="M:Visibility.ViewField.BySpaceLatticeAndViewPoint(Core.SpaceLattice,Autodesk.DesignScript.Geometry.Point,System.Double)">
+            <summary>
+            Computes a field of view paths from a single view point.
+            </summary>
+            <param name="spaceLattice">SpaceLattice</param>
+            <param name="viewPoint">View point</param>
+            <param name="radius">Radius of view field</param>
+            <returns>ViewField</returns>
+        </member>
+        <member name="M:Visibility.ViewField.BySpaceLatticeAndViewCone(Core.SpaceLattice,Visibility.ViewCone,System.Double)">
+            <summary>
+            Computes a field of view paths from a single view cone.
+            </summary>
+            <param name="spaceLattice">SpaceLattice</param>
+            <param name="viewCone">View cone</param>
+            <param name="radius">Radius of view field</param>
+            <returns>ViewField</returns>
+        </member>
+        <member name="T:Visibility.VisibilityGrid">
+            <summary>
+            Grid of visibility values ranging from 0 (not visible) to 1 (visible).
+            </summary>
+        </member>
+        <member name="M:Visibility.VisibilityGrid.ByViewField(Visibility.ViewField)">
+            <summary>
+            Create VisibilityGrid using a viewField.
+            </summary>
+            <param name="viewField"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Visibility.VisibilityGrid.ByUnion(System.Collections.Generic.List{Visibility.ViewField})">
+            <summary>
+            Create a VisibilityGrid by the union of viewFields. 
+            </summary>
+            <param name="ViewFields">ViewField List</param>
+            <returns name="VisibilityGrid"></returns>
+        </member>
+        <member name="M:Visibility.VisibilityGrid.ByIntersection(System.Collections.Generic.List{Visibility.ViewField})">
+            <summary>
+            Create a VisibilityGrid by the intersection of viewFields. 
+            </summary>
+            <param name="ViewFields">ViewField List</param>
+            <returns  name="VisibilityGrid"></returns>
+        </member>
+        <member name="M:Visibility.VisibilityGrid.Values">
+            <summary>
+            2D grid of visibility values, which range from 0.0 (completely invisible) to 1.0 (completely visible).
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Visibility.VisibilityGrid.ValueAtPoint(Autodesk.DesignScript.Geometry.Point)">
+            <summary>
+            Get visibility at a point.
+            </summary>
+            <param name="point">Point</param>
+            <returns>Visibility value, which ranges from 0.0 (completely invisible) to 1.0 (completely visible).</returns>
+        </member>
+        <member name="M:Visibility.VisibilityGrid.XCoordinates">
+            <summary>
+            List of X Coordinates
+            </summary>
+            <returns name="XCoordinates">List of XCoordinates</returns>
+        </member>
+        <member name="M:Visibility.VisibilityGrid.YCoordinates">
+            <summary>
+            List of Y Coordinates
+            </summary>
+            <returns name="YCoordinates">List of YCoordinates</returns>
+        </member>
+        <member name="M:Visibility.VisibilityGrid.Points">
+            <summary>
+            2D Lists of Points
+            </summary>
+            <returns name="Points">2D Lists of Points</returns>
+        </member>
+        <member name="M:Visibility.VisibilityGrid.Surface">
+            <summary>
+            Get the bounding surface of the VisibiltyGrid
+            </summary>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,288 @@
+{
+  "Uuid": "7eda5d5a-496d-4710-8b95-32ec2bd66dcb",
+  "IsCustomNode": true,
+  "Category": "Ampersand.[&] Surface",
+  "Description": "Trim a single surface with a list of closed curves and pick points (to designate the region to be subtracted)",
+  "Name": "[&] Surface.TrimMultiple",
+  "ElementResolver": {
+    "ResolutionMap": {
+      "Autodesk.Surface": {
+        "Key": "Autodesk.DesignScript.Geometry.Surface",
+        "Value": "ProtoGeometry.dll"
+      },
+      "Autodesk.Point": {
+        "Key": "Autodesk.DesignScript.Geometry.Point",
+        "Value": "ProtoGeometry.dll"
+      }
+    }
+  },
+  "Inputs": [],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "PythonNodeModels.PythonNode, PythonNodeModels",
+      "NodeType": "PythonScriptNode",
+      "Code": "#\r\n# Colin McCrone\r\n# Twitter:  https://twitter.com/colinmccrone\r\n# LinkedIn: https://www.linkedin.com/in/colinmccrone\r\n# Updated:  2019-05-20\r\n#\r\nimport clr\r\nclr.AddReference('ProtoGeometry')\r\nfrom Autodesk.DesignScript.Geometry import *\r\n\r\nbase_surface = IN[0]\r\ncircles = IN[1]\r\npoints = IN[2]\r\n\r\nnew_base = base_surface\r\n\r\nfor i in range(len(circles)):\r\n\tnew_base = new_base.Trim(circles[i], points[i])[0]\r\n\r\nOUT = new_base",
+      "VariableInputPorts": true,
+      "Id": "f67259a96e7647468c93c6ce1ea0bc55",
+      "Inputs": [
+        {
+          "Id": "422146e59af646cf8435228618c72b11",
+          "Name": "IN[0]",
+          "Description": "Input #0",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "b9af1b81148d409eb351691820aaf529",
+          "Name": "IN[1]",
+          "Description": "Input #1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "b4210efd83b64b959b8ffa2dc82d25fe",
+          "Name": "IN[2]",
+          "Description": "Input #2",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "5cf0aa0471624cce9fe5c5d9b06da292",
+          "Name": "OUT",
+          "Description": "Result of the python script",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Runs an embedded IronPython script."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Output, DynamoCore",
+      "NodeType": "OutputNode",
+      "ElementResolver": null,
+      "Symbol": "surface",
+      "Id": "7fc9fa9cba844ab0aece6e39e5a87364",
+      "Inputs": [
+        {
+          "Id": "cf120bfd64674a469178c511331bb93c",
+          "Name": "",
+          "Description": "",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [],
+      "Replication": "Disabled",
+      "Description": "A function output, use with custom nodes"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Symbol, DynamoCore",
+      "NodeType": "InputNode",
+      "Parameter": {
+        "Name": "surface",
+        "TypeName": "Autodesk.DesignScript.Geometry.Surface",
+        "TypeRank": 0,
+        "DefaultValue": null,
+        "Description": ""
+      },
+      "Id": "f82bc96d00144412945024fcf93416ee",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "546e39c7250f4a82b467cbfcf0d4f57f",
+          "Name": "",
+          "Description": "Symbol",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "A function parameter, use with custom nodes.\r\n\r\nYou can specify the type and default value for parameter. E.g.,\r\n\r\ninput : var[]..[]\r\nvalue : bool = false"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Symbol, DynamoCore",
+      "NodeType": "InputNode",
+      "Parameter": {
+        "Name": "trimCurves",
+        "TypeName": "var",
+        "TypeRank": 1,
+        "DefaultValue": null,
+        "Description": ""
+      },
+      "Id": "7c3eaae2852945c6bc5a890de6f530b3",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "cacf33abda8649b99332896703e541fb",
+          "Name": "",
+          "Description": "Symbol",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "A function parameter, use with custom nodes.\r\n\r\nYou can specify the type and default value for parameter. E.g.,\r\n\r\ninput : var[]..[]\r\nvalue : bool = false"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Symbol, DynamoCore",
+      "NodeType": "InputNode",
+      "Parameter": {
+        "Name": "pickPoints",
+        "TypeName": "Autodesk.DesignScript.Geometry.Point",
+        "TypeRank": 1,
+        "DefaultValue": null,
+        "Description": ""
+      },
+      "Id": "dae66108d8454c37af6cf217f7e97f1c",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "735d5ca257a041e2a4b35519db87f7f5",
+          "Name": "",
+          "Description": "Symbol",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "A function parameter, use with custom nodes.\r\n\r\nYou can specify the type and default value for parameter. E.g.,\r\n\r\ninput : var[]..[]\r\nvalue : bool = false"
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "5cf0aa0471624cce9fe5c5d9b06da292",
+      "End": "cf120bfd64674a469178c511331bb93c",
+      "Id": "b9fd8aff4c754c6989176ee84a145ceb"
+    },
+    {
+      "Start": "546e39c7250f4a82b467cbfcf0d4f57f",
+      "End": "422146e59af646cf8435228618c72b11",
+      "Id": "84ebfaae52a840bd97ce0287f63564c6"
+    },
+    {
+      "Start": "cacf33abda8649b99332896703e541fb",
+      "End": "b9af1b81148d409eb351691820aaf529",
+      "Id": "0605405cc3b94ccbb2e790aad837384f"
+    },
+    {
+      "Start": "735d5ca257a041e2a4b35519db87f7f5",
+      "End": "b4210efd83b64b959b8ffa2dc82d25fe",
+      "Id": "2f291638c2d04224a0589feefa686b61"
+    }
+  ],
+  "Dependencies": [],
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": false,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "2.0.2.6826",
+      "RunType": "Manual",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "Background Preview",
+      "EyeX": -17.0,
+      "EyeY": 24.0,
+      "EyeZ": 50.0,
+      "LookX": 12.0,
+      "LookY": -13.0,
+      "LookZ": -58.0,
+      "UpX": 0.0,
+      "UpY": 1.0,
+      "UpZ": 0.0
+    },
+    "NodeViews": [
+      {
+        "ShowGeometry": true,
+        "Name": "Python Script",
+        "Id": "f67259a96e7647468c93c6ce1ea0bc55",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 356.8,
+        "Y": 70.4
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Output",
+        "Id": "7fc9fa9cba844ab0aece6e39e5a87364",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 626.0,
+        "Y": 71.2
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Input",
+        "Id": "f82bc96d00144412945024fcf93416ee",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -220.57087600428022,
+        "Y": 63.2641396695181
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Input",
+        "Id": "7c3eaae2852945c6bc5a890de6f530b3",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -220.57087600428022,
+        "Y": 151.31797789888418
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Input",
+        "Id": "dae66108d8454c37af6cf217f7e97f1c",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -220.57087600428022,
+        "Y": 239.37181612825026
+      }
+    ],
+    "Annotations": [
+      {
+        "Id": "464426a09aab43849d8562c3f9b87423",
+        "Title": "Colin McCrone\r\nTwitter:  @ColinMcCrone\r\nLinkedIn: https://www.linkedin.com/in/colinmccrone\r\nUpdated:  2019-05-20\r\n\r\nAn example Dynamo script for how to use this node can be found in the 'extra' folder where the package files are stored. To find it, go to the Packages Menu and select \"Manage Packages.\" Where Ampersand is listed, open the drop-down menu link at the right and choose \"Show Root Directory.\" Open the \"extra\" folder to find the example file called AmpersandExamples.dyn.",
+        "Nodes": [],
+        "Left": -219.54929001229277,
+        "Top": -190.40896238948949,
+        "Width": 0.0,
+        "Height": 0.0,
+        "FontSize": 36.0,
+        "InitialTop": 0.0,
+        "InitialHeight": 0.0,
+        "TextblockHeight": 0.0,
+        "Background": "#FFC1D676"
+      }
+    ],
+    "X": 414.91503340346969,
+    "Y": 266.49393121349203,
+    "Zoom": 1.1047642563030271
+  }
+}

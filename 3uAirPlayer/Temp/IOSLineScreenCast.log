@@ -1,0 +1,281 @@
+2026-05-26 19:16:32 482  [write] Log.cpp:106:LogInit :  g_nLogLevel[0x5][0x5]
+2026-05-26 19:16:32 510  [write] IOSLineScreenCast.cpp:1022:ilsc_init :  AutoInstallDrive[1]
+2026-05-26 19:16:32 537  [write] IOSLineScreenCast.cpp:1023:ilsc_init :  AutoUninstallDrive[0]
+2026-05-26 19:16:32 563  [write] IOSLineScreenCast.cpp:1024:ilsc_init :  AutoInstallDriveMsgBox[0]
+2026-05-26 19:16:32 589  [write] IOSLineScreenCast.cpp:1025:ilsc_init :  ScreenMode[1]
+2026-05-26 19:17:52 233  [info] IOSLineScreenCast.cpp:1202:ilsc_disable_qtConfig :  start
+2026-05-26 19:17:52 255  [info] IOSLineScreenCast.cpp:1203:ilsc_disable_qtConfig :  vid [1452]  pid [4776]  serialNumber[00008110001C30921486201E]
+2026-05-26 19:17:52 274  [info] IOSLineScreenCast.cpp:1205:ilsc_disable_qtConfig :  vecIosDevices num [0]
+2026-05-26 19:17:52 295  [warning] IOSLineScreenCast.cpp:1207:ilsc_disable_qtConfig :  —∞’“…Ë±∏ ß∞‹£¨«Î÷ÿ–¬∞Œ≤Â…Ë±∏
+2026-05-26 19:18:31 414  [info] IOSLineScreenCast.cpp:1202:ilsc_disable_qtConfig :  start
+2026-05-26 19:18:31 439  [info] IOSLineScreenCast.cpp:1203:ilsc_disable_qtConfig :  vid [1452]  pid [4776]  serialNumber[00008110001C30921486201E]
+2026-05-26 19:18:31 463  [info] IOSLineScreenCast.cpp:1205:ilsc_disable_qtConfig :  vecIosDevices num [0]
+2026-05-26 19:18:31 487  [warning] IOSLineScreenCast.cpp:1207:ilsc_disable_qtConfig :  —∞’“…Ë±∏ ß∞‹£¨«Î÷ÿ–¬∞Œ≤Â…Ë±∏
+2026-05-26 19:22:04 407  [info] IOSLineScreenCast.cpp:1202:ilsc_disable_qtConfig :  start
+2026-05-26 19:22:04 436  [info] IOSLineScreenCast.cpp:1203:ilsc_disable_qtConfig :  vid [1452]  pid [4776]  serialNumber[00008110001C30921486201E]
+2026-05-26 19:22:04 457  [info] IOSLineScreenCast.cpp:1205:ilsc_disable_qtConfig :  vecIosDevices num [0]
+2026-05-26 19:22:04 480  [warning] IOSLineScreenCast.cpp:1207:ilsc_disable_qtConfig :  —∞’“…Ë±∏ ß∞‹£¨«Î÷ÿ–¬∞Œ≤Â…Ë±∏
+2026-05-26 19:22:09 925  [info] IOSLineScreenCast.cpp:1202:ilsc_disable_qtConfig :  start
+2026-05-26 19:22:09 957  [info] IOSLineScreenCast.cpp:1203:ilsc_disable_qtConfig :  vid [1452]  pid [4776]  serialNumber[00008110001C30921486201E]
+2026-05-26 19:22:09 986  [info] IOSLineScreenCast.cpp:1205:ilsc_disable_qtConfig :  vecIosDevices num [0]
+2026-05-26 19:22:10 015  [warning] IOSLineScreenCast.cpp:1207:ilsc_disable_qtConfig :  —∞’“…Ë±∏ ß∞‹£¨«Î÷ÿ–¬∞Œ≤Â…Ë±∏
+2026-05-26 19:22:20 593  [info] IOSLineScreenCast.cpp:1202:ilsc_disable_qtConfig :  start
+2026-05-26 19:22:20 622  [info] IOSLineScreenCast.cpp:1203:ilsc_disable_qtConfig :  vid [1452]  pid [4776]  serialNumber[000081010002642621D0001E]
+2026-05-26 19:22:20 651  [info] IOSLineScreenCast.cpp:1205:ilsc_disable_qtConfig :  vecIosDevices num [0]
+2026-05-26 19:22:20 683  [warning] IOSLineScreenCast.cpp:1207:ilsc_disable_qtConfig :  —∞’“…Ë±∏ ß∞‹£¨«Î÷ÿ–¬∞Œ≤Â…Ë±∏
+2026-05-26 19:23:36 669  [info] IOSLineScreenCast.cpp:1202:ilsc_disable_qtConfig :  start
+2026-05-26 19:23:36 703  [info] IOSLineScreenCast.cpp:1203:ilsc_disable_qtConfig :  vid [1452]  pid [4776]  serialNumber[000081010002642621D0001E]
+2026-05-26 19:23:36 731  [info] GCUSB.cpp:94:GCUSB::GetIosDevices :  Apple Inc.-iPhone-000081010002642621D0001E
+2026-05-26 19:23:36 757  [info] IOSLineScreenCast.cpp:1205:ilsc_disable_qtConfig :  vecIosDevices num [1]
+2026-05-26 19:23:36 786  [info] IOSLineScreenCast.cpp:1213:ilsc_disable_qtConfig :  tmp_device vid [4776]  tmp_device pid [1452]  tmp_device strDeviceSerialNumber[`‚~k]
+2026-05-26 19:23:36 814  [info] GCUSB.cpp:1167:IosDevice::FindConfigurations :  Found MuxConfig[3]  Interface[1],for Device \\.\libusb0-0002--0x05ac-0x12a8
+2026-05-26 19:23:36 851  [info] GCUSB.cpp:1167:IosDevice::FindConfigurations :  Found MuxConfig[4]  Interface[1],for Device \\.\libusb0-0002--0x05ac-0x12a8
+2026-05-26 19:25:52 441  [info] IOSLineScreenCast.cpp:1202:ilsc_disable_qtConfig :  start
+2026-05-26 19:25:52 480  [info] IOSLineScreenCast.cpp:1203:ilsc_disable_qtConfig :  vid [1452]  pid [4776]  serialNumber[000081010002642621D0001E]
+2026-05-26 19:25:52 509  [info] GCUSB.cpp:94:GCUSB::GetIosDevices :  Apple Inc.-iPhone-00008110001C30921486201E
+2026-05-26 19:25:52 544  [info] IOSLineScreenCast.cpp:1205:ilsc_disable_qtConfig :  vecIosDevices num [1]
+2026-05-26 19:25:52 577  [info] IOSLineScreenCast.cpp:1213:ilsc_disable_qtConfig :  tmp_device vid [4776]  tmp_device pid [1452]  tmp_device strDeviceSerialNumber[P„xk]
+2026-05-26 19:26:03 135  [info] IOSLineScreenCast.cpp:1202:ilsc_disable_qtConfig :  start
+2026-05-26 19:26:03 160  [info] IOSLineScreenCast.cpp:1203:ilsc_disable_qtConfig :  vid [1452]  pid [4776]  serialNumber[00008110001C30921486201E]
+2026-05-26 19:26:03 183  [info] GCUSB.cpp:94:GCUSB::GetIosDevices :  Apple Inc.-iPhone-00008110001C30921486201E
+2026-05-26 19:26:03 205  [info] IOSLineScreenCast.cpp:1205:ilsc_disable_qtConfig :  vecIosDevices num [1]
+2026-05-26 19:26:03 228  [info] IOSLineScreenCast.cpp:1213:ilsc_disable_qtConfig :  tmp_device vid [4776]  tmp_device pid [1452]  tmp_device strDeviceSerialNumber[  c]
+2026-05-26 19:26:03 250  [info] GCUSB.cpp:1167:IosDevice::FindConfigurations :  Found MuxConfig[3]  Interface[1],for Device \\.\libusb0-0001--0x05ac-0x12a8
+2026-05-26 19:26:03 273  [info] GCUSB.cpp:1167:IosDevice::FindConfigurations :  Found MuxConfig[4]  Interface[1],for Device \\.\libusb0-0001--0x05ac-0x12a8
+2026-05-26 19:27:45 363  [info] IOSLineScreenCast.cpp:1202:ilsc_disable_qtConfig :  start
+2026-05-26 19:27:45 384  [info] IOSLineScreenCast.cpp:1203:ilsc_disable_qtConfig :  vid [1452]  pid [4776]  serialNumber[00008110001C30921486201E]
+2026-05-26 19:27:45 403  [info] GCUSB.cpp:94:GCUSB::GetIosDevices :  Apple Inc.-iPhone-00008110001C30921486201E
+2026-05-26 19:27:45 423  [info] IOSLineScreenCast.cpp:1205:ilsc_disable_qtConfig :  vecIosDevices num [1]
+2026-05-26 19:27:45 442  [info] IOSLineScreenCast.cpp:1213:ilsc_disable_qtConfig :  tmp_device vid [4776]  tmp_device pid [1452]  tmp_device strDeviceSerialNumber[]
+2026-05-26 19:27:45 466  [info] GCUSB.cpp:1167:IosDevice::FindConfigurations :  Found MuxConfig[3]  Interface[1],for Device \\.\libusb0-0001--0x05ac-0x12a8
+2026-05-26 19:27:45 489  [info] GCUSB.cpp:1167:IosDevice::FindConfigurations :  Found MuxConfig[4]  Interface[1],for Device \\.\libusb0-0001--0x05ac-0x12a8
+2026-05-26 19:35:05 731  [info] IOSLineScreenCast.cpp:1202:ilsc_disable_qtConfig :  start
+2026-05-26 19:35:05 763  [info] IOSLineScreenCast.cpp:1203:ilsc_disable_qtConfig :  vid [1452]  pid [4776]  serialNumber[00008110001C30921486201E]
+2026-05-26 19:35:05 795  [info] GCUSB.cpp:94:GCUSB::GetIosDevices :  Apple Inc.-iPhone-00008110001C30921486201E
+2026-05-26 19:35:05 824  [info] IOSLineScreenCast.cpp:1205:ilsc_disable_qtConfig :  vecIosDevices num [1]
+2026-05-26 19:35:05 854  [info] IOSLineScreenCast.cpp:1213:ilsc_disable_qtConfig :  tmp_device vid [4776]  tmp_device pid [1452]  tmp_device strDeviceSerialNumber[@"Îi]
+2026-05-26 19:35:05 889  [info] GCUSB.cpp:1167:IosDevice::FindConfigurations :  Found MuxConfig[3]  Interface[1],for Device \\.\libusb0-0001--0x05ac-0x12a8
+2026-05-26 19:35:05 930  [info] GCUSB.cpp:1167:IosDevice::FindConfigurations :  Found MuxConfig[4]  Interface[1],for Device \\.\libusb0-0001--0x05ac-0x12a8
+2026-05-26 19:50:08 929  [info] IOSLineScreenCast.cpp:1202:ilsc_disable_qtConfig :  start
+2026-05-26 19:50:08 943  [info] IOSLineScreenCast.cpp:1203:ilsc_disable_qtConfig :  vid [1452]  pid [4776]  serialNumber[000081010002642621D0001E]
+2026-05-26 19:50:08 956  [info] GCUSB.cpp:94:GCUSB::GetIosDevices :  Apple Inc.-iPhone-000081010002642621D0001E
+2026-05-26 19:50:08 968  [info] IOSLineScreenCast.cpp:1205:ilsc_disable_qtConfig :  vecIosDevices num [1]
+2026-05-26 19:50:08 981  [info] IOSLineScreenCast.cpp:1213:ilsc_disable_qtConfig :  tmp_device vid [4776]  tmp_device pid [1452]  tmp_device strDeviceSerialNumber[Ä*xk]
+2026-05-26 19:50:08 994  [info] GCUSB.cpp:1167:IosDevice::FindConfigurations :  Found MuxConfig[3]  Interface[1],for Device \\.\libusb0-0001--0x05ac-0x12a8
+2026-05-26 19:50:09 006  [info] GCUSB.cpp:1167:IosDevice::FindConfigurations :  Found MuxConfig[4]  Interface[1],for Device \\.\libusb0-0001--0x05ac-0x12a8
+2026-05-26 19:56:54 900  [info] IOSLineScreenCast.cpp:1202:ilsc_disable_qtConfig :  start
+2026-05-26 19:56:54 925  [info] IOSLineScreenCast.cpp:1203:ilsc_disable_qtConfig :  vid [1452]  pid [4776]  serialNumber[000081010002642621D0001E]
+2026-05-26 19:56:54 941  [info] GCUSB.cpp:94:GCUSB::GetIosDevices :  Apple Inc.-iPhone-000081010002642621D0001E
+2026-05-26 19:56:54 957  [info] IOSLineScreenCast.cpp:1205:ilsc_disable_qtConfig :  vecIosDevices num [1]
+2026-05-26 19:56:54 973  [info] IOSLineScreenCast.cpp:1213:ilsc_disable_qtConfig :  tmp_device vid [4776]  tmp_device pid [1452]  tmp_device strDeviceSerialNumber[Àc]
+2026-05-26 19:56:54 987  [info] GCUSB.cpp:1167:IosDevice::FindConfigurations :  Found MuxConfig[3]  Interface[1],for Device \\.\libusb0-0001--0x05ac-0x12a8
+2026-05-26 19:56:55 006  [info] GCUSB.cpp:1167:IosDevice::FindConfigurations :  Found MuxConfig[4]  Interface[1],for Device \\.\libusb0-0001--0x05ac-0x12a8
+2026-05-26 19:57:33 366  [info] IOSLineScreenCast.cpp:1202:ilsc_disable_qtConfig :  start
+2026-05-26 19:57:33 383  [info] IOSLineScreenCast.cpp:1203:ilsc_disable_qtConfig :  vid [1452]  pid [4776]  serialNumber[000081010002642621D0001E]
+2026-05-26 19:57:33 397  [info] GCUSB.cpp:94:GCUSB::GetIosDevices :  Apple Inc.-iPhone-000081010002642621D0001E
+2026-05-26 19:57:33 415  [info] IOSLineScreenCast.cpp:1205:ilsc_disable_qtConfig :  vecIosDevices num [1]
+2026-05-26 19:57:33 430  [info] IOSLineScreenCast.cpp:1213:ilsc_disable_qtConfig :  tmp_device vid [4776]  tmp_device pid [1452]  tmp_device strDeviceSerialNumber[∞Úxk]
+2026-05-26 19:57:33 444  [info] GCUSB.cpp:1167:IosDevice::FindConfigurations :  Found MuxConfig[3]  Interface[1],for Device \\.\libusb0-0001--0x05ac-0x12a8
+2026-05-26 19:57:33 459  [info] GCUSB.cpp:1167:IosDevice::FindConfigurations :  Found MuxConfig[4]  Interface[1],for Device \\.\libusb0-0001--0x05ac-0x12a8
+2026-05-26 19:58:27 236  [info] IOSLineScreenCast.cpp:1202:ilsc_disable_qtConfig :  start
+2026-05-26 19:58:27 247  [info] IOSLineScreenCast.cpp:1203:ilsc_disable_qtConfig :  vid [1452]  pid [4776]  serialNumber[000081010002642621D0001E]
+2026-05-26 19:58:27 256  [info] GCUSB.cpp:94:GCUSB::GetIosDevices :  Apple Inc.-iPhone-000081010002642621D0001E
+2026-05-26 19:58:27 265  [info] IOSLineScreenCast.cpp:1205:ilsc_disable_qtConfig :  vecIosDevices num [1]
+2026-05-26 19:58:27 272  [info] IOSLineScreenCast.cpp:1213:ilsc_disable_qtConfig :  tmp_device vid [4776]  tmp_device pid [1452]  tmp_device strDeviceSerialNumber[êÒxk]
+2026-05-26 19:58:27 282  [info] GCUSB.cpp:1167:IosDevice::FindConfigurations :  Found MuxConfig[3]  Interface[1],for Device \\.\libusb0-0002--0x05ac-0x12a8
+2026-05-26 19:58:27 290  [info] GCUSB.cpp:1167:IosDevice::FindConfigurations :  Found MuxConfig[4]  Interface[1],for Device \\.\libusb0-0002--0x05ac-0x12a8
+2026-05-26 20:04:43 866  [info] IOSLineScreenCast.cpp:1202:ilsc_disable_qtConfig :  start
+2026-05-26 20:04:43 879  [info] IOSLineScreenCast.cpp:1203:ilsc_disable_qtConfig :  vid [1452]  pid [4776]  serialNumber[00008110001C30921486201E]
+2026-05-26 20:04:43 894  [info] GCUSB.cpp:94:GCUSB::GetIosDevices :  Apple Inc.-iPhone-00008110001C30921486201E
+2026-05-26 20:04:43 905  [info] IOSLineScreenCast.cpp:1205:ilsc_disable_qtConfig :  vecIosDevices num [1]
+2026-05-26 20:04:43 919  [info] IOSLineScreenCast.cpp:1213:ilsc_disable_qtConfig :  tmp_device vid [4776]  tmp_device pid [1452]  tmp_device strDeviceSerialNumber[@.xk]
+2026-05-26 20:04:43 934  [info] GCUSB.cpp:1167:IosDevice::FindConfigurations :  Found MuxConfig[3]  Interface[1],for Device \\.\libusb0-0001--0x05ac-0x12a8
+2026-05-26 20:04:43 946  [info] GCUSB.cpp:1167:IosDevice::FindConfigurations :  Found MuxConfig[4]  Interface[1],for Device \\.\libusb0-0001--0x05ac-0x12a8
+2026-05-27 00:02:28 866  [write] Log.cpp:106:LogInit :  g_nLogLevel[0x5][0x5]
+2026-05-27 00:02:28 890  [write] IOSLineScreenCast.cpp:1022:ilsc_init :  AutoInstallDrive[1]
+2026-05-27 00:02:28 914  [write] IOSLineScreenCast.cpp:1023:ilsc_init :  AutoUninstallDrive[0]
+2026-05-27 00:02:28 937  [write] IOSLineScreenCast.cpp:1024:ilsc_init :  AutoInstallDriveMsgBox[0]
+2026-05-27 00:02:28 960  [write] IOSLineScreenCast.cpp:1025:ilsc_init :  ScreenMode[1]
+2026-05-27 21:59:43 111  [write] Log.cpp:106:LogInit :  g_nLogLevel[0x5][0x5]
+2026-05-27 21:59:43 140  [write] IOSLineScreenCast.cpp:1022:ilsc_init :  AutoInstallDrive[1]
+2026-05-27 21:59:43 160  [write] IOSLineScreenCast.cpp:1023:ilsc_init :  AutoUninstallDrive[0]
+2026-05-27 21:59:43 182  [write] IOSLineScreenCast.cpp:1024:ilsc_init :  AutoInstallDriveMsgBox[0]
+2026-05-27 21:59:43 208  [write] IOSLineScreenCast.cpp:1025:ilsc_init :  ScreenMode[1]
+2026-05-29 11:17:33 574  [write] Log.cpp:106:LogInit :  g_nLogLevel[0x5][0x5]
+2026-05-29 11:17:33 598  [write] IOSLineScreenCast.cpp:1022:ilsc_init :  AutoInstallDrive[1]
+2026-05-29 11:17:33 618  [write] IOSLineScreenCast.cpp:1023:ilsc_init :  AutoUninstallDrive[0]
+2026-05-29 11:17:33 638  [write] IOSLineScreenCast.cpp:1024:ilsc_init :  AutoInstallDriveMsgBox[0]
+2026-05-29 11:17:33 658  [write] IOSLineScreenCast.cpp:1025:ilsc_init :  ScreenMode[1]
+2026-05-30 09:53:06 503  [write] Log.cpp:106:LogInit :  g_nLogLevel[0x5][0x5]
+2026-05-30 09:53:06 533  [write] IOSLineScreenCast.cpp:1022:ilsc_init :  AutoInstallDrive[1]
+2026-05-30 09:53:06 558  [write] IOSLineScreenCast.cpp:1023:ilsc_init :  AutoUninstallDrive[0]
+2026-05-30 09:53:06 589  [write] IOSLineScreenCast.cpp:1024:ilsc_init :  AutoInstallDriveMsgBox[0]
+2026-05-30 09:53:06 616  [write] IOSLineScreenCast.cpp:1025:ilsc_init :  ScreenMode[1]
+2026-06-01 21:21:49 836  [write] Log.cpp:106:LogInit :  g_nLogLevel[0x5][0x5]
+2026-06-01 21:21:49 845  [write] IOSLineScreenCast.cpp:1022:ilsc_init :  AutoInstallDrive[1]
+2026-06-01 21:21:49 852  [write] IOSLineScreenCast.cpp:1023:ilsc_init :  AutoUninstallDrive[0]
+2026-06-01 21:21:49 860  [write] IOSLineScreenCast.cpp:1024:ilsc_init :  AutoInstallDriveMsgBox[0]
+2026-06-01 21:21:49 868  [write] IOSLineScreenCast.cpp:1025:ilsc_init :  ScreenMode[1]
+2026-06-02 15:52:48 466  [write] Log.cpp:106:LogInit :  g_nLogLevel[0x5][0x5]
+2026-06-02 15:52:48 487  [write] IOSLineScreenCast.cpp:1022:ilsc_init :  AutoInstallDrive[1]
+2026-06-02 15:52:48 504  [write] IOSLineScreenCast.cpp:1023:ilsc_init :  AutoUninstallDrive[0]
+2026-06-02 15:52:48 521  [write] IOSLineScreenCast.cpp:1024:ilsc_init :  AutoInstallDriveMsgBox[0]
+2026-06-02 15:52:48 538  [write] IOSLineScreenCast.cpp:1025:ilsc_init :  ScreenMode[1]
+2026-06-02 21:51:12 772  [write] Log.cpp:106:LogInit :  g_nLogLevel[0x5][0x5]
+2026-06-02 21:51:12 806  [write] IOSLineScreenCast.cpp:1022:ilsc_init :  AutoInstallDrive[1]
+2026-06-02 21:51:12 836  [write] IOSLineScreenCast.cpp:1023:ilsc_init :  AutoUninstallDrive[0]
+2026-06-02 21:51:12 864  [write] IOSLineScreenCast.cpp:1024:ilsc_init :  AutoInstallDriveMsgBox[0]
+2026-06-02 21:51:12 883  [write] IOSLineScreenCast.cpp:1025:ilsc_init :  ScreenMode[1]
+2026-06-04 16:34:44 471  [write] Log.cpp:106:LogInit :  g_nLogLevel[0x5][0x5]
+2026-06-04 16:34:44 497  [write] IOSLineScreenCast.cpp:1022:ilsc_init :  AutoInstallDrive[1]
+2026-06-04 16:34:44 523  [write] IOSLineScreenCast.cpp:1023:ilsc_init :  AutoUninstallDrive[0]
+2026-06-04 16:34:44 544  [write] IOSLineScreenCast.cpp:1024:ilsc_init :  AutoInstallDriveMsgBox[0]
+2026-06-04 16:34:44 571  [write] IOSLineScreenCast.cpp:1025:ilsc_init :  ScreenMode[1]
+2026-06-05 21:09:05 158  [write] Log.cpp:106:LogInit :  g_nLogLevel[0x5][0x5]
+2026-06-05 21:09:05 182  [write] IOSLineScreenCast.cpp:1022:ilsc_init :  AutoInstallDrive[1]
+2026-06-05 21:09:05 202  [write] IOSLineScreenCast.cpp:1023:ilsc_init :  AutoUninstallDrive[0]
+2026-06-05 21:09:05 223  [write] IOSLineScreenCast.cpp:1024:ilsc_init :  AutoInstallDriveMsgBox[0]
+2026-06-05 21:09:05 241  [write] IOSLineScreenCast.cpp:1025:ilsc_init :  ScreenMode[1]
+2026-06-05 21:12:57 231  [info] IOSLineScreenCast.cpp:1202:ilsc_disable_qtConfig :  start
+2026-06-05 21:12:57 266  [info] IOSLineScreenCast.cpp:1203:ilsc_disable_qtConfig :  vid [1452]  pid [4776]  serialNumber[000081010002642621D0001E]
+2026-06-05 21:12:57 295  [info] GCUSB.cpp:94:GCUSB::GetIosDevices :  Apple Inc.-iPhone-000081010002642621D0001E
+2026-06-05 21:12:57 315  [info] IOSLineScreenCast.cpp:1205:ilsc_disable_qtConfig :  vecIosDevices num [1]
+2026-06-05 21:12:57 337  [info] IOSLineScreenCast.cpp:1213:ilsc_disable_qtConfig :  tmp_device vid [4776]  tmp_device pid [1452]  tmp_device strDeviceSerialNumber[†!§•º]
+2026-06-05 21:12:57 362  [info] GCUSB.cpp:1167:IosDevice::FindConfigurations :  Found MuxConfig[3]  Interface[1],for Device \\.\libusb0-0001--0x05ac-0x12a8
+2026-06-05 21:12:57 386  [info] GCUSB.cpp:1167:IosDevice::FindConfigurations :  Found MuxConfig[4]  Interface[1],for Device \\.\libusb0-0001--0x05ac-0x12a8
+2026-06-05 21:13:53 658  [info] IOSLineScreenCast.cpp:1202:ilsc_disable_qtConfig :  start
+2026-06-05 21:13:53 687  [info] IOSLineScreenCast.cpp:1203:ilsc_disable_qtConfig :  vid [1452]  pid [4776]  serialNumber[000081010002642621D0001E]
+2026-06-05 21:13:53 714  [info] GCUSB.cpp:94:GCUSB::GetIosDevices :  Apple Inc.-iPhone-000081010002642621D0001E
+2026-06-05 21:13:53 742  [info] IOSLineScreenCast.cpp:1205:ilsc_disable_qtConfig :  vecIosDevices num [1]
+2026-06-05 21:13:53 771  [info] IOSLineScreenCast.cpp:1213:ilsc_disable_qtConfig :  tmp_device vid [4776]  tmp_device pid [1452]  tmp_device strDeviceSerialNumber[¿Rßº]
+2026-06-05 21:13:53 800  [info] GCUSB.cpp:1167:IosDevice::FindConfigurations :  Found MuxConfig[3]  Interface[1],for Device \\.\libusb0-0001--0x05ac-0x12a8
+2026-06-05 21:13:53 827  [info] GCUSB.cpp:1167:IosDevice::FindConfigurations :  Found MuxConfig[4]  Interface[1],for Device \\.\libusb0-0001--0x05ac-0x12a8
+2026-06-05 21:16:23 438  [info] IOSLineScreenCast.cpp:1202:ilsc_disable_qtConfig :  start
+2026-06-05 21:16:23 464  [info] IOSLineScreenCast.cpp:1203:ilsc_disable_qtConfig :  vid [1452]  pid [4776]  serialNumber[000081010002642621D0001E]
+2026-06-05 21:16:23 485  [info] GCUSB.cpp:94:GCUSB::GetIosDevices :  Apple Inc.-iPhone-000081010002642621D0001E
+2026-06-05 21:16:23 511  [info] IOSLineScreenCast.cpp:1205:ilsc_disable_qtConfig :  vecIosDevices num [1]
+2026-06-05 21:16:23 545  [info] IOSLineScreenCast.cpp:1213:ilsc_disable_qtConfig :  tmp_device vid [4776]  tmp_device pid [1452]  tmp_device strDeviceSerialNumber[]
+2026-06-05 21:16:23 580  [info] GCUSB.cpp:1167:IosDevice::FindConfigurations :  Found MuxConfig[3]  Interface[1],for Device \\.\libusb0-0001--0x05ac-0x12a8
+2026-06-05 21:16:23 610  [info] GCUSB.cpp:1167:IosDevice::FindConfigurations :  Found MuxConfig[4]  Interface[1],for Device \\.\libusb0-0001--0x05ac-0x12a8
+2026-06-05 21:16:26 134  [info] IOSLineScreenCast.cpp:1202:ilsc_disable_qtConfig :  start
+2026-06-05 21:16:26 164  [info] IOSLineScreenCast.cpp:1203:ilsc_disable_qtConfig :  vid [1452]  pid [4776]  serialNumber[000081010002642621D0001E]
+2026-06-05 21:16:26 213  [info] GCUSB.cpp:94:GCUSB::GetIosDevices :  Apple Inc.-iPhone-000081010002642621D0001E
+2026-06-05 21:16:26 239  [info] IOSLineScreenCast.cpp:1205:ilsc_disable_qtConfig :  vecIosDevices num [1]
+2026-06-05 21:16:26 263  [info] IOSLineScreenCast.cpp:1213:ilsc_disable_qtConfig :  tmp_device vid [4776]  tmp_device pid [1452]  tmp_device strDeviceSerialNumber[`Lßº]
+2026-06-05 21:16:26 285  [info] GCUSB.cpp:1167:IosDevice::FindConfigurations :  Found MuxConfig[3]  Interface[1],for Device \\.\libusb0-0001--0x05ac-0x12a8
+2026-06-05 21:16:26 314  [info] GCUSB.cpp:1167:IosDevice::FindConfigurations :  Found MuxConfig[4]  Interface[1],for Device \\.\libusb0-0001--0x05ac-0x12a8
+2026-06-05 21:16:38 164  [info] IOSLineScreenCast.cpp:1202:ilsc_disable_qtConfig :  start
+2026-06-05 21:16:38 201  [info] IOSLineScreenCast.cpp:1203:ilsc_disable_qtConfig :  vid [1452]  pid [4776]  serialNumber[000081010002642621D0001E]
+2026-06-05 21:16:38 229  [info] GCUSB.cpp:94:GCUSB::GetIosDevices :  Apple Inc.-iPhone-000081010002642621D0001E
+2026-06-05 21:16:38 258  [info] IOSLineScreenCast.cpp:1205:ilsc_disable_qtConfig :  vecIosDevices num [1]
+2026-06-05 21:16:38 292  [info] IOSLineScreenCast.cpp:1213:ilsc_disable_qtConfig :  tmp_device vid [4776]  tmp_device pid [1452]  tmp_device strDeviceSerialNumber[∞_ßº]
+2026-06-05 21:16:38 322  [info] GCUSB.cpp:1167:IosDevice::FindConfigurations :  Found MuxConfig[3]  Interface[1],for Device \\.\libusb0-0002--0x05ac-0x12a8
+2026-06-05 21:16:38 353  [info] GCUSB.cpp:1167:IosDevice::FindConfigurations :  Found MuxConfig[4]  Interface[1],for Device \\.\libusb0-0002--0x05ac-0x12a8
+2026-06-05 21:16:53 875  [info] IOSLineScreenCast.cpp:1202:ilsc_disable_qtConfig :  start
+2026-06-05 21:16:53 911  [info] IOSLineScreenCast.cpp:1203:ilsc_disable_qtConfig :  vid [1452]  pid [4776]  serialNumber[000081010002642621D0001E]
+2026-06-05 21:16:53 942  [info] GCUSB.cpp:94:GCUSB::GetIosDevices :  Apple Inc.-iPhone-000081010002642621D0001E
+2026-06-05 21:16:53 974  [info] IOSLineScreenCast.cpp:1205:ilsc_disable_qtConfig :  vecIosDevices num [1]
+2026-06-05 21:16:54 068  [info] IOSLineScreenCast.cpp:1213:ilsc_disable_qtConfig :  tmp_device vid [4776]  tmp_device pid [1452]  tmp_device strDeviceSerialNumber[0∫ßº]
+2026-06-05 21:16:54 111  [info] GCUSB.cpp:1167:IosDevice::FindConfigurations :  Found MuxConfig[3]  Interface[1],for Device \\.\libusb0-0001--0x05ac-0x12a8
+2026-06-05 21:16:54 149  [info] GCUSB.cpp:1167:IosDevice::FindConfigurations :  Found MuxConfig[4]  Interface[1],for Device \\.\libusb0-0001--0x05ac-0x12a8
+2026-06-05 21:54:22 643  [write] Log.cpp:106:LogInit :  g_nLogLevel[0x5][0x5]
+2026-06-05 21:54:22 667  [write] IOSLineScreenCast.cpp:1022:ilsc_init :  AutoInstallDrive[1]
+2026-06-05 21:54:22 686  [write] IOSLineScreenCast.cpp:1023:ilsc_init :  AutoUninstallDrive[0]
+2026-06-05 21:54:22 706  [write] IOSLineScreenCast.cpp:1024:ilsc_init :  AutoInstallDriveMsgBox[0]
+2026-06-05 21:54:22 727  [write] IOSLineScreenCast.cpp:1025:ilsc_init :  ScreenMode[1]
+2026-06-06 20:23:52 759  [write] Log.cpp:106:LogInit :  g_nLogLevel[0x5][0x5]
+2026-06-06 20:23:52 797  [write] IOSLineScreenCast.cpp:1022:ilsc_init :  AutoInstallDrive[1]
+2026-06-06 20:23:52 828  [write] IOSLineScreenCast.cpp:1023:ilsc_init :  AutoUninstallDrive[0]
+2026-06-06 20:23:52 859  [write] IOSLineScreenCast.cpp:1024:ilsc_init :  AutoInstallDriveMsgBox[0]
+2026-06-06 20:23:52 881  [write] IOSLineScreenCast.cpp:1025:ilsc_init :  ScreenMode[1]
+2026-06-07 22:25:31 687  [write] Log.cpp:106:LogInit :  g_nLogLevel[0x5][0x5]
+2026-06-07 22:25:31 708  [write] IOSLineScreenCast.cpp:1022:ilsc_init :  AutoInstallDrive[1]
+2026-06-07 22:25:31 726  [write] IOSLineScreenCast.cpp:1023:ilsc_init :  AutoUninstallDrive[0]
+2026-06-07 22:25:31 744  [write] IOSLineScreenCast.cpp:1024:ilsc_init :  AutoInstallDriveMsgBox[0]
+2026-06-07 22:25:31 763  [write] IOSLineScreenCast.cpp:1025:ilsc_init :  ScreenMode[1]
+2026-06-09 22:13:07 767  [write] Log.cpp:106:LogInit :  g_nLogLevel[0x5][0x5]
+2026-06-09 22:13:07 793  [write] IOSLineScreenCast.cpp:1022:ilsc_init :  AutoInstallDrive[1]
+2026-06-09 22:13:07 813  [write] IOSLineScreenCast.cpp:1023:ilsc_init :  AutoUninstallDrive[0]
+2026-06-09 22:13:07 830  [write] IOSLineScreenCast.cpp:1024:ilsc_init :  AutoInstallDriveMsgBox[0]
+2026-06-09 22:13:07 849  [write] IOSLineScreenCast.cpp:1025:ilsc_init :  ScreenMode[1]
+2026-06-11 03:13:14 427  [write] Log.cpp:106:LogInit :  g_nLogLevel[0x5][0x5]
+2026-06-11 03:13:14 471  [write] IOSLineScreenCast.cpp:1022:ilsc_init :  AutoInstallDrive[1]
+2026-06-11 03:13:14 584  [write] IOSLineScreenCast.cpp:1023:ilsc_init :  AutoUninstallDrive[0]
+2026-06-11 03:13:14 717  [write] IOSLineScreenCast.cpp:1024:ilsc_init :  AutoInstallDriveMsgBox[0]
+2026-06-11 03:13:14 746  [write] IOSLineScreenCast.cpp:1025:ilsc_init :  ScreenMode[1]
+2026-06-11 18:05:06 541  [info] IOSLineScreenCast.cpp:1202:ilsc_disable_qtConfig :  start
+2026-06-11 18:05:06 599  [info] IOSLineScreenCast.cpp:1203:ilsc_disable_qtConfig :  vid [1452]  pid [4776]  serialNumber[000081010002642621D0001E]
+2026-06-11 18:05:06 633  [info] GCUSB.cpp:94:GCUSB::GetIosDevices :  Apple Inc.-iPhone-000081010002642621D0001E
+2026-06-11 18:05:06 664  [info] IOSLineScreenCast.cpp:1205:ilsc_disable_qtConfig :  vecIosDevices num [1]
+2026-06-11 18:05:06 694  [info] IOSLineScreenCast.cpp:1213:ilsc_disable_qtConfig :  tmp_device vid [4776]  tmp_device pid [1452]  tmp_device strDeviceSerialNumber[–»Ω]
+2026-06-11 18:05:06 729  [info] GCUSB.cpp:1167:IosDevice::FindConfigurations :  Found MuxConfig[3]  Interface[1],for Device \\.\libusb0-0001--0x05ac-0x12a8
+2026-06-11 18:05:06 764  [info] GCUSB.cpp:1167:IosDevice::FindConfigurations :  Found MuxConfig[4]  Interface[1],for Device \\.\libusb0-0001--0x05ac-0x12a8
+2026-06-11 18:06:05 670  [info] IOSLineScreenCast.cpp:1202:ilsc_disable_qtConfig :  start
+2026-06-11 18:06:06 053  [info] IOSLineScreenCast.cpp:1203:ilsc_disable_qtConfig :  vid [1452]  pid [4776]  serialNumber[000081010002642621D0001E]
+2026-06-11 18:06:06 187  [info] IOSLineScreenCast.cpp:1205:ilsc_disable_qtConfig :  vecIosDevices num [0]
+2026-06-11 18:06:06 219  [warning] IOSLineScreenCast.cpp:1207:ilsc_disable_qtConfig :  —∞’“…Ë±∏ ß∞‹£¨«Î÷ÿ–¬∞Œ≤Â…Ë±∏
+2026-06-11 18:09:15 219  [info] IOSLineScreenCast.cpp:1202:ilsc_disable_qtConfig :  start
+2026-06-11 18:09:15 252  [info] IOSLineScreenCast.cpp:1203:ilsc_disable_qtConfig :  vid [1452]  pid [4776]  serialNumber[000081010002642621D0001E]
+2026-06-11 18:09:15 297  [info] GCUSB.cpp:94:GCUSB::GetIosDevices :  Apple Inc.-iPhone-000081010002642621D0001E
+2026-06-11 18:09:15 319  [info] IOSLineScreenCast.cpp:1205:ilsc_disable_qtConfig :  vecIosDevices num [1]
+2026-06-11 18:09:15 343  [info] IOSLineScreenCast.cpp:1213:ilsc_disable_qtConfig :  tmp_device vid [4776]  tmp_device pid [1452]  tmp_device strDeviceSerialNumber[@xùŒΩ]
+2026-06-11 18:09:15 366  [info] GCUSB.cpp:1167:IosDevice::FindConfigurations :  Found MuxConfig[3]  Interface[1],for Device \\.\libusb0-0001--0x05ac-0x12a8
+2026-06-11 18:09:15 389  [info] GCUSB.cpp:1167:IosDevice::FindConfigurations :  Found MuxConfig[4]  Interface[1],for Device \\.\libusb0-0001--0x05ac-0x12a8
+2026-06-11 18:09:17 769  [info] IOSLineScreenCast.cpp:1202:ilsc_disable_qtConfig :  start
+2026-06-11 18:09:17 800  [info] IOSLineScreenCast.cpp:1203:ilsc_disable_qtConfig :  vid [1452]  pid [4776]  serialNumber[000081010002642621D0001E]
+2026-06-11 18:09:17 827  [info] GCUSB.cpp:94:GCUSB::GetIosDevices :  Apple Inc.-iPhone-000081010002642621D0001E
+2026-06-11 18:09:17 851  [info] IOSLineScreenCast.cpp:1205:ilsc_disable_qtConfig :  vecIosDevices num [1]
+2026-06-11 18:09:17 876  [info] IOSLineScreenCast.cpp:1213:ilsc_disable_qtConfig :  tmp_device vid [4776]  tmp_device pid [1452]  tmp_device strDeviceSerialNumber[‡tùŒΩ]
+2026-06-11 18:09:17 900  [info] GCUSB.cpp:1167:IosDevice::FindConfigurations :  Found MuxConfig[3]  Interface[1],for Device \\.\libusb0-0001--0x05ac-0x12a8
+2026-06-11 18:09:17 927  [info] GCUSB.cpp:1167:IosDevice::FindConfigurations :  Found MuxConfig[4]  Interface[1],for Device \\.\libusb0-0001--0x05ac-0x12a8
+2026-06-11 18:09:20 358  [info] IOSLineScreenCast.cpp:1202:ilsc_disable_qtConfig :  start
+2026-06-11 18:09:20 385  [info] IOSLineScreenCast.cpp:1203:ilsc_disable_qtConfig :  vid [1452]  pid [4776]  serialNumber[000081010002642621D0001E]
+2026-06-11 18:09:20 420  [info] GCUSB.cpp:94:GCUSB::GetIosDevices :  Apple Inc.-iPhone-000081010002642621D0001E
+2026-06-11 18:09:20 448  [info] IOSLineScreenCast.cpp:1205:ilsc_disable_qtConfig :  vecIosDevices num [1]
+2026-06-11 18:09:20 471  [info] IOSLineScreenCast.cpp:1213:ilsc_disable_qtConfig :  tmp_device vid [4776]  tmp_device pid [1452]  tmp_device strDeviceSerialNumber[@;ŒΩ]
+2026-06-11 18:09:20 501  [info] GCUSB.cpp:1167:IosDevice::FindConfigurations :  Found MuxConfig[3]  Interface[1],for Device \\.\libusb0-0001--0x05ac-0x12a8
+2026-06-11 18:09:20 541  [info] GCUSB.cpp:1167:IosDevice::FindConfigurations :  Found MuxConfig[4]  Interface[1],for Device \\.\libusb0-0001--0x05ac-0x12a8
+2026-06-11 18:09:23 799  [info] IOSLineScreenCast.cpp:1202:ilsc_disable_qtConfig :  start
+2026-06-11 18:09:23 839  [info] IOSLineScreenCast.cpp:1203:ilsc_disable_qtConfig :  vid [1452]  pid [4776]  serialNumber[000081010002642621D0001E]
+2026-06-11 18:09:23 871  [info] GCUSB.cpp:94:GCUSB::GetIosDevices :  Apple Inc.-iPhone-000081010002642621D0001E
+2026-06-11 18:09:23 903  [info] IOSLineScreenCast.cpp:1205:ilsc_disable_qtConfig :  vecIosDevices num [1]
+2026-06-11 18:09:23 935  [info] IOSLineScreenCast.cpp:1213:ilsc_disable_qtConfig :  tmp_device vid [4776]  tmp_device pid [1452]  tmp_device strDeviceSerialNumber[]
+2026-06-11 18:09:23 966  [info] GCUSB.cpp:1167:IosDevice::FindConfigurations :  Found MuxConfig[3]  Interface[1],for Device \\.\libusb0-0001--0x05ac-0x12a8
+2026-06-11 18:09:23 996  [info] GCUSB.cpp:1167:IosDevice::FindConfigurations :  Found MuxConfig[4]  Interface[1],for Device \\.\libusb0-0001--0x05ac-0x12a8
+2026-06-11 18:09:26 703  [info] IOSLineScreenCast.cpp:1202:ilsc_disable_qtConfig :  start
+2026-06-11 18:09:26 747  [info] IOSLineScreenCast.cpp:1203:ilsc_disable_qtConfig :  vid [1452]  pid [4776]  serialNumber[000081010002642621D0001E]
+2026-06-11 18:09:26 783  [info] GCUSB.cpp:94:GCUSB::GetIosDevices :  Apple Inc.-iPhone-000081010002642621D0001E
+2026-06-11 18:09:26 819  [info] IOSLineScreenCast.cpp:1205:ilsc_disable_qtConfig :  vecIosDevices num [1]
+2026-06-11 18:09:26 859  [info] IOSLineScreenCast.cpp:1213:ilsc_disable_qtConfig :  tmp_device vid [4776]  tmp_device pid [1452]  tmp_device strDeviceSerialNumber[¿=;ŒΩ]
+2026-06-11 18:09:26 895  [info] GCUSB.cpp:1167:IosDevice::FindConfigurations :  Found MuxConfig[3]  Interface[1],for Device \\.\libusb0-0001--0x05ac-0x12a8
+2026-06-11 18:09:26 936  [info] GCUSB.cpp:1167:IosDevice::FindConfigurations :  Found MuxConfig[4]  Interface[1],for Device \\.\libusb0-0001--0x05ac-0x12a8
+2026-06-12 22:41:47 983  [write] Log.cpp:106:LogInit :  g_nLogLevel[0x5][0x5]
+2026-06-12 22:41:48 010  [write] IOSLineScreenCast.cpp:1022:ilsc_init :  AutoInstallDrive[1]
+2026-06-12 22:41:48 028  [write] IOSLineScreenCast.cpp:1023:ilsc_init :  AutoUninstallDrive[0]
+2026-06-12 22:41:48 045  [write] IOSLineScreenCast.cpp:1024:ilsc_init :  AutoInstallDriveMsgBox[0]
+2026-06-12 22:41:48 063  [write] IOSLineScreenCast.cpp:1025:ilsc_init :  ScreenMode[1]
+2026-06-14 22:31:02 584  [write] Log.cpp:106:LogInit :  g_nLogLevel[0x5][0x5]
+2026-06-14 22:31:02 603  [write] IOSLineScreenCast.cpp:1022:ilsc_init :  AutoInstallDrive[1]
+2026-06-14 22:31:02 621  [write] IOSLineScreenCast.cpp:1023:ilsc_init :  AutoUninstallDrive[0]
+2026-06-14 22:31:02 638  [write] IOSLineScreenCast.cpp:1024:ilsc_init :  AutoInstallDriveMsgBox[0]
+2026-06-14 22:31:02 655  [write] IOSLineScreenCast.cpp:1025:ilsc_init :  ScreenMode[1]
+2026-06-16 09:37:19 460  [write] Log.cpp:106:LogInit :  g_nLogLevel[0x5][0x5]
+2026-06-16 09:37:19 485  [write] IOSLineScreenCast.cpp:1022:ilsc_init :  AutoInstallDrive[1]
+2026-06-16 09:37:19 503  [write] IOSLineScreenCast.cpp:1023:ilsc_init :  AutoUninstallDrive[0]
+2026-06-16 09:37:19 521  [write] IOSLineScreenCast.cpp:1024:ilsc_init :  AutoInstallDriveMsgBox[0]
+2026-06-16 09:37:19 540  [write] IOSLineScreenCast.cpp:1025:ilsc_init :  ScreenMode[1]
+2026-06-17 06:25:24 641  [write] Log.cpp:106:LogInit :  g_nLogLevel[0x5][0x5]
+2026-06-17 06:25:24 672  [write] IOSLineScreenCast.cpp:1022:ilsc_init :  AutoInstallDrive[1]
+2026-06-17 06:25:24 711  [write] IOSLineScreenCast.cpp:1023:ilsc_init :  AutoUninstallDrive[0]
+2026-06-17 06:25:24 738  [write] IOSLineScreenCast.cpp:1024:ilsc_init :  AutoInstallDriveMsgBox[0]
+2026-06-17 06:25:24 765  [write] IOSLineScreenCast.cpp:1025:ilsc_init :  ScreenMode[1]
+2026-06-17 20:02:32 602  [write] Log.cpp:106:LogInit :  g_nLogLevel[0x5][0x5]
+2026-06-17 20:02:32 611  [write] IOSLineScreenCast.cpp:1022:ilsc_init :  AutoInstallDrive[1]
+2026-06-17 20:02:32 618  [write] IOSLineScreenCast.cpp:1023:ilsc_init :  AutoUninstallDrive[0]
+2026-06-17 20:02:32 626  [write] IOSLineScreenCast.cpp:1024:ilsc_init :  AutoInstallDriveMsgBox[0]
+2026-06-17 20:02:32 633  [write] IOSLineScreenCast.cpp:1025:ilsc_init :  ScreenMode[1]
+2026-06-18 21:32:27 919  [write] Log.cpp:106:LogInit :  g_nLogLevel[0x5][0x5]
+2026-06-18 21:32:27 937  [write] IOSLineScreenCast.cpp:1022:ilsc_init :  AutoInstallDrive[1]
+2026-06-18 21:32:27 954  [write] IOSLineScreenCast.cpp:1023:ilsc_init :  AutoUninstallDrive[0]
+2026-06-18 21:32:27 971  [write] IOSLineScreenCast.cpp:1024:ilsc_init :  AutoInstallDriveMsgBox[0]
+2026-06-18 21:32:27 988  [write] IOSLineScreenCast.cpp:1025:ilsc_init :  ScreenMode[1]
